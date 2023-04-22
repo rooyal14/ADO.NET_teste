@@ -17,6 +17,7 @@ namespace ADO.NET_teste
         public Form1()
         {
             InitializeComponent();
+            fillDgv();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,7 +27,13 @@ namespace ADO.NET_teste
                                 Convert.ToInt32(fmEstoque.Text),
                                 fmAutor.Text);
 
-            
+            addLivroToDB(livro);
+            fillDgv();
+
+        }
+
+        private void addLivroToDB(Livro livro)
+        {
             string connectionString = ConfigurationManager.ConnectionStrings["CS_ADO_NET"].ConnectionString;
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
@@ -38,7 +45,26 @@ namespace ADO.NET_teste
             command.Parameters.AddWithValue("@autor", livro.autor);
             command.ExecuteNonQuery();
             connection.Close();
-            MessageBox.Show("Fornecedor registrado com sucesso");
+            MessageBox.Show("Livro registrado com sucesso");
         }
+
+        private void fillDgv()
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["CS_ADO_NET"].ConnectionString;
+            SqlConnection connection = new SqlConnection(connectionString);
+            /*
+            connection.Open();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandText = "select * from tbLivros";
+            dgv.DataSource = command.ExecuteReader();
+            */
+            var adapter = new SqlDataAdapter("select * from tbLivros", connectionString);
+            var builder = new SqlCommandBuilder(adapter);
+            var table = new DataTable();
+            adapter.Fill(table);
+            dgv.DataSource = table;
+            connection.Close();
+        }
+
     }
 }
