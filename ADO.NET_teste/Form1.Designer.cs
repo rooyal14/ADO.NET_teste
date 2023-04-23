@@ -44,7 +44,7 @@ namespace ADO.NET_teste
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(109, 227);
+            this.button1.Location = new System.Drawing.Point(78, 217);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -54,28 +54,28 @@ namespace ADO.NET_teste
             // 
             // fmNr
             // 
-            this.fmNr.Location = new System.Drawing.Point(121, 73);
+            this.fmNr.Location = new System.Drawing.Point(90, 63);
             this.fmNr.Name = "fmNr";
             this.fmNr.Size = new System.Drawing.Size(100, 20);
             this.fmNr.TabIndex = 1;
             // 
             // fmNome
             // 
-            this.fmNome.Location = new System.Drawing.Point(112, 111);
+            this.fmNome.Location = new System.Drawing.Point(81, 101);
             this.fmNome.Name = "fmNome";
             this.fmNome.Size = new System.Drawing.Size(109, 20);
             this.fmNome.TabIndex = 2;
             // 
             // fmEstoque
             // 
-            this.fmEstoque.Location = new System.Drawing.Point(139, 149);
+            this.fmEstoque.Location = new System.Drawing.Point(108, 139);
             this.fmEstoque.Name = "fmEstoque";
             this.fmEstoque.Size = new System.Drawing.Size(82, 20);
             this.fmEstoque.TabIndex = 3;
             // 
             // fmAutor
             // 
-            this.fmAutor.Location = new System.Drawing.Point(109, 185);
+            this.fmAutor.Location = new System.Drawing.Point(78, 175);
             this.fmAutor.Name = "fmAutor";
             this.fmAutor.Size = new System.Drawing.Size(112, 20);
             this.fmAutor.TabIndex = 4;
@@ -83,7 +83,7 @@ namespace ADO.NET_teste
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 76);
+            this.label1.Location = new System.Drawing.Point(37, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 5;
@@ -92,7 +92,7 @@ namespace ADO.NET_teste
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 114);
+            this.label2.Location = new System.Drawing.Point(37, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 6;
@@ -101,7 +101,7 @@ namespace ADO.NET_teste
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(68, 188);
+            this.label3.Location = new System.Drawing.Point(37, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 7;
@@ -110,7 +110,7 @@ namespace ADO.NET_teste
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 152);
+            this.label4.Location = new System.Drawing.Point(37, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 7;
@@ -119,16 +119,16 @@ namespace ADO.NET_teste
             // dgv
             // 
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(295, 12);
+            this.dgv.Location = new System.Drawing.Point(254, 24);
             this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(431, 344);
+            this.dgv.Size = new System.Drawing.Size(397, 290);
             this.dgv.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(715, 363);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
