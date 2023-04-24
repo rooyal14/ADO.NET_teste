@@ -1,7 +1,7 @@
 ﻿
 namespace ADO.NET_teste
 {
-    partial class Form1
+    partial class FormRegistroLivros
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace ADO.NET_teste
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.fmNr = new System.Windows.Forms.TextBox();
             this.fmNome = new System.Windows.Forms.TextBox();
             this.fmEstoque = new System.Windows.Forms.TextBox();
@@ -39,51 +38,49 @@ namespace ADO.NET_teste
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnChange = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(78, 217);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Insert";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // fmNr
             // 
-            this.fmNr.Location = new System.Drawing.Point(90, 63);
+            this.fmNr.Enabled = false;
+            this.fmNr.Location = new System.Drawing.Point(596, 111);
             this.fmNr.Name = "fmNr";
-            this.fmNr.Size = new System.Drawing.Size(100, 20);
+            this.fmNr.Size = new System.Drawing.Size(200, 20);
             this.fmNr.TabIndex = 1;
             // 
             // fmNome
             // 
-            this.fmNome.Location = new System.Drawing.Point(81, 101);
+            this.fmNome.Enabled = false;
+            this.fmNome.Location = new System.Drawing.Point(587, 149);
             this.fmNome.Name = "fmNome";
-            this.fmNome.Size = new System.Drawing.Size(109, 20);
+            this.fmNome.Size = new System.Drawing.Size(209, 20);
             this.fmNome.TabIndex = 2;
             // 
             // fmEstoque
             // 
-            this.fmEstoque.Location = new System.Drawing.Point(108, 139);
+            this.fmEstoque.Enabled = false;
+            this.fmEstoque.Location = new System.Drawing.Point(614, 187);
             this.fmEstoque.Name = "fmEstoque";
-            this.fmEstoque.Size = new System.Drawing.Size(82, 20);
+            this.fmEstoque.Size = new System.Drawing.Size(182, 20);
             this.fmEstoque.TabIndex = 3;
             // 
             // fmAutor
             // 
-            this.fmAutor.Location = new System.Drawing.Point(78, 175);
+            this.fmAutor.Enabled = false;
+            this.fmAutor.Location = new System.Drawing.Point(584, 223);
             this.fmAutor.Name = "fmAutor";
-            this.fmAutor.Size = new System.Drawing.Size(112, 20);
+            this.fmAutor.Size = new System.Drawing.Size(212, 20);
             this.fmAutor.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 66);
+            this.label1.Location = new System.Drawing.Point(543, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 5;
@@ -92,7 +89,7 @@ namespace ADO.NET_teste
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 104);
+            this.label2.Location = new System.Drawing.Point(543, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 6;
@@ -101,7 +98,7 @@ namespace ADO.NET_teste
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 178);
+            this.label3.Location = new System.Drawing.Point(543, 226);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 7;
@@ -110,7 +107,7 @@ namespace ADO.NET_teste
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 142);
+            this.label4.Location = new System.Drawing.Point(543, 190);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 7;
@@ -118,17 +115,74 @@ namespace ADO.NET_teste
             // 
             // dgv
             // 
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AllowUserToResizeColumns = false;
+            this.dgv.AllowUserToResizeRows = false;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(254, 24);
+            this.dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgv.Location = new System.Drawing.Point(36, 76);
+            this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
+            this.dgv.ReadOnly = true;
+            this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(397, 290);
             this.dgv.TabIndex = 8;
+            this.dgv.SelectionChanged += new System.EventHandler(this.dgv_SelectionChanged);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Location = new System.Drawing.Point(674, 262);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(58, 23);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnInsert
+            // 
+            this.btnInsert.Enabled = false;
+            this.btnInsert.Location = new System.Drawing.Point(738, 262);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(58, 23);
+            this.btnInsert.TabIndex = 11;
+            this.btnInsert.Text = "Insert";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // btnChange
+            // 
+            this.btnChange.Enabled = false;
+            this.btnChange.Location = new System.Drawing.Point(610, 262);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(58, 23);
+            this.btnChange.TabIndex = 12;
+            this.btnChange.Text = "Change";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.Enabled = false;
+            this.btnNew.Location = new System.Drawing.Point(546, 262);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(58, 23);
+            this.btnNew.TabIndex = 13;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(715, 363);
+            this.ClientSize = new System.Drawing.Size(951, 471);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.btnChange);
+            this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -138,7 +192,6 @@ namespace ADO.NET_teste
             this.Controls.Add(this.fmEstoque);
             this.Controls.Add(this.fmNome);
             this.Controls.Add(this.fmNr);
-            this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
@@ -148,8 +201,6 @@ namespace ADO.NET_teste
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox fmNr;
         private System.Windows.Forms.TextBox fmNome;
         private System.Windows.Forms.TextBox fmEstoque;
@@ -159,6 +210,10 @@ namespace ADO.NET_teste
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.Button btnNew;
     }
 }
 

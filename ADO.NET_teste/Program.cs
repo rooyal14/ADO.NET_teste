@@ -16,7 +16,7 @@ namespace ADO.NET_teste
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormRegistroClientes());
+            Application.Run(new FormRegistroLivros());
         }
     }
 }

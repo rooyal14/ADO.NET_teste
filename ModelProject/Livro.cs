@@ -8,12 +8,12 @@ namespace ADO.NET_teste
 {
     public class Livro
     {
-        public int nr;
+        public string nr;
         public string nome;
         public int estoque;
         public string autor;
 
-        public Livro(int nr, string nome, int estoque, string autor)
+        public Livro(string nr, string nome, int estoque, string autor)
         {
             this.nr = nr;
             this.nome = nome;
