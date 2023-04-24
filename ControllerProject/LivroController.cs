@@ -1,5 +1,4 @@
-﻿using ADO.NET_teste;
-using ModelProject;
+﻿using ModelProject;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;

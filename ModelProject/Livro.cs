@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ADO.NET_teste
+namespace ModelProject
 {
     public class Livro
     {
