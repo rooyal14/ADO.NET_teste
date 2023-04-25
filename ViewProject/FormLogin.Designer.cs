@@ -29,20 +29,20 @@ namespace ViewProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.fmEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.fmSenha = new System.Windows.Forms.TextBox();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox3
+            // fmEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(79, 69);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(285, 20);
-            this.textBox3.TabIndex = 9;
+            this.fmEmail.Location = new System.Drawing.Point(79, 69);
+            this.fmEmail.Name = "fmEmail";
+            this.fmEmail.Size = new System.Drawing.Size(285, 20);
+            this.fmEmail.TabIndex = 9;
             // 
             // label3
             // 
@@ -62,16 +62,16 @@ namespace ViewProject
             this.label1.TabIndex = 10;
             this.label1.Text = "Senha:";
             // 
-            // textBox1
+            // fmSenha
             // 
-            this.textBox1.Location = new System.Drawing.Point(85, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(279, 20);
-            this.textBox1.TabIndex = 11;
+            this.fmSenha.Location = new System.Drawing.Point(85, 115);
+            this.fmSenha.Name = "fmSenha";
+            this.fmSenha.Size = new System.Drawing.Size(279, 20);
+            this.fmSenha.TabIndex = 11;
             // 
             // btnCadastro
             // 
-            this.btnCadastro.Location = new System.Drawing.Point(79, 172);
+            this.btnCadastro.Location = new System.Drawing.Point(62, 162);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(75, 23);
             this.btnCadastro.TabIndex = 13;
@@ -81,12 +81,13 @@ namespace ViewProject
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(289, 172);
+            this.btnEntrar.Location = new System.Drawing.Point(275, 162);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(75, 23);
             this.btnEntrar.TabIndex = 14;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // FormLogin
             // 
@@ -95,9 +96,9 @@ namespace ViewProject
             this.ClientSize = new System.Drawing.Size(400, 220);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.btnCadastro);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.fmSenha);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.fmEmail);
             this.Controls.Add(this.label3);
             this.Name = "FormLogin";
             this.Text = "FormLogin";
@@ -108,10 +109,10 @@ namespace ViewProject
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox fmEmail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox fmSenha;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnEntrar;
     }

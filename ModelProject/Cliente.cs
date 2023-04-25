@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModelProject
 {
-    class Cliente
+    public class Cliente
     {
         public string cpf;
         public string nome;
