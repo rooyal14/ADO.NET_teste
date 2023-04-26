@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="adminForms\FormMenuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminForms\FormMenuAdmin.Designer.cs">
+      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,30 +80,33 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegistroClientes.cs">
+    <Compile Include="adminForms\FormRegistroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegistroClientes.Designer.cs">
+    <Compile Include="adminForms\FormRegistroClientes.Designer.cs">
       <DependentUpon>FormRegistroClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegistroLivros.cs">
+    <Compile Include="adminForms\FormRegistroLivros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegistroLivros.Designer.cs">
+    <Compile Include="adminForms\FormRegistroLivros.Designer.cs">
       <DependentUpon>FormRegistroLivros.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="adminForms\FormMenuAdmin.resx">
+      <DependentUpon>FormMenuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroUsuario.resx">
       <DependentUpon>FormCadastroUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRegistroClientes.resx">
+    <EmbeddedResource Include="adminForms\FormRegistroClientes.resx">
       <DependentUpon>FormRegistroClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRegistroLivros.resx">
+    <EmbeddedResource Include="adminForms\FormRegistroLivros.resx">
       <DependentUpon>FormRegistroLivros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

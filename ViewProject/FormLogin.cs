@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewProject.adminForms;
 
 namespace ViewProject
 {
@@ -24,7 +25,6 @@ namespace ViewProject
         {
             this.Hide();
             new FormCadastroUsuario().ShowDialog();
-            MessageBox.Show("SS");
             this.Show();
             
         }
@@ -35,9 +35,9 @@ namespace ViewProject
             if (validado)
             {
                 this.Hide();
-                var FormRegistroLivros = new FormRegistroLivros();
-                FormRegistroLivros.Closed += (s, args) => this.Close();
-                FormRegistroLivros.Show();
+                var FormMenuAdmin = new FormMenuAdmin();
+                FormMenuAdmin.Closed += (s, args) => this.Close();
+                FormMenuAdmin.Show();
             } else
             {
                 MessageBox.Show("Email ou usuário incorretos, tente novamente");
