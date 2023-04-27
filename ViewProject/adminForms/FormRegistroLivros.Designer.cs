@@ -29,29 +29,21 @@ namespace ViewProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.fmNr = new System.Windows.Forms.TextBox();
             this.fmNome = new System.Windows.Forms.TextBox();
-            this.fmEstoque = new System.Windows.Forms.TextBox();
-            this.fmAutor = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnChange = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
+            this.fmEstoque = new System.Windows.Forms.TextBox();
+            this.fmAutor = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.fmNr = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
-            // 
-            // fmNr
-            // 
-            this.fmNr.Enabled = false;
-            this.fmNr.Location = new System.Drawing.Point(596, 111);
-            this.fmNr.Name = "fmNr";
-            this.fmNr.Size = new System.Drawing.Size(200, 20);
-            this.fmNr.TabIndex = 1;
             // 
             // fmNome
             // 
@@ -61,31 +53,6 @@ namespace ViewProject
             this.fmNome.Size = new System.Drawing.Size(209, 20);
             this.fmNome.TabIndex = 2;
             // 
-            // fmEstoque
-            // 
-            this.fmEstoque.Enabled = false;
-            this.fmEstoque.Location = new System.Drawing.Point(614, 187);
-            this.fmEstoque.Name = "fmEstoque";
-            this.fmEstoque.Size = new System.Drawing.Size(182, 20);
-            this.fmEstoque.TabIndex = 3;
-            // 
-            // fmAutor
-            // 
-            this.fmAutor.Enabled = false;
-            this.fmAutor.Location = new System.Drawing.Point(584, 223);
-            this.fmAutor.Name = "fmAutor";
-            this.fmAutor.Size = new System.Drawing.Size(212, 20);
-            this.fmAutor.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(543, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Número:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -94,24 +61,6 @@ namespace ViewProject
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Nome:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(543, 226);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Autor:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(543, 190);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Quantidade:";
             // 
             // dgv
             // 
@@ -173,6 +122,57 @@ namespace ViewProject
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
+            // fmEstoque
+            // 
+            this.fmEstoque.Enabled = false;
+            this.fmEstoque.Location = new System.Drawing.Point(614, 187);
+            this.fmEstoque.Name = "fmEstoque";
+            this.fmEstoque.Size = new System.Drawing.Size(182, 20);
+            this.fmEstoque.TabIndex = 3;
+            // 
+            // fmAutor
+            // 
+            this.fmAutor.Enabled = false;
+            this.fmAutor.Location = new System.Drawing.Point(584, 223);
+            this.fmAutor.Name = "fmAutor";
+            this.fmAutor.Size = new System.Drawing.Size(212, 20);
+            this.fmAutor.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(543, 226);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Autor:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(543, 190);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Quantidade:";
+            // 
+            // fmNr
+            // 
+            this.fmNr.Enabled = false;
+            this.fmNr.Location = new System.Drawing.Point(596, 111);
+            this.fmNr.Name = "fmNr";
+            this.fmNr.Size = new System.Drawing.Size(200, 20);
+            this.fmNr.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(543, 114);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Número:";
+            // 
             // FormRegistroLivros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,19 +200,19 @@ namespace ViewProject
         }
 
         #endregion
-        private System.Windows.Forms.TextBox fmNr;
         private System.Windows.Forms.TextBox fmNome;
-        private System.Windows.Forms.TextBox fmEstoque;
-        private System.Windows.Forms.TextBox fmAutor;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.TextBox fmEstoque;
+        private System.Windows.Forms.TextBox fmAutor;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox fmNr;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -43,6 +43,7 @@ namespace ViewProject
             this.fmEmail.Name = "fmEmail";
             this.fmEmail.Size = new System.Drawing.Size(285, 20);
             this.fmEmail.TabIndex = 9;
+            this.fmEmail.Text = "admin";
             // 
             // label3
             // 
@@ -68,6 +69,7 @@ namespace ViewProject
             this.fmSenha.Name = "fmSenha";
             this.fmSenha.Size = new System.Drawing.Size(279, 20);
             this.fmSenha.TabIndex = 11;
+            this.fmSenha.Text = "123";
             // 
             // btnCadastro
             // 

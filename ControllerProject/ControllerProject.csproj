@@ -41,7 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClienteController.cs" />
+    <Compile Include="AutorController.cs" />
+    <Compile Include="UserController.cs" />
     <Compile Include="LivroController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

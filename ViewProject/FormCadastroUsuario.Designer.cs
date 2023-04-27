@@ -112,6 +112,7 @@ namespace ViewProject
             this.btnIncluir.TabIndex = 9;
             this.btnIncluir.Text = "Cadastrar";
             this.btnIncluir.UseVisualStyleBackColor = true;
+            this.btnIncluir.Click += new System.EventHandler(this.btnIncluir_Click);
             // 
             // FormCadastroUsuario
             // 

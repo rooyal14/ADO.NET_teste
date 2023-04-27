@@ -30,5 +30,12 @@ namespace ViewProject.adminForms
             new FormRegistroLivros().ShowDialog();
             this.Show();
         }
+
+        private void btnRegistroAutores_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormRegistroAutores().ShowDialog();
+            this.Show();
+        }
     }
 }

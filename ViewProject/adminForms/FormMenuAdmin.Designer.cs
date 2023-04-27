@@ -31,6 +31,7 @@ namespace ViewProject.adminForms
         {
             this.btnRegistroUsuarios = new System.Windows.Forms.Button();
             this.btnRegistroLivros = new System.Windows.Forms.Button();
+            this.btnRegistroAutores = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnRegistroUsuarios
@@ -53,11 +54,22 @@ namespace ViewProject.adminForms
             this.btnRegistroLivros.UseVisualStyleBackColor = true;
             this.btnRegistroLivros.Click += new System.EventHandler(this.btnRegistroLivros_Click);
             // 
+            // btnRegistroAutores
+            // 
+            this.btnRegistroAutores.Location = new System.Drawing.Point(281, 253);
+            this.btnRegistroAutores.Name = "btnRegistroAutores";
+            this.btnRegistroAutores.Size = new System.Drawing.Size(138, 33);
+            this.btnRegistroAutores.TabIndex = 2;
+            this.btnRegistroAutores.Text = "Registro de Autores";
+            this.btnRegistroAutores.UseVisualStyleBackColor = true;
+            this.btnRegistroAutores.Click += new System.EventHandler(this.btnRegistroAutores_Click);
+            // 
             // FormMenuAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRegistroAutores);
             this.Controls.Add(this.btnRegistroLivros);
             this.Controls.Add(this.btnRegistroUsuarios);
             this.Name = "FormMenuAdmin";
@@ -70,5 +82,6 @@ namespace ViewProject.adminForms
 
         private System.Windows.Forms.Button btnRegistroUsuarios;
         private System.Windows.Forms.Button btnRegistroLivros;
+        private System.Windows.Forms.Button btnRegistroAutores;
     }
 }

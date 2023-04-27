@@ -20,7 +20,7 @@ namespace ViewProject
 
         }
         string currentUserCpf;
-        ClienteController clienteController = new ClienteController();
+        UserController clienteController = new UserController();
         private void btnCadastro_Click(object sender, EventArgs e)
         {
             this.Hide();
