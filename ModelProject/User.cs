@@ -13,14 +13,16 @@ namespace ModelProject
         public string senha;
         public string email;
         public string telefone;
+        public bool isAdmin;
 
-        public User(string cpf, string nome, string senha, string email, string telefone)
+        public User(string cpf, string nome, string senha, string email, string telefone, bool isAdmin)
         {
             this.cpf = cpf;
             this.nome = nome;
             this.senha = senha;
             this.email = email;
             this.telefone = telefone;
+            this.isAdmin = isAdmin;
         }
     }
 }

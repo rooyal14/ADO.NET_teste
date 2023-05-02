@@ -98,6 +98,18 @@
     <Compile Include="adminForms\FormRegistroLivros.Designer.cs">
       <DependentUpon>FormRegistroLivros.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLoginCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginCompra.Designer.cs">
+      <DependentUpon>FormLoginCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLojaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLojaCliente.Designer.cs">
+      <DependentUpon>FormLojaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="adminForms\FormMenuAdmin.resx">
@@ -118,6 +130,12 @@
     <EmbeddedResource Include="adminForms\FormRegistroLivros.resx">
       <DependentUpon>FormRegistroLivros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginCompra.resx">
+      <DependentUpon>FormLoginCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLojaCliente.resx">
+      <DependentUpon>FormLojaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -127,6 +145,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\ModelProject.Carrinho.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

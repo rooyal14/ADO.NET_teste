@@ -48,6 +48,7 @@ namespace ViewProject
                 fmNome.Text = dgv.CurrentRow.Cells[1].Value.ToString();
                 fmEstoque.Text = dgv.CurrentRow.Cells[2].Value.ToString();
                 fmAutor.Text = dgv.CurrentRow.Cells[3].Value.ToString();
+                fmPrecoUnitario.Text = dgv.CurrentRow.Cells[4].Value.ToString();
             }
         }
 
@@ -57,6 +58,7 @@ namespace ViewProject
             fmNome.Enabled = arg;
             fmEstoque.Enabled = arg;
             fmAutor.Enabled = arg;
+            fmPrecoUnitario.Enabled = arg;
 
         }
 
@@ -69,6 +71,7 @@ namespace ViewProject
             fmNome.Text = "";
             fmEstoque.Text = "";
             fmAutor.Text = "";
+            fmPrecoUnitario.Text = "";
             changeFormularioEnabled(true);
 
         }
@@ -91,7 +94,8 @@ namespace ViewProject
             Livro livro = new Livro(fmNr.Text,
                     fmNome.Text,
                     Convert.ToInt32(fmEstoque.Text),
-                    fmAutor.Text);
+                    fmAutor.Text,
+                    Convert.ToDouble(fmPrecoUnitario.Text));
 
             livroController.deleteLivroFromDB(livro);
             fillDgv();
@@ -103,8 +107,9 @@ namespace ViewProject
             Livro livro = new Livro(fmNr.Text,
                     fmNome.Text,
                     Convert.ToInt32(fmEstoque.Text),
-                    fmAutor.Text);
-            
+                    fmAutor.Text,
+                    Convert.ToDouble(fmPrecoUnitario.Text));
+
             if (String.IsNullOrEmpty(fmNr.Text))
             {
                 //TODO: Alerta caso haja repetição de nomes

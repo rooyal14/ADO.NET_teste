@@ -17,6 +17,7 @@ namespace ViewProject
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormLogin());
+            //Checar se falta algo no IsAdmin
         }
     }
 }

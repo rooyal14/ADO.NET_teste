@@ -42,13 +42,15 @@ namespace ViewProject
             this.label4 = new System.Windows.Forms.Label();
             this.fmNr = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.fmPrecoUnitario = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // fmNome
             // 
             this.fmNome.Enabled = false;
-            this.fmNome.Location = new System.Drawing.Point(587, 149);
+            this.fmNome.Location = new System.Drawing.Point(664, 154);
             this.fmNome.Name = "fmNome";
             this.fmNome.Size = new System.Drawing.Size(209, 20);
             this.fmNome.TabIndex = 2;
@@ -56,7 +58,7 @@ namespace ViewProject
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(543, 152);
+            this.label2.Location = new System.Drawing.Point(620, 157);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 6;
@@ -75,14 +77,14 @@ namespace ViewProject
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(441, 290);
+            this.dgv.Size = new System.Drawing.Size(542, 287);
             this.dgv.TabIndex = 8;
             this.dgv.SelectionChanged += new System.EventHandler(this.dgv_SelectionChanged);
             // 
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(674, 262);
+            this.btnDelete.Location = new System.Drawing.Point(751, 300);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(58, 23);
             this.btnDelete.TabIndex = 10;
@@ -93,7 +95,7 @@ namespace ViewProject
             // btnInsert
             // 
             this.btnInsert.Enabled = false;
-            this.btnInsert.Location = new System.Drawing.Point(738, 262);
+            this.btnInsert.Location = new System.Drawing.Point(815, 300);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(58, 23);
             this.btnInsert.TabIndex = 11;
@@ -104,7 +106,7 @@ namespace ViewProject
             // btnChange
             // 
             this.btnChange.Enabled = false;
-            this.btnChange.Location = new System.Drawing.Point(610, 262);
+            this.btnChange.Location = new System.Drawing.Point(687, 300);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(58, 23);
             this.btnChange.TabIndex = 12;
@@ -114,7 +116,7 @@ namespace ViewProject
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(546, 262);
+            this.btnNew.Location = new System.Drawing.Point(623, 300);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(58, 23);
             this.btnNew.TabIndex = 13;
@@ -125,7 +127,7 @@ namespace ViewProject
             // fmEstoque
             // 
             this.fmEstoque.Enabled = false;
-            this.fmEstoque.Location = new System.Drawing.Point(614, 187);
+            this.fmEstoque.Location = new System.Drawing.Point(691, 192);
             this.fmEstoque.Name = "fmEstoque";
             this.fmEstoque.Size = new System.Drawing.Size(182, 20);
             this.fmEstoque.TabIndex = 3;
@@ -133,7 +135,7 @@ namespace ViewProject
             // fmAutor
             // 
             this.fmAutor.Enabled = false;
-            this.fmAutor.Location = new System.Drawing.Point(584, 223);
+            this.fmAutor.Location = new System.Drawing.Point(661, 228);
             this.fmAutor.Name = "fmAutor";
             this.fmAutor.Size = new System.Drawing.Size(212, 20);
             this.fmAutor.TabIndex = 4;
@@ -141,7 +143,7 @@ namespace ViewProject
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(543, 226);
+            this.label3.Location = new System.Drawing.Point(620, 231);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 7;
@@ -150,7 +152,7 @@ namespace ViewProject
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(543, 190);
+            this.label4.Location = new System.Drawing.Point(620, 195);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 7;
@@ -159,7 +161,7 @@ namespace ViewProject
             // fmNr
             // 
             this.fmNr.Enabled = false;
-            this.fmNr.Location = new System.Drawing.Point(596, 111);
+            this.fmNr.Location = new System.Drawing.Point(673, 116);
             this.fmNr.Name = "fmNr";
             this.fmNr.Size = new System.Drawing.Size(200, 20);
             this.fmNr.TabIndex = 1;
@@ -167,17 +169,36 @@ namespace ViewProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(543, 114);
+            this.label1.Location = new System.Drawing.Point(620, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Número:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(620, 263);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Valor Unitário:";
+            // 
+            // fmPrecoUnitario
+            // 
+            this.fmPrecoUnitario.Enabled = false;
+            this.fmPrecoUnitario.Location = new System.Drawing.Point(699, 260);
+            this.fmPrecoUnitario.Name = "fmPrecoUnitario";
+            this.fmPrecoUnitario.Size = new System.Drawing.Size(174, 20);
+            this.fmPrecoUnitario.TabIndex = 14;
+            // 
             // FormRegistroLivros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(951, 471);
+            this.ClientSize = new System.Drawing.Size(907, 468);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.fmPrecoUnitario);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.btnChange);
             this.Controls.Add(this.btnInsert);
@@ -213,6 +234,8 @@ namespace ViewProject
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox fmNr;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox fmPrecoUnitario;
     }
 }
 

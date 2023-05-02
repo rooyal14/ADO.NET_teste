@@ -38,10 +38,13 @@ namespace ViewProject
             this.fmSenha = new System.Windows.Forms.TextBox();
             this.fmNome = new System.Windows.Forms.TextBox();
             this.fmCPF = new System.Windows.Forms.TextBox();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnChange = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.cbxIsAdmin = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.fmTelefone = new System.Windows.Forms.TextBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,10 +56,10 @@ namespace ViewProject
             this.dgvClientes.AllowUserToResizeRows = false;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvClientes.Location = new System.Drawing.Point(250, 28);
+            this.dgvClientes.Location = new System.Drawing.Point(386, 12);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(526, 388);
+            this.dgvClientes.Size = new System.Drawing.Size(654, 388);
             this.dgvClientes.TabIndex = 18;
             this.dgvClientes.SelectionChanged += new System.EventHandler(this.dgvClientes_SelectionChanged);
             // 
@@ -124,15 +127,61 @@ namespace ViewProject
             this.fmCPF.Size = new System.Drawing.Size(112, 20);
             this.fmCPF.TabIndex = 10;
             // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(13, 259);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(58, 23);
+            this.btnNew.TabIndex = 25;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnChange
+            // 
+            this.btnChange.Enabled = false;
+            this.btnChange.Location = new System.Drawing.Point(77, 259);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(58, 23);
+            this.btnChange.TabIndex = 24;
+            this.btnChange.Text = "Change";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(114, 227);
+            this.btnInsert.Enabled = false;
+            this.btnInsert.Location = new System.Drawing.Point(205, 259);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(75, 23);
-            this.btnInsert.TabIndex = 9;
+            this.btnInsert.Size = new System.Drawing.Size(58, 23);
+            this.btnInsert.TabIndex = 23;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Enabled = false;
+            this.btnDelete.Location = new System.Drawing.Point(141, 259);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(58, 23);
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // cbxIsAdmin
+            // 
+            this.cbxIsAdmin.AutoSize = true;
+            this.cbxIsAdmin.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbxIsAdmin.Location = new System.Drawing.Point(39, 226);
+            this.cbxIsAdmin.Name = "cbxIsAdmin";
+            this.cbxIsAdmin.Size = new System.Drawing.Size(69, 17);
+            this.cbxIsAdmin.TabIndex = 26;
+            this.cbxIsAdmin.Text = "Is Admin:";
+            this.cbxIsAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cbxIsAdmin.UseVisualStyleBackColor = true;
+            this.cbxIsAdmin.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label5
             // 
@@ -150,21 +199,15 @@ namespace ViewProject
             this.fmTelefone.Size = new System.Drawing.Size(95, 20);
             this.fmTelefone.TabIndex = 20;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(114, 343);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 21;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // FormRegistroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1139, 491);
+            this.Controls.Add(this.cbxIsAdmin);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.btnChange);
+            this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.fmTelefone);
             this.Controls.Add(this.label5);
@@ -177,7 +220,6 @@ namespace ViewProject
             this.Controls.Add(this.fmSenha);
             this.Controls.Add(this.fmNome);
             this.Controls.Add(this.fmCPF);
-            this.Controls.Add(this.btnInsert);
             this.Name = "FormRegistroClientes";
             this.Text = "FormRegistroClientes";
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
@@ -197,9 +239,12 @@ namespace ViewProject
         private System.Windows.Forms.TextBox fmSenha;
         private System.Windows.Forms.TextBox fmNome;
         private System.Windows.Forms.TextBox fmCPF;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.CheckBox cbxIsAdmin;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox fmTelefone;
-        private System.Windows.Forms.Button btnDelete;
     }
 }

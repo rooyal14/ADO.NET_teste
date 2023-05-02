@@ -1,4 +1,5 @@
 ﻿using ControllerProject;
+using ModelProject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,8 @@ namespace ViewProject
 
         }
         string currentUserCpf;
+        bool currentUserIsAdmin;
+
         UserController clienteController = new UserController();
         private void btnCadastro_Click(object sender, EventArgs e)
         {
@@ -31,18 +34,34 @@ namespace ViewProject
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            bool validado = clienteController.loginUser(fmEmail.Text, fmSenha.Text, out currentUserCpf);
-            if (validado)
+            bool validado = clienteController.loginUser(fmEmail.Text, fmSenha.Text, out currentUserCpf, out currentUserIsAdmin);
+
+            if (validado && currentUserIsAdmin)
             {
                 this.Hide();
                 var FormMenuAdmin = new FormMenuAdmin();
                 FormMenuAdmin.Closed += (s, args) => this.Close();
                 FormMenuAdmin.Show();
-            } else
+            } 
+            else if (validado && !currentUserIsAdmin)
+            {
+                this.Hide();
+                var FormLojaCliente= new FormLojaCliente(currentUserCpf);
+                FormLojaCliente.Closed += (s, args) => this.Close();
+                FormLojaCliente.Show();
+            } 
+            else
             {
                 MessageBox.Show("Email ou usuário incorretos, tente novamente");
             }
         }
 
+        private void btnEntrarAnonimo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var FormLojaCliente = new FormLojaCliente(currentUserCpf);
+            FormLojaCliente.Closed += (s, args) => this.Close();
+            FormLojaCliente.Show();
+        }
     }
 }

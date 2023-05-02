@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ControllerProject;
+using ModelProject;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,14 +19,29 @@ namespace ViewProject
             InitializeComponent();
         }
 
-        private void CadastroUsuario_Load(object sender, EventArgs e)
-        {
+        UserController userController = new UserController();
 
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            User usuario = new User(fmCPF.Text,
+                                    fmNome.Text,
+                                    fmSenha.Text,
+                                    fmEmail.Text,
+                                    fmTelefone.Text,
+                                    false);
+            if (userController.addUserToDB(usuario))
+            {
+                MessageBox.Show("Usuário cadastrado com sucesso");
+                this.Close();
+            } else
+            {
+                MessageBox.Show("Usuário já cadastrado");
+            }
         }
 
-        private void btnIncluir_Click(object sender, EventArgs e)
+        private void btnVoltar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

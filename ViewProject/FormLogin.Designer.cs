@@ -35,13 +35,14 @@ namespace ViewProject
             this.fmSenha = new System.Windows.Forms.TextBox();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnEntrar = new System.Windows.Forms.Button();
+            this.btnEntrarAnonimo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fmEmail
             // 
             this.fmEmail.Location = new System.Drawing.Point(79, 69);
             this.fmEmail.Name = "fmEmail";
-            this.fmEmail.Size = new System.Drawing.Size(285, 20);
+            this.fmEmail.Size = new System.Drawing.Size(347, 20);
             this.fmEmail.TabIndex = 9;
             this.fmEmail.Text = "admin";
             // 
@@ -67,7 +68,7 @@ namespace ViewProject
             // 
             this.fmSenha.Location = new System.Drawing.Point(85, 115);
             this.fmSenha.Name = "fmSenha";
-            this.fmSenha.Size = new System.Drawing.Size(279, 20);
+            this.fmSenha.Size = new System.Drawing.Size(341, 20);
             this.fmSenha.TabIndex = 11;
             this.fmSenha.Text = "123";
             // 
@@ -83,19 +84,30 @@ namespace ViewProject
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(275, 162);
+            this.btnEntrar.Location = new System.Drawing.Point(351, 162);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(75, 23);
             this.btnEntrar.TabIndex = 14;
-            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.Text = "Login";
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            // 
+            // btnEntrarAnonimo
+            // 
+            this.btnEntrarAnonimo.Location = new System.Drawing.Point(208, 162);
+            this.btnEntrarAnonimo.Name = "btnEntrarAnonimo";
+            this.btnEntrarAnonimo.Size = new System.Drawing.Size(137, 23);
+            this.btnEntrarAnonimo.TabIndex = 15;
+            this.btnEntrarAnonimo.Text = "Entrar como Anônimo";
+            this.btnEntrarAnonimo.UseVisualStyleBackColor = true;
+            this.btnEntrarAnonimo.Click += new System.EventHandler(this.btnEntrarAnonimo_Click);
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(400, 220);
+            this.ClientSize = new System.Drawing.Size(478, 240);
+            this.Controls.Add(this.btnEntrarAnonimo);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.fmSenha);
@@ -117,5 +129,6 @@ namespace ViewProject
         private System.Windows.Forms.TextBox fmSenha;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.Button btnEntrarAnonimo;
     }
 }

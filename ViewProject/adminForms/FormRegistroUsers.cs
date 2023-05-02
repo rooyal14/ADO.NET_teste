@@ -22,7 +22,123 @@ namespace ViewProject
             fillDgv();
         }
 
+        bool stateAdicionando = false;
+
         UserController userController = new UserController();
+
+         private void btnNew_Click(object sender, EventArgs e)
+        {
+            stateAdicionando = true;
+            btnChange.Enabled = false;
+            btnDelete.Enabled = false;
+            btnInsert.Enabled = true;
+            fmCPF.Text = "";
+            fmNome.Text = "";
+            fmSenha.Text = "";
+            fmEmail.Text = "";
+            fmTelefone.Text = "";
+            cbxIsAdmin.Checked = false;
+            changeFormularioEnabled(true);
+
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            User usuario = new User(fmCPF.Text,
+                        fmNome.Text,
+                        fmSenha.Text,
+                        fmEmail.Text,
+                        fmTelefone.Text,
+                        cbxIsAdmin.Checked);
+
+            //Comando apenas habilita a edição do registro
+            //Implementação feita na função btnInsert_Click
+
+            if (checkIfDefaultAdmin(usuario))
+            {
+                MessageBox.Show("Não é possível mudar o valor do administrador padrão");
+            }
+            else
+            {
+                btnNew.Enabled = true;
+                btnChange.Enabled = false;
+                btnDelete.Enabled = false;
+                btnInsert.Enabled = true;
+                changeFormularioEnabled(true);
+                fmCPF.Enabled = false;
+            }
+            
+            
+            
+        }
+
+        
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            User usuario = new User(fmCPF.Text,
+                        fmNome.Text,
+                        fmSenha.Text,
+                        fmEmail.Text,
+                        fmTelefone.Text,
+                        cbxIsAdmin.Checked);
+
+
+            if (checkIfDefaultAdmin(usuario))
+            {
+                MessageBox.Show("Não é possível deletar o administrador padrão");
+            }
+            else
+            {
+                userController.deleteUserFromDB(usuario);
+                MessageBox.Show("Usuário excluído com sucesso");
+                fillDgv();
+            }
+            
+        }
+        
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            User usuario = new User(fmCPF.Text,
+                                    fmNome.Text,
+                                    fmSenha.Text,
+                                    fmEmail.Text,
+                                    fmTelefone.Text,
+                                    cbxIsAdmin.Checked);
+
+            if (stateAdicionando)
+            {
+                //TODO: Alerta caso haja repetição de nomes
+                userController.addUserToDB(usuario);
+            } else
+            {
+                userController.updateUserFromDB(usuario);
+            }
+
+            fillDgv();
+
+        }
+
+        /*
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            User usuario = new User(fmCPF.Text,
+                                    fmNome.Text,
+                                    fmSenha.Text,
+                                    fmEmail.Text,
+                                    fmTelefone.Text);
+
+            if (checkIfDefaultAdmin(usuario))
+            {
+                MessageBox.Show("Não é possível deletar o administrador padrão");
+            }
+            else
+            {
+                userController.deleteUserFromDB(usuario);
+                MessageBox.Show("Usuário excluído com sucesso");
+                fillDgv();
+            }
+
+        }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
@@ -44,21 +160,19 @@ namespace ViewProject
         }
         
 
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            User usuario = new User(fmCPF.Text,
-                                    fmNome.Text,
-                                    fmSenha.Text,
-                                    fmEmail.Text,
-                                    fmTelefone.Text);
-            userController.deleteUserFromDB(usuario);
-            MessageBox.Show("Cliente excluído com sucesso");
-            fillDgv();
-        }
+        */
+        
 
         private void dgvClientes_SelectionChanged(object sender, EventArgs e)
         {
+            stateAdicionando = false;
+
+            btnNew.Enabled = true;
+            btnChange.Enabled = true;
+            btnDelete.Enabled = true;
+            btnInsert.Enabled = false;
+            changeFormularioEnabled(false);
+
             if (dgvClientes.CurrentRow != null)
             {
                 fmCPF.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
@@ -81,6 +195,30 @@ namespace ViewProject
             conn.Close();
         }
 
+        private bool checkIfDefaultAdmin(User usuario)
+        {
+            if(usuario.email == "admin")
+                return true;
+            else
+                return false;
+            
+        }
+
+        private void changeFormularioEnabled(bool arg)
+        {
+            fmCPF.Enabled = arg;
+            fmNome.Enabled = arg;
+            fmSenha.Enabled = arg;
+            fmEmail.Enabled = arg;
+            fmTelefone.Enabled = arg;
+            cbxIsAdmin.Enabled = arg;
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
         //IMPLEMENTAR VALIDAÇÃO DE CPF
     }
 }
