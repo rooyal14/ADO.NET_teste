@@ -29,7 +29,6 @@ namespace ViewProject
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEntrarAnonimo = new System.Windows.Forms.Button();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.fmSenha = new System.Windows.Forms.TextBox();
@@ -37,16 +36,6 @@ namespace ViewProject
             this.fmEmail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // btnEntrarAnonimo
-            // 
-            this.btnEntrarAnonimo.Location = new System.Drawing.Point(205, 130);
-            this.btnEntrarAnonimo.Name = "btnEntrarAnonimo";
-            this.btnEntrarAnonimo.Size = new System.Drawing.Size(137, 23);
-            this.btnEntrarAnonimo.TabIndex = 22;
-            this.btnEntrarAnonimo.Text = "Entrar como Anônimo";
-            this.btnEntrarAnonimo.UseVisualStyleBackColor = true;
-            this.btnEntrarAnonimo.Click += new System.EventHandler(this.btnEntrarAnonimo_Click);
             // 
             // btnEntrar
             // 
@@ -56,6 +45,7 @@ namespace ViewProject
             this.btnEntrar.TabIndex = 21;
             this.btnEntrar.Text = "Login";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnCadastro
             // 
@@ -65,6 +55,7 @@ namespace ViewProject
             this.btnCadastro.TabIndex = 20;
             this.btnCadastro.Text = "Cadastro";
             this.btnCadastro.UseVisualStyleBackColor = true;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // fmSenha
             // 
@@ -105,7 +96,6 @@ namespace ViewProject
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 194);
-            this.Controls.Add(this.btnEntrarAnonimo);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.fmSenha);
@@ -120,8 +110,6 @@ namespace ViewProject
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnEntrarAnonimo;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.TextBox fmSenha;

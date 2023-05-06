@@ -23,10 +23,10 @@ namespace ViewProject
 
         private BindingSource binding = new BindingSource();
 
-        private string currentUserCpf;
+        private string currentUserEmail;
         public FormLojaCliente(string currentUserCpf)
         {
-            this.currentUserCpf = currentUserCpf;
+            this.currentUserEmail = currentUserCpf;
             InitializeComponent();
             fillDgvLivros();
 
@@ -140,15 +140,15 @@ namespace ViewProject
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(currentUserCpf))
+            if (String.IsNullOrEmpty(currentUserEmail))
             {
-                MessageBox.Show(currentUserCpf);
+                MessageBox.Show("Necessário logar para confirmar compra");
                 this.Hide();
                 var a = new FormLoginCompra();
                 a.ShowDialog();
-                currentUserCpf = a.CurrentUserCpf;
+                currentUserEmail = a.CurrentUserEmail;
                 this.Show();
-                MessageBox.Show(currentUserCpf);
+                MessageBox.Show(currentUserEmail);
                 return;
             }
             livroController.confirmarCompra(repositorioCarrinho.obterCarrinho());

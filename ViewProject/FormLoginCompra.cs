@@ -19,7 +19,9 @@ namespace ViewProject
             InitializeComponent();
         }
 
-        public string CurrentUserCpf { get; set; }
+        private bool currentUserIsAdmin;
+        private string currentUserEmail;
+        public string CurrentUserEmail { get; set; }
 
         UserController clienteController = new UserController();
 
@@ -33,13 +35,23 @@ namespace ViewProject
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            
+            bool validado = clienteController.loginUser(fmEmail.Text, fmSenha.Text, out currentUserEmail, out currentUserIsAdmin);
+
+            currentUserIsAdmin = false;
+            if (validado)
+            {
+                CurrentUserEmail = fmEmail.Text;
+                this.Close();
+                
+            }            
+            else
+            {
+                CurrentUserEmail = "";
+                MessageBox.Show("Email ou usuário incorretos, tente novamente");
+            }
         }
 
-        private void btnEntrarAnonimo_Click(object sender, EventArgs e)
-        {
-            CurrentUserCpf = "aoba";
-        }
+
     }
 }
 

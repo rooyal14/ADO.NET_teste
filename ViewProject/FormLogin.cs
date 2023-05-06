@@ -20,7 +20,7 @@ namespace ViewProject
             InitializeComponent();
 
         }
-        string currentUserCpf;
+        string currentUserEmail;
         bool currentUserIsAdmin;
 
         UserController clienteController = new UserController();
@@ -34,7 +34,7 @@ namespace ViewProject
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            bool validado = clienteController.loginUser(fmEmail.Text, fmSenha.Text, out currentUserCpf, out currentUserIsAdmin);
+            bool validado = clienteController.loginUser(fmEmail.Text, fmSenha.Text, out currentUserEmail, out currentUserIsAdmin);
 
             if (validado && currentUserIsAdmin)
             {
@@ -46,7 +46,7 @@ namespace ViewProject
             else if (validado && !currentUserIsAdmin)
             {
                 this.Hide();
-                var FormLojaCliente= new FormLojaCliente(currentUserCpf);
+                var FormLojaCliente= new FormLojaCliente(currentUserEmail);
                 FormLojaCliente.Closed += (s, args) => this.Close();
                 FormLojaCliente.Show();
             } 
@@ -59,7 +59,7 @@ namespace ViewProject
         private void btnEntrarAnonimo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var FormLojaCliente = new FormLojaCliente(currentUserCpf);
+            var FormLojaCliente = new FormLojaCliente(currentUserEmail);
             FormLojaCliente.Closed += (s, args) => this.Close();
             FormLojaCliente.Show();
         }

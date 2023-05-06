@@ -76,7 +76,7 @@ namespace ViewProject
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(624, 156);
+            this.label4.Location = new System.Drawing.Point(573, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 20;
@@ -85,7 +85,7 @@ namespace ViewProject
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(624, 192);
+            this.label3.Location = new System.Drawing.Point(573, 192);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 21;
@@ -94,7 +94,7 @@ namespace ViewProject
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(624, 118);
+            this.label2.Location = new System.Drawing.Point(573, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 19;
@@ -103,7 +103,7 @@ namespace ViewProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(624, 80);
+            this.label1.Location = new System.Drawing.Point(573, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 18;
@@ -112,7 +112,7 @@ namespace ViewProject
             // fmAutor
             // 
             this.fmAutor.Enabled = false;
-            this.fmAutor.Location = new System.Drawing.Point(665, 189);
+            this.fmAutor.Location = new System.Drawing.Point(614, 189);
             this.fmAutor.Name = "fmAutor";
             this.fmAutor.Size = new System.Drawing.Size(212, 20);
             this.fmAutor.TabIndex = 17;
@@ -120,7 +120,7 @@ namespace ViewProject
             // fmEstoque
             // 
             this.fmEstoque.Enabled = false;
-            this.fmEstoque.Location = new System.Drawing.Point(695, 153);
+            this.fmEstoque.Location = new System.Drawing.Point(644, 153);
             this.fmEstoque.Name = "fmEstoque";
             this.fmEstoque.Size = new System.Drawing.Size(182, 20);
             this.fmEstoque.TabIndex = 16;
@@ -128,7 +128,7 @@ namespace ViewProject
             // fmNome
             // 
             this.fmNome.Enabled = false;
-            this.fmNome.Location = new System.Drawing.Point(668, 115);
+            this.fmNome.Location = new System.Drawing.Point(617, 115);
             this.fmNome.Name = "fmNome";
             this.fmNome.Size = new System.Drawing.Size(209, 20);
             this.fmNome.TabIndex = 15;
@@ -136,7 +136,7 @@ namespace ViewProject
             // fmNr
             // 
             this.fmNr.Enabled = false;
-            this.fmNr.Location = new System.Drawing.Point(677, 77);
+            this.fmNr.Location = new System.Drawing.Point(626, 77);
             this.fmNr.Name = "fmNr";
             this.fmNr.Size = new System.Drawing.Size(200, 20);
             this.fmNr.TabIndex = 14;
@@ -147,7 +147,7 @@ namespace ViewProject
             this.dgvCarrinho.AllowUserToResizeRows = false;
             this.dgvCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCarrinho.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvCarrinho.Location = new System.Drawing.Point(952, 42);
+            this.dgvCarrinho.Location = new System.Drawing.Point(866, 39);
             this.dgvCarrinho.MultiSelect = false;
             this.dgvCarrinho.Name = "dgvCarrinho";
             this.dgvCarrinho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -158,7 +158,7 @@ namespace ViewProject
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(624, 261);
+            this.label5.Location = new System.Drawing.Point(573, 261);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(176, 13);
             this.label5.TabIndex = 28;
@@ -167,14 +167,14 @@ namespace ViewProject
             // numQtd
             // 
             this.numQtd.Enabled = false;
-            this.numQtd.Location = new System.Drawing.Point(806, 259);
+            this.numQtd.Location = new System.Drawing.Point(755, 259);
             this.numQtd.Name = "numQtd";
             this.numQtd.Size = new System.Drawing.Size(71, 20);
             this.numQtd.TabIndex = 29;
             // 
             // btnAddToCarrinho
             // 
-            this.btnAddToCarrinho.Location = new System.Drawing.Point(756, 293);
+            this.btnAddToCarrinho.Location = new System.Drawing.Point(705, 293);
             this.btnAddToCarrinho.Name = "btnAddToCarrinho";
             this.btnAddToCarrinho.Size = new System.Drawing.Size(121, 36);
             this.btnAddToCarrinho.TabIndex = 30;
@@ -185,7 +185,7 @@ namespace ViewProject
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(624, 226);
+            this.label6.Location = new System.Drawing.Point(573, 226);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 32;
@@ -194,7 +194,7 @@ namespace ViewProject
             // fmPrecoUnitario
             // 
             this.fmPrecoUnitario.Enabled = false;
-            this.fmPrecoUnitario.Location = new System.Drawing.Point(703, 223);
+            this.fmPrecoUnitario.Location = new System.Drawing.Point(652, 223);
             this.fmPrecoUnitario.Name = "fmPrecoUnitario";
             this.fmPrecoUnitario.Size = new System.Drawing.Size(174, 20);
             this.fmPrecoUnitario.TabIndex = 31;
@@ -222,7 +222,7 @@ namespace ViewProject
             // btnRemoveFromCart
             // 
             this.btnRemoveFromCart.Enabled = false;
-            this.btnRemoveFromCart.Location = new System.Drawing.Point(627, 293);
+            this.btnRemoveFromCart.Location = new System.Drawing.Point(576, 293);
             this.btnRemoveFromCart.Name = "btnRemoveFromCart";
             this.btnRemoveFromCart.Size = new System.Drawing.Size(123, 36);
             this.btnRemoveFromCart.TabIndex = 35;
@@ -248,7 +248,7 @@ namespace ViewProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1491, 599);
+            this.ClientSize = new System.Drawing.Size(1370, 599);
             this.Controls.Add(this.btnConfirmarCompra);
             this.Controls.Add(this.btnRemoveFromCart);
             this.Controls.Add(this.lblTotal);

@@ -12,7 +12,6 @@ namespace ModelProject
     public abstract class DBCon
     {
         static string connectionString = ConfigurationManager.ConnectionStrings["CS_ADO_NET"].ConnectionString;
-        //SqlConnection connection = new SqlConnection(connectionString);
 
         static public SqlConnection Conn()
         {
