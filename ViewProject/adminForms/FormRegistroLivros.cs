@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ViewProject.adminForms;
 
 namespace ViewProject
 {
@@ -20,9 +21,21 @@ namespace ViewProject
         {
             InitializeComponent();
             fillDgv();
+            fillCbx();
+
         }
 
         LivroController livroController = new LivroController();
+
+        private void fillCbx()
+        {
+            var comm = DBCon.Conn().CreateCommand();
+            comm.CommandText = "select generoDesc, idGenero from tbGeneros";
+            var d = DBCon.queryDataTable(comm);
+            cbxGenero.ValueMember = d.Columns[1].ToString();
+            cbxGenero.DisplayMember = d.Columns[0].ToString();
+            cbxGenero.DataSource = d;
+        }
 
         private void fillDgv()
         {
@@ -59,6 +72,7 @@ namespace ViewProject
             fmEstoque.Enabled = arg;
             fmAutor.Enabled = arg;
             fmPrecoUnitario.Enabled = arg;
+            cbxGenero.Enabled = arg;
 
         }
 
@@ -71,6 +85,7 @@ namespace ViewProject
             fmNome.Text = "";
             fmEstoque.Text = "";
             fmAutor.Text = "";
+            cbxGenero.SelectedIndex = -1;
             fmPrecoUnitario.Text = "";
             changeFormularioEnabled(true);
 
@@ -124,6 +139,11 @@ namespace ViewProject
 
 
 
+        }
+
+        private void btnAutorPopup_Click(object sender, EventArgs e)
+        {
+            new FormPopupSelectAutores().ShowDialog();
         }
     }
 }

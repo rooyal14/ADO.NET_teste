@@ -44,6 +44,9 @@ namespace ViewProject
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.fmPrecoUnitario = new System.Windows.Forms.TextBox();
+            this.cbxGenero = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnAutorPopup = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,7 +87,7 @@ namespace ViewProject
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(751, 300);
+            this.btnDelete.Location = new System.Drawing.Point(754, 334);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(58, 23);
             this.btnDelete.TabIndex = 10;
@@ -95,7 +98,7 @@ namespace ViewProject
             // btnInsert
             // 
             this.btnInsert.Enabled = false;
-            this.btnInsert.Location = new System.Drawing.Point(815, 300);
+            this.btnInsert.Location = new System.Drawing.Point(818, 334);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(58, 23);
             this.btnInsert.TabIndex = 11;
@@ -106,7 +109,7 @@ namespace ViewProject
             // btnChange
             // 
             this.btnChange.Enabled = false;
-            this.btnChange.Location = new System.Drawing.Point(687, 300);
+            this.btnChange.Location = new System.Drawing.Point(690, 334);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(58, 23);
             this.btnChange.TabIndex = 12;
@@ -116,7 +119,7 @@ namespace ViewProject
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(623, 300);
+            this.btnNew.Location = new System.Drawing.Point(626, 334);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(58, 23);
             this.btnNew.TabIndex = 13;
@@ -135,15 +138,15 @@ namespace ViewProject
             // fmAutor
             // 
             this.fmAutor.Enabled = false;
-            this.fmAutor.Location = new System.Drawing.Point(661, 228);
+            this.fmAutor.Location = new System.Drawing.Point(664, 262);
             this.fmAutor.Name = "fmAutor";
-            this.fmAutor.Size = new System.Drawing.Size(212, 20);
+            this.fmAutor.Size = new System.Drawing.Size(179, 20);
             this.fmAutor.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(620, 231);
+            this.label3.Location = new System.Drawing.Point(623, 265);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 7;
@@ -178,7 +181,7 @@ namespace ViewProject
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(620, 263);
+            this.label5.Location = new System.Drawing.Point(623, 297);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 15;
@@ -187,16 +190,45 @@ namespace ViewProject
             // fmPrecoUnitario
             // 
             this.fmPrecoUnitario.Enabled = false;
-            this.fmPrecoUnitario.Location = new System.Drawing.Point(699, 260);
+            this.fmPrecoUnitario.Location = new System.Drawing.Point(702, 294);
             this.fmPrecoUnitario.Name = "fmPrecoUnitario";
             this.fmPrecoUnitario.Size = new System.Drawing.Size(174, 20);
             this.fmPrecoUnitario.TabIndex = 14;
+            // 
+            // cbxGenero
+            // 
+            this.cbxGenero.FormattingEnabled = true;
+            this.cbxGenero.Location = new System.Drawing.Point(676, 227);
+            this.cbxGenero.Name = "cbxGenero";
+            this.cbxGenero.Size = new System.Drawing.Size(200, 21);
+            this.cbxGenero.TabIndex = 40;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(623, 230);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(47, 18);
+            this.label8.TabIndex = 39;
+            this.label8.Text = "Gênero:";
+            // 
+            // btnAutorPopup
+            // 
+            this.btnAutorPopup.Location = new System.Drawing.Point(852, 260);
+            this.btnAutorPopup.Name = "btnAutorPopup";
+            this.btnAutorPopup.Size = new System.Drawing.Size(24, 23);
+            this.btnAutorPopup.TabIndex = 41;
+            this.btnAutorPopup.Text = "...";
+            this.btnAutorPopup.UseVisualStyleBackColor = true;
+            this.btnAutorPopup.Click += new System.EventHandler(this.btnAutorPopup_Click);
             // 
             // FormRegistroLivros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 468);
+            this.Controls.Add(this.btnAutorPopup);
+            this.Controls.Add(this.cbxGenero);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.fmPrecoUnitario);
             this.Controls.Add(this.btnNew);
@@ -236,6 +268,9 @@ namespace ViewProject
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox fmPrecoUnitario;
+        private System.Windows.Forms.ComboBox cbxGenero;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnAutorPopup;
     }
 }
 

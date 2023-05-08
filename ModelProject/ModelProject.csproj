@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Autor.cs" />
     <Compile Include="Carrinho.cs" />
+    <Compile Include="Genero.cs" />
     <Compile Include="ItemCarrinho.cs" />
     <Compile Include="User.cs" />
     <Compile Include="DBCon.cs" />

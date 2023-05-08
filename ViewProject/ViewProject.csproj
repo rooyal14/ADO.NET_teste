@@ -68,11 +68,23 @@
     <Compile Include="adminForms\FormMenuAdmin.Designer.cs">
       <DependentUpon>FormMenuAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminForms\FormPopupSelectAutores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminForms\FormPopupSelectAutores.Designer.cs">
+      <DependentUpon>FormPopupSelectAutores.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminForms\FormRegistroAutores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="adminForms\FormRegistroAutores.Designer.cs">
       <DependentUpon>FormRegistroAutores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adminForms\FormRegistroGeneros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminForms\FormRegistroGeneros.Designer.cs">
+      <DependentUpon>FormRegistroGeneros.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCadastroUsuario.cs">
       <SubType>Form</SubType>
@@ -115,8 +127,14 @@
     <EmbeddedResource Include="adminForms\FormMenuAdmin.resx">
       <DependentUpon>FormMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="adminForms\FormPopupSelectAutores.resx">
+      <DependentUpon>FormPopupSelectAutores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminForms\FormRegistroAutores.resx">
       <DependentUpon>FormRegistroAutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminForms\FormRegistroGeneros.resx">
+      <DependentUpon>FormRegistroGeneros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroUsuario.resx">
       <DependentUpon>FormCadastroUsuario.cs</DependentUpon>
