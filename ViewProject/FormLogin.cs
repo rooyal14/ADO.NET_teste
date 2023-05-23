@@ -63,5 +63,18 @@ namespace ViewProject
             FormLojaCliente.Closed += (s, args) => this.Close();
             FormLojaCliente.Show();
         }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Seja bem-vindo ao Sistema Livraria " +
+                "ADO.NET. \n\nProjeto desenvolvido por: \nAlice Bentes, " +
+                "Rodrigo Zwirtes, Victor Hugo e Wellington Amaral.",
+                "Sobre os Autores", MessageBoxButtons.OK);
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
     }
 }

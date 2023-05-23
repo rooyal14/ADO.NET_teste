@@ -29,72 +29,93 @@ namespace ViewProject.adminForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRegistroUsuarios = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenuAdmin));
+            this.btnRelatorios = new System.Windows.Forms.Button();
+            this.btnRegistroVendas = new System.Windows.Forms.Button();
+            this.btnRegistroGeneros = new System.Windows.Forms.Button();
             this.btnRegistroLivros = new System.Windows.Forms.Button();
             this.btnRegistroAutores = new System.Windows.Forms.Button();
-            this.btnRegistroGeneros = new System.Windows.Forms.Button();
+            this.btnRegistroUsuarios = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnRegistroUsuarios
+            // btnRelatorios
             // 
-            this.btnRegistroUsuarios.Location = new System.Drawing.Point(281, 119);
-            this.btnRegistroUsuarios.Name = "btnRegistroUsuarios";
-            this.btnRegistroUsuarios.Size = new System.Drawing.Size(138, 33);
-            this.btnRegistroUsuarios.TabIndex = 0;
-            this.btnRegistroUsuarios.Text = "Registro de Usuários";
-            this.btnRegistroUsuarios.UseVisualStyleBackColor = true;
-            this.btnRegistroUsuarios.Click += new System.EventHandler(this.btnRegistroUsuarios_Click);
+            resources.ApplyResources(this.btnRelatorios, "btnRelatorios");
+            this.btnRelatorios.Name = "btnRelatorios";
+            this.btnRelatorios.UseVisualStyleBackColor = true;
+            // 
+            // btnRegistroVendas
+            // 
+            resources.ApplyResources(this.btnRegistroVendas, "btnRegistroVendas");
+            this.btnRegistroVendas.Name = "btnRegistroVendas";
+            this.btnRegistroVendas.UseVisualStyleBackColor = true;
+            // 
+            // btnRegistroGeneros
+            // 
+            resources.ApplyResources(this.btnRegistroGeneros, "btnRegistroGeneros");
+            this.btnRegistroGeneros.Name = "btnRegistroGeneros";
+            this.btnRegistroGeneros.UseVisualStyleBackColor = true;
+            this.btnRegistroGeneros.Click += new System.EventHandler(this.btnRegistroGeneros_Click);
             // 
             // btnRegistroLivros
             // 
-            this.btnRegistroLivros.Location = new System.Drawing.Point(281, 185);
+            resources.ApplyResources(this.btnRegistroLivros, "btnRegistroLivros");
             this.btnRegistroLivros.Name = "btnRegistroLivros";
-            this.btnRegistroLivros.Size = new System.Drawing.Size(138, 33);
-            this.btnRegistroLivros.TabIndex = 1;
-            this.btnRegistroLivros.Text = "Registro de Livros";
             this.btnRegistroLivros.UseVisualStyleBackColor = true;
             this.btnRegistroLivros.Click += new System.EventHandler(this.btnRegistroLivros_Click);
             // 
             // btnRegistroAutores
             // 
-            this.btnRegistroAutores.Location = new System.Drawing.Point(281, 253);
+            resources.ApplyResources(this.btnRegistroAutores, "btnRegistroAutores");
             this.btnRegistroAutores.Name = "btnRegistroAutores";
-            this.btnRegistroAutores.Size = new System.Drawing.Size(138, 33);
-            this.btnRegistroAutores.TabIndex = 2;
-            this.btnRegistroAutores.Text = "Registro de Autores";
             this.btnRegistroAutores.UseVisualStyleBackColor = true;
             this.btnRegistroAutores.Click += new System.EventHandler(this.btnRegistroAutores_Click);
             // 
-            // btnRegistroGeneros
+            // btnRegistroUsuarios
             // 
-            this.btnRegistroGeneros.Location = new System.Drawing.Point(281, 320);
-            this.btnRegistroGeneros.Name = "btnRegistroGeneros";
-            this.btnRegistroGeneros.Size = new System.Drawing.Size(138, 33);
-            this.btnRegistroGeneros.TabIndex = 3;
-            this.btnRegistroGeneros.Text = "Registro de Gêneros";
-            this.btnRegistroGeneros.UseVisualStyleBackColor = true;
-            this.btnRegistroGeneros.Click += new System.EventHandler(this.btnRegistroGeneros_Click);
+            resources.ApplyResources(this.btnRegistroUsuarios, "btnRegistroUsuarios");
+            this.btnRegistroUsuarios.Name = "btnRegistroUsuarios";
+            this.btnRegistroUsuarios.UseVisualStyleBackColor = true;
+            this.btnRegistroUsuarios.Click += new System.EventHandler(this.btnRegistroUsuarios_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
+            this.tableLayoutPanel1.Controls.Add(this.btnRegistroUsuarios, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnRelatorios, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnRegistroLivros, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnRegistroVendas, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.btnRegistroAutores, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnRegistroGeneros, 1, 1);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // FormMenuAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnRegistroGeneros);
-            this.Controls.Add(this.btnRegistroAutores);
-            this.Controls.Add(this.btnRegistroLivros);
-            this.Controls.Add(this.btnRegistroUsuarios);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormMenuAdmin";
-            this.Text = "FormMenuAdmin";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnRegistroUsuarios;
+        private System.Windows.Forms.Button btnRelatorios;
+        private System.Windows.Forms.Button btnRegistroVendas;
+        private System.Windows.Forms.Button btnRegistroGeneros;
         private System.Windows.Forms.Button btnRegistroLivros;
         private System.Windows.Forms.Button btnRegistroAutores;
-        private System.Windows.Forms.Button btnRegistroGeneros;
+        private System.Windows.Forms.Button btnRegistroUsuarios;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }

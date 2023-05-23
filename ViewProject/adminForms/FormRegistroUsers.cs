@@ -98,6 +98,8 @@ namespace ViewProject
         
         private void btnInsert_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(fmCPF.Text);
+            MessageBox.Show(fmTelefone.Text);
             User usuario = new User(fmCPF.Text,
                                     fmNome.Text,
                                     fmSenha.Text,
@@ -216,6 +218,21 @@ namespace ViewProject
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormRegistroClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fmCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }
