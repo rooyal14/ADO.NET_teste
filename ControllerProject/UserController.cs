@@ -18,14 +18,14 @@ namespace ControllerProject
             {
                 SqlConnection conn = DBCon.Conn();
                 SqlCommand command = conn.CreateCommand();
-                command.CommandText = "insert into tbClientes(cpf, nome, senha, email, telefone, isAdmin) values " +
-                    "(@cpf, @nome, @senha, @email, @telefone, @isAdmin)";
+                command.CommandText = "insert into Tb_Usuarios(cpf, nome, senha, email, telefone, trueAdmin) values " +
+                    "(@cpf, @nome, @senha, @email, @telefone, @trueAdmin)";
                 command.Parameters.AddWithValue("@cpf", user.cpf);
                 command.Parameters.AddWithValue("@nome", user.nome);
                 command.Parameters.AddWithValue("@senha", user.senha);
                 command.Parameters.AddWithValue("@email", user.email);
                 command.Parameters.AddWithValue("@telefone", user.telefone);
-                command.Parameters.AddWithValue("@isAdmin", user.isAdmin == true ? 1 : 0);
+                command.Parameters.AddWithValue("@trueAdmin", user.trueAdmin == true ? 1 : 0);
                 command.ExecuteNonQuery();
                 conn.Close();
                 return true;
@@ -40,7 +40,7 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "delete from tbClientes where cpf = @cpf";
+            command.CommandText = "delete from Tb_Usuarios where cpf = @cpf";
             command.Parameters.AddWithValue("@cpf", user.cpf);
             command.ExecuteNonQuery();
             conn.Close();
@@ -50,7 +50,7 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "UPDATE tbClientes SET nome=@nome, senha=@senha, " +
+            command.CommandText = "UPDATE Tb_Usuarios SET nome=@nome, senha=@senha, " +
                                 "email=@email, telefone=@telefone WHERE cpf=@cpf";
             command.Parameters.AddWithValue("@cpf", user.cpf);
             command.Parameters.AddWithValue("@nome", user.nome);
@@ -62,11 +62,11 @@ namespace ControllerProject
         }
 
 
-        public bool loginUser(string email, string password, out string currentUserCpf, out bool currentUserIsAdmin)
+        public bool loginUser(string email, string password, out string currentUserCpf, out bool currentUsertrueAdmin)
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "select cpf, isAdmin from tbClientes where email = @email and senha = @senha";
+            command.CommandText = "select cpf, trueAdmin from Tb_Usuarios where email = @email and senha = @senha";
             command.Parameters.AddWithValue("@email", email);
             command.Parameters.AddWithValue("@senha", password);
             DataTable query = DBCon.queryDataTable(command);
@@ -74,14 +74,23 @@ namespace ControllerProject
             if(query.Rows.Count > 0)
             {
                 currentUserCpf = query.Rows[0][0].ToString();
-                currentUserIsAdmin = Convert.ToBoolean(query.Rows[0][1].ToString());
+                currentUsertrueAdmin = Convert.ToBoolean(query.Rows[0][1].ToString());
                 return true;
             } else
             {
                 currentUserCpf = "";
-                currentUserIsAdmin = false;
+                currentUsertrueAdmin = false;
                 return false;
             }
+
+        }
+
+        public bool checkIfProtectedUser(User usuario)
+        {
+            if (usuario.email == "admin" || usuario.email == "cliente deletado")
+                return true;
+            else
+                return false;
 
         }
 
@@ -89,18 +98,26 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "select cpf from tbClientes where cpf = @cpf";
+            command.CommandText = "select count(cpf) from Tb_Usuarios where cpf = @cpf";
             command.Parameters.AddWithValue("@cpf", user.cpf);
             DataTable query = DBCon.queryDataTable(command);
             conn.Close();
 
-            if (query.Rows.Count == 0)
-            {
-                return false;
-            } else
-            {
-                return true;
-            }
+            var result = Convert.ToInt32(query.Rows[0][0].ToString()) == 0 ? false : true;
+            return result;
+            
+        }
+
+        public bool userIsReferenced(User user)
+        {
+            SqlConnection conn = DBCon.Conn();
+            SqlCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT COUNT(ID_Venda) FROM Tb_Venda WHERE ID_Cliente = (SELECT ID_Cliente FROM Tb_Usuarios WHERE CPF=@cpf)";
+            command.Parameters.AddWithValue("@cpf", user.cpf);
+            DataTable query = DBCon.queryDataTable(command);
+            conn.Close();
+            var result = Convert.ToInt32(query.Rows[0][0].ToString()) == 0 ? false : true;
+            return result;
         }
 
 

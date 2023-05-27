@@ -8,12 +8,12 @@ namespace ModelProject
 {
     public class Autor
     {
-        public string idAutor;
+        public string ID_Autor;
         public string nome;
 
-        public Autor(string idAutor, string nome)
+        public Autor(string ID_Autor, string nome)
         {
-            this.idAutor = idAutor;
+            this.ID_Autor = ID_Autor;
             this.nome = nome;
         }
     }

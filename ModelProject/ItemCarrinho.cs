@@ -13,7 +13,7 @@ namespace ModelProject
         {
             get
             {
-                return this.livro.nr;
+                return this.livro.ID_Livro;
             }
         }
         public string NomeLivro

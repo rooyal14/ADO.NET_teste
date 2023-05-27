@@ -19,6 +19,8 @@ namespace ViewProject
 
         LivroController livroController = new LivroController();
 
+        VendaController vendaController = new VendaController();
+
         private Carrinho repositorioCarrinho = new Carrinho();
 
         private BindingSource binding = new BindingSource();
@@ -38,18 +40,13 @@ namespace ViewProject
 
         private void fillDgvLivros()
         {
-            SqlConnection conn = DBCon.Conn();
-            SqlCommand command = conn.CreateCommand();
-            command.CommandText = "select * from tbLivros";
-            var table = DBCon.queryDataTable(command);
-            dgv.DataSource = table;
-            conn.Close();
+            dgv.DataSource = livroController.getDisplayLivros(); ;
 
             dgv.Columns[0].HeaderText = "Código";
-            dgv.Columns[1].HeaderText = "Nome";
+            dgv.Columns[1].HeaderText = "Genero";
             dgv.Columns[2].HeaderText = "Quantidade em Estoque";
-            dgv.Columns[3].HeaderText = "Nome do Autor";
-            dgv.Columns[4].HeaderText = "Valor Unitário";
+            dgv.Columns[3].HeaderText = "Valor Unitário";
+            dgv.Columns[4].HeaderText = "Nome";
 
         }
 
@@ -72,9 +69,10 @@ namespace ViewProject
             {
                 fmNr.Text = dgv.CurrentRow.Cells[0].Value.ToString();
                 fmNome.Text = dgv.CurrentRow.Cells[1].Value.ToString();
-                fmEstoque.Text = dgv.CurrentRow.Cells[2].Value.ToString();
-                fmAutor.Text = dgv.CurrentRow.Cells[3].Value.ToString();
-                fmPrecoUnitario.Text = dgv.CurrentRow.Cells[4].Value.ToString();
+                fmPrecoUnitario.Text = dgv.CurrentRow.Cells[2].Value.ToString();
+                fmEstoque.Text = dgv.CurrentRow.Cells[3].Value.ToString();
+                fmGenero.Text = dgv.CurrentRow.Cells[4].Value.ToString();
+                fmAutores.Text = dgv.CurrentRow.Cells[5].Value.ToString();
                 numQtd.Value = 1;
                 btnRemoveFromCart.Enabled = false;
             }
@@ -85,7 +83,7 @@ namespace ViewProject
 
             fmNome.Enabled = arg;
             fmEstoque.Enabled = arg;
-            fmAutor.Enabled = arg;
+            fmGenero.Enabled = arg;
 
         }
 
@@ -95,10 +93,10 @@ namespace ViewProject
             {
                 ItemCarrinho item = repositorioCarrinho.obterCarrinho().Where(x => x.Codigo == dgvCarrinho.CurrentRow.Cells[0].Value.ToString()).FirstOrDefault();
                 Livro livro = item.getLivro();
-                fmNr.Text = livro.nr;
+                fmNr.Text = livro.ID_Livro;
                 fmNome.Text = livro.nome;
                 fmEstoque.Text = livro.estoque.ToString();
-                fmAutor.Text = livro.autor;
+                //fmAutor.Text = livro.autor;
                 fmPrecoUnitario.Text = livro.precoUnitario.ToString();
                 numQtd.Enabled = true;
                 numQtd.Value = item.Qtd;
@@ -112,7 +110,6 @@ namespace ViewProject
             Livro livro = new Livro(fmNr.Text,
                     fmNome.Text,
                     Convert.ToInt32(fmEstoque.Text),
-                    fmAutor.Text,
                     Convert.ToDouble(fmPrecoUnitario.Text));
             ItemCarrinho item = new ItemCarrinho(livro, Convert.ToInt32(numQtd.Value));
             if (item.Qtd > livro.estoque)
@@ -123,7 +120,7 @@ namespace ViewProject
             else
             {
                 repositorioCarrinho.adicionarItemAoCarrinho(item);
-                lblTotal.Text = repositorioCarrinho.total.ToString();
+                lblTotal.Text = repositorioCarrinho.getTotal().ToString();
             }
 
         }
@@ -133,7 +130,6 @@ namespace ViewProject
             Livro livro = new Livro(fmNr.Text,
                     fmNome.Text,
                     Convert.ToInt32(fmEstoque.Text),
-                    fmAutor.Text,
                     Convert.ToDouble(fmPrecoUnitario.Text));
             repositorioCarrinho.removerItemDoCarrinho(livro);
         }
@@ -148,10 +144,11 @@ namespace ViewProject
                 a.ShowDialog();
                 currentUserEmail = a.CurrentUserEmail;
                 this.Show();
-                MessageBox.Show(currentUserEmail);
+                if(String.IsNullOrEmpty(currentUserEmail))
+                    MessageBox.Show("Usuário Logado com sucesso, confirme sua compra");
                 return;
             }
-            livroController.confirmarCompra(repositorioCarrinho.obterCarrinho());
+            vendaController.confirmarCompra(repositorioCarrinho, currentUserEmail);
             repositorioCarrinho.limparCarrinho();
             fillDgvLivros();
             MessageBox.Show("Você comprou!");

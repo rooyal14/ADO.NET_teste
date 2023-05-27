@@ -13,7 +13,7 @@ namespace ModelProject
         public string senha;
         public string email;
         public string telefone;
-        public bool isAdmin;
+        public bool trueAdmin;
 
         public User(string cpf, string nome, string senha, string email, string telefone, bool isAdmin)
         {
@@ -22,7 +22,7 @@ namespace ModelProject
             this.senha = senha;
             this.email = email;
             this.telefone = telefone;
-            this.isAdmin = isAdmin;
+            this.trueAdmin = isAdmin;
         }
     }
 }

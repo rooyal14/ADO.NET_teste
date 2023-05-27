@@ -42,16 +42,14 @@ namespace ViewProject
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // fmEmail
             // 
-            this.fmEmail.Location = new System.Drawing.Point(82, 48);
-            this.fmEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fmEmail.Location = new System.Drawing.Point(55, 31);
             this.fmEmail.Name = "fmEmail";
-            this.fmEmail.Size = new System.Drawing.Size(493, 26);
+            this.fmEmail.Size = new System.Drawing.Size(330, 20);
             this.fmEmail.TabIndex = 9;
             this.fmEmail.Text = "admin";
             this.toolTip1.SetToolTip(this.fmEmail, "Informe o e-mail cadastrado para acessar o sistema.");
@@ -59,30 +57,27 @@ namespace ViewProject
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 51);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(16, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 20);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Email:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 87);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(15, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.Size = new System.Drawing.Size(41, 13);
             this.label1.TabIndex = 10;
             this.label1.Text = "Senha:";
             // 
             // fmSenha
             // 
-            this.fmSenha.Location = new System.Drawing.Point(82, 84);
-            this.fmSenha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fmSenha.Location = new System.Drawing.Point(55, 55);
             this.fmSenha.Name = "fmSenha";
             this.fmSenha.PasswordChar = '*';
-            this.fmSenha.Size = new System.Drawing.Size(495, 26);
+            this.fmSenha.Size = new System.Drawing.Size(331, 20);
             this.fmSenha.TabIndex = 11;
             this.fmSenha.Text = "123";
             this.toolTip2.SetToolTip(this.fmSenha, "Informe a senha cadastrada, caso precise de ajuda, contate o administrador do sis" +
@@ -91,10 +86,9 @@ namespace ViewProject
             // 
             // btnCadastro
             // 
-            this.btnCadastro.Location = new System.Drawing.Point(26, 120);
-            this.btnCadastro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCadastro.Location = new System.Drawing.Point(17, 78);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(112, 35);
+            this.btnCadastro.Size = new System.Drawing.Size(75, 23);
             this.btnCadastro.TabIndex = 13;
             this.btnCadastro.Text = "Cadastre-se";
             this.btnCadastro.UseVisualStyleBackColor = true;
@@ -102,10 +96,9 @@ namespace ViewProject
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(450, 120);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEntrar.Location = new System.Drawing.Point(300, 78);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(127, 35);
+            this.btnEntrar.Size = new System.Drawing.Size(85, 23);
             this.btnEntrar.TabIndex = 16;
             this.btnEntrar.Text = "Login";
             this.btnEntrar.UseVisualStyleBackColor = true;
@@ -113,10 +106,9 @@ namespace ViewProject
             // 
             // btnEntrarAnonimo
             // 
-            this.btnEntrarAnonimo.Location = new System.Drawing.Point(162, 120);
-            this.btnEntrarAnonimo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEntrarAnonimo.Location = new System.Drawing.Point(172, 78);
             this.btnEntrarAnonimo.Name = "btnEntrarAnonimo";
-            this.btnEntrarAnonimo.Size = new System.Drawing.Size(136, 35);
+            this.btnEntrarAnonimo.Size = new System.Drawing.Size(122, 23);
             this.btnEntrarAnonimo.TabIndex = 15;
             this.btnEntrarAnonimo.Text = "Entrar como Anônimo";
             this.btnEntrarAnonimo.UseVisualStyleBackColor = true;
@@ -124,13 +116,13 @@ namespace ViewProject
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.iniciarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(603, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(402, 24);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -139,13 +131,13 @@ namespace ViewProject
             this.iniciarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sobreToolStripMenuItem});
             this.iniciarToolStripMenuItem.Name = "iniciarToolStripMenuItem";
-            this.iniciarToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
+            this.iniciarToolStripMenuItem.Size = new System.Drawing.Size(51, 22);
             this.iniciarToolStripMenuItem.Text = "Iniciar";
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(161, 34);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
@@ -161,22 +153,11 @@ namespace ViewProject
             this.toolTip2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip2.ToolTipTitle = "Atenção!";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(306, 120);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 35);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Entrar como Anônimo";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 184);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(402, 120);
             this.Controls.Add(this.btnEntrarAnonimo);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.btnCadastro);
@@ -186,7 +167,6 @@ namespace ViewProject
             this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLogin";
@@ -213,6 +193,5 @@ namespace ViewProject
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
-        private System.Windows.Forms.Button button1;
     }
 }

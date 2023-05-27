@@ -26,11 +26,12 @@ namespace ViewProject
         }
 
         LivroController livroController = new LivroController();
+        VendaController vendaController = new VendaController();
 
         private void fillCbx()
         {
             var comm = DBCon.Conn().CreateCommand();
-            comm.CommandText = "select generoDesc, idGenero from tbGeneros";
+            comm.CommandText = "SELECT Nome, ID_Genero FROM Tb_Genero";
             var d = DBCon.queryDataTable(comm);
             cbxGenero.ValueMember = d.Columns[1].ToString();
             cbxGenero.DisplayMember = d.Columns[0].ToString();
@@ -39,12 +40,7 @@ namespace ViewProject
 
         private void fillDgv()
         {
-            SqlConnection conn = DBCon.Conn();
-            SqlCommand command = conn.CreateCommand();
-            command.CommandText = "select * from tbLivros";
-            var table = DBCon.queryDataTable(command);
-            dgv.DataSource = table;
-            conn.Close();
+            dgv.DataSource = livroController.getDisplayLivros();
 
         }
 
@@ -59,9 +55,11 @@ namespace ViewProject
             {
                 fmNr.Text = dgv.CurrentRow.Cells[0].Value.ToString();
                 fmNome.Text = dgv.CurrentRow.Cells[1].Value.ToString();
-                fmEstoque.Text = dgv.CurrentRow.Cells[2].Value.ToString();
-                fmAutor.Text = dgv.CurrentRow.Cells[3].Value.ToString();
-                fmPrecoUnitario.Text = dgv.CurrentRow.Cells[4].Value.ToString();
+                fmPrecoUnitario.Text = dgv.CurrentRow.Cells[2].Value.ToString();
+                fmEstoque.Text = dgv.CurrentRow.Cells[3].Value.ToString();
+                cbxGenero.Text = dgv.CurrentRow.Cells[4].Value.ToString();
+                fmAutor.Text = dgv.CurrentRow.Cells[5].Value.ToString();
+                
             }
         }
 
@@ -70,7 +68,7 @@ namespace ViewProject
 
             fmNome.Enabled = arg;
             fmEstoque.Enabled = arg;
-            fmAutor.Enabled = arg;
+            btnAutorPopup.Enabled = arg;
             fmPrecoUnitario.Enabled = arg;
             cbxGenero.Enabled = arg;
 
@@ -109,10 +107,27 @@ namespace ViewProject
             Livro livro = new Livro(fmNr.Text,
                     fmNome.Text,
                     Convert.ToInt32(fmEstoque.Text),
-                    fmAutor.Text,
                     Convert.ToDouble(fmPrecoUnitario.Text));
 
-            livroController.deleteLivroFromDB(livro);
+            if (livroController.checkIfProtectedLivro(livro))
+            {
+                MessageBox.Show("Não é possível deletar o gênero padrão");
+            }
+            else if (livroController.livroIsReferenced(livro))
+            {
+                MessageBox.Show("livro cadastrado em livros, deseja substituí-lo e deletar mesmo assim?");
+                //TODO: perguntar se o usuário quer mesmo deletar
+                if (true)
+                {
+                    vendaController.substituirPorLivroIndefinido(livro);
+                    livroController.deleteLivroFromDB(livro);
+                }
+            }
+            else
+            {
+                livroController.deleteLivroFromDB(livro);
+                MessageBox.Show("Usuário excluído com sucesso");
+            }
             fillDgv();
             
         }
@@ -122,7 +137,6 @@ namespace ViewProject
             Livro livro = new Livro(fmNr.Text,
                     fmNome.Text,
                     Convert.ToInt32(fmEstoque.Text),
-                    fmAutor.Text,
                     Convert.ToDouble(fmPrecoUnitario.Text));
 
             if (String.IsNullOrEmpty(fmNr.Text))

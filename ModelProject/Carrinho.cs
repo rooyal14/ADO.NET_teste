@@ -11,12 +11,12 @@ namespace ModelProject
     {
         private IList<ItemCarrinho> carrinhoDeLivros = new BindingList<ItemCarrinho>();
 
-        public double total;
+        private double total;
 
         public void adicionarItemAoCarrinho(ItemCarrinho itemCarrinho)
         {
 
-            var itemExistente = carrinhoDeLivros.Where(x => x.getLivro().nr == itemCarrinho.getLivro().nr);
+            var itemExistente = carrinhoDeLivros.Where(x => x.getLivro().ID_Livro == itemCarrinho.getLivro().ID_Livro);
             if (itemExistente.Count() == 0)
             {
                 carrinhoDeLivros.Add(itemCarrinho);
@@ -30,7 +30,7 @@ namespace ModelProject
         
         public void removerItemDoCarrinho(Livro livro)
         {
-            carrinhoDeLivros.Remove(carrinhoDeLivros.Where(x => x.getLivro().nr == livro.nr).FirstOrDefault());
+            carrinhoDeLivros.Remove(carrinhoDeLivros.Where(x => x.getLivro().ID_Livro == livro.ID_Livro).FirstOrDefault());
         }
         
         private void calcularTotal()
@@ -51,6 +51,11 @@ namespace ModelProject
         public void limparCarrinho()
         {
             this.carrinhoDeLivros.Clear();
+        }
+        
+        public double getTotal()
+        {
+            return this.total;
         }
     }
 }

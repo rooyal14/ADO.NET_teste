@@ -15,7 +15,7 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "insert into tbAutores(nome) values (@nome)";
+            command.CommandText = "insert into Tb_Autor(nome) values (@nome)";
             command.Parameters.AddWithValue("@nome", autor.nome);
             command.ExecuteNonQuery();
             conn.Close();
@@ -25,8 +25,8 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "delete from tbAutores where idAutor = @idAutor";
-            command.Parameters.AddWithValue("@idAutor", autor.idAutor);
+            command.CommandText = "delete from Tb_Autor where ID_Autor = @ID_Autor";
+            command.Parameters.AddWithValue("@ID_Autor", autor.ID_Autor);
             command.ExecuteNonQuery();
             conn.Close();
         }
@@ -35,8 +35,8 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "UPDATE tbAutores SET nome=@nome WHERE idAutor=@idAutor";
-            command.Parameters.AddWithValue("@idAutor", autor.idAutor);
+            command.CommandText = "UPDATE Tb_Autor SET nome=@nome WHERE ID_Autor=@ID_Autor";
+            command.Parameters.AddWithValue("@ID_Autor", autor.ID_Autor);
             command.Parameters.AddWithValue("@nome", autor.nome);
             command.ExecuteNonQuery();
             conn.Close();
@@ -52,7 +52,7 @@ namespace ControllerProject
             public void setAllAutores()
             {
                 var comm = DBCon.Conn().CreateCommand();
-                comm.CommandText = "select nome from tbAutores";
+                comm.CommandText = "select nome from Tb_Autor";
                 var dt = DBCon.queryDataTable(comm);
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
@@ -62,11 +62,7 @@ namespace ControllerProject
 
             public void setContainsAutores()
             {
-                foreach (var autor in allAutores)
-                {
-                    if (autor.Contains(""))
-                        containsAutores.Add(autor);
-                }
+                allAutores.ForEach(x => containsAutores.Add(x));
             }
 
             public void setDisplayAutores()

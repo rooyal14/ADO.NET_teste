@@ -53,7 +53,7 @@ namespace ViewProject
             // fmNome
             // 
             this.fmNome.Enabled = false;
-            this.fmNome.Location = new System.Drawing.Point(664, 154);
+            this.fmNome.Location = new System.Drawing.Point(664, 128);
             this.fmNome.Name = "fmNome";
             this.fmNome.Size = new System.Drawing.Size(209, 20);
             this.fmNome.TabIndex = 2;
@@ -61,7 +61,7 @@ namespace ViewProject
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(620, 157);
+            this.label2.Location = new System.Drawing.Point(620, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 6;
@@ -87,7 +87,7 @@ namespace ViewProject
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(754, 334);
+            this.btnDelete.Location = new System.Drawing.Point(754, 330);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(58, 23);
             this.btnDelete.TabIndex = 10;
@@ -98,7 +98,7 @@ namespace ViewProject
             // btnInsert
             // 
             this.btnInsert.Enabled = false;
-            this.btnInsert.Location = new System.Drawing.Point(818, 334);
+            this.btnInsert.Location = new System.Drawing.Point(818, 330);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(58, 23);
             this.btnInsert.TabIndex = 11;
@@ -109,7 +109,7 @@ namespace ViewProject
             // btnChange
             // 
             this.btnChange.Enabled = false;
-            this.btnChange.Location = new System.Drawing.Point(690, 334);
+            this.btnChange.Location = new System.Drawing.Point(690, 330);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(58, 23);
             this.btnChange.TabIndex = 12;
@@ -119,7 +119,7 @@ namespace ViewProject
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(626, 334);
+            this.btnNew.Location = new System.Drawing.Point(626, 330);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(58, 23);
             this.btnNew.TabIndex = 13;
@@ -130,7 +130,7 @@ namespace ViewProject
             // fmEstoque
             // 
             this.fmEstoque.Enabled = false;
-            this.fmEstoque.Location = new System.Drawing.Point(691, 192);
+            this.fmEstoque.Location = new System.Drawing.Point(691, 208);
             this.fmEstoque.Name = "fmEstoque";
             this.fmEstoque.Size = new System.Drawing.Size(182, 20);
             this.fmEstoque.TabIndex = 3;
@@ -138,7 +138,7 @@ namespace ViewProject
             // fmAutor
             // 
             this.fmAutor.Enabled = false;
-            this.fmAutor.Location = new System.Drawing.Point(664, 262);
+            this.fmAutor.Location = new System.Drawing.Point(664, 278);
             this.fmAutor.Name = "fmAutor";
             this.fmAutor.Size = new System.Drawing.Size(179, 20);
             this.fmAutor.TabIndex = 4;
@@ -146,7 +146,7 @@ namespace ViewProject
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(623, 265);
+            this.label3.Location = new System.Drawing.Point(623, 281);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 7;
@@ -155,7 +155,7 @@ namespace ViewProject
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(620, 195);
+            this.label4.Location = new System.Drawing.Point(620, 211);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 7;
@@ -164,7 +164,7 @@ namespace ViewProject
             // fmNr
             // 
             this.fmNr.Enabled = false;
-            this.fmNr.Location = new System.Drawing.Point(673, 116);
+            this.fmNr.Location = new System.Drawing.Point(673, 90);
             this.fmNr.Name = "fmNr";
             this.fmNr.Size = new System.Drawing.Size(200, 20);
             this.fmNr.TabIndex = 1;
@@ -172,7 +172,7 @@ namespace ViewProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(620, 119);
+            this.label1.Location = new System.Drawing.Point(620, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 5;
@@ -181,7 +181,7 @@ namespace ViewProject
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(623, 297);
+            this.label5.Location = new System.Drawing.Point(623, 174);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 13);
             this.label5.TabIndex = 15;
@@ -190,7 +190,7 @@ namespace ViewProject
             // fmPrecoUnitario
             // 
             this.fmPrecoUnitario.Enabled = false;
-            this.fmPrecoUnitario.Location = new System.Drawing.Point(702, 294);
+            this.fmPrecoUnitario.Location = new System.Drawing.Point(702, 171);
             this.fmPrecoUnitario.Name = "fmPrecoUnitario";
             this.fmPrecoUnitario.Size = new System.Drawing.Size(174, 20);
             this.fmPrecoUnitario.TabIndex = 14;
@@ -198,14 +198,14 @@ namespace ViewProject
             // cbxGenero
             // 
             this.cbxGenero.FormattingEnabled = true;
-            this.cbxGenero.Location = new System.Drawing.Point(676, 227);
+            this.cbxGenero.Location = new System.Drawing.Point(676, 243);
             this.cbxGenero.Name = "cbxGenero";
             this.cbxGenero.Size = new System.Drawing.Size(200, 21);
             this.cbxGenero.TabIndex = 40;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(623, 230);
+            this.label8.Location = new System.Drawing.Point(623, 246);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 18);
             this.label8.TabIndex = 39;
@@ -213,7 +213,7 @@ namespace ViewProject
             // 
             // btnAutorPopup
             // 
-            this.btnAutorPopup.Location = new System.Drawing.Point(852, 260);
+            this.btnAutorPopup.Location = new System.Drawing.Point(852, 276);
             this.btnAutorPopup.Name = "btnAutorPopup";
             this.btnAutorPopup.Size = new System.Drawing.Size(24, 23);
             this.btnAutorPopup.TabIndex = 41;

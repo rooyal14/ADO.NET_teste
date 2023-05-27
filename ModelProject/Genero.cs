@@ -8,13 +8,13 @@ namespace ModelProject
 {
     public class Genero
     {
-        public string idGenero;
-        public string generoDesc;
+        public string ID_Genero;
+        public string Nome;
 
         public Genero(string idGenero, string generoDesc)
         {
-            this.idGenero = idGenero;
-            this.generoDesc = generoDesc;
+            this.ID_Genero = idGenero;
+            this.Nome = generoDesc;
         }
     }
 }

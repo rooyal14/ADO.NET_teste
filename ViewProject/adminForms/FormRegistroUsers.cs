@@ -25,6 +25,7 @@ namespace ViewProject
         bool stateAdicionando = false;
 
         UserController userController = new UserController();
+        VendaController vendaController = new VendaController();
 
          private void btnNew_Click(object sender, EventArgs e)
         {
@@ -54,7 +55,7 @@ namespace ViewProject
             //Comando apenas habilita a edição do registro
             //Implementação feita na função btnInsert_Click
 
-            if (checkIfDefaultAdmin(usuario))
+            if (userController.checkIfProtectedUser(usuario))
             {
                 MessageBox.Show("Não é possível mudar o valor do administrador padrão");
             }
@@ -83,23 +84,31 @@ namespace ViewProject
                         cbxIsAdmin.Checked);
 
 
-            if (checkIfDefaultAdmin(usuario))
+            if (userController.checkIfProtectedUser(usuario))
             {
-                MessageBox.Show("Não é possível deletar o administrador padrão");
+                MessageBox.Show("Não é possível deletar um usuário protegido");
             }
+            else if (userController.userIsReferenced(usuario))
+            {
+                MessageBox.Show("Usuário cadastrado em vendas, deseja substituí-lo deletar mesmo assim?");
+                //TODO: perguntar se o usuário quer mesmo deletar
+                if (true)
+                {
+                    vendaController.substituirPorClienteDeletado(usuario);
+                    userController.deleteUserFromDB(usuario);
+                }
+            } 
             else
             {
                 userController.deleteUserFromDB(usuario);
                 MessageBox.Show("Usuário excluído com sucesso");
-                fillDgv();
             }
-            
+            fillDgv();
+
         }
         
         private void btnInsert_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show(fmCPF.Text);
-            MessageBox.Show(fmTelefone.Text);
+        {            
             User usuario = new User(fmCPF.Text,
                                     fmNome.Text,
                                     fmSenha.Text,
@@ -120,51 +129,6 @@ namespace ViewProject
 
         }
 
-        /*
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            User usuario = new User(fmCPF.Text,
-                                    fmNome.Text,
-                                    fmSenha.Text,
-                                    fmEmail.Text,
-                                    fmTelefone.Text);
-
-            if (checkIfDefaultAdmin(usuario))
-            {
-                MessageBox.Show("Não é possível deletar o administrador padrão");
-            }
-            else
-            {
-                userController.deleteUserFromDB(usuario);
-                MessageBox.Show("Usuário excluído com sucesso");
-                fillDgv();
-            }
-
-        }
-
-        private void btnInsert_Click(object sender, EventArgs e)
-        {
-            addClienteToDB();
-            fillDgv();
-        }
-        
-        private void addClienteToDB()
-        {
-            User usuario = new User(fmCPF.Text, 
-                                    fmNome.Text, 
-                                    fmSenha.Text, 
-                                    fmEmail.Text, 
-                                    fmTelefone.Text);
-
-            userController.addUserToDB(usuario);
-            fillDgv();
-            MessageBox.Show("Cliente registrado com sucesso");
-        }
-        
-
-        */
-        
-
         private void dgvClientes_SelectionChanged(object sender, EventArgs e)
         {
             stateAdicionando = false;
@@ -177,11 +141,11 @@ namespace ViewProject
 
             if (dgvClientes.CurrentRow != null)
             {
-                fmCPF.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
+                fmCPF.Text = dgvClientes.CurrentRow.Cells[2].Value.ToString();
                 fmNome.Text = dgvClientes.CurrentRow.Cells[1].Value.ToString();
-                fmSenha.Text = dgvClientes.CurrentRow.Cells[2].Value.ToString();
+                fmSenha.Text = dgvClientes.CurrentRow.Cells[4].Value.ToString();
                 fmEmail.Text = dgvClientes.CurrentRow.Cells[3].Value.ToString();
-                fmTelefone.Text = dgvClientes.CurrentRow.Cells[4].Value.ToString();
+                fmTelefone.Text = dgvClientes.CurrentRow.Cells[6].Value.ToString();
             }
             
         }
@@ -190,20 +154,11 @@ namespace ViewProject
         {
             var conn = DBCon.Conn();
             var command = conn.CreateCommand();
-            command.CommandText = "select * from tbClientes";
+            command.CommandText = "select * from Tb_Usuarios";
             var table = DBCon.queryDataTable(command);
             dgvClientes.DataSource = table;
 
             conn.Close();
-        }
-
-        private bool checkIfDefaultAdmin(User usuario)
-        {
-            if(usuario.email == "admin")
-                return true;
-            else
-                return false;
-            
         }
 
         private void changeFormularioEnabled(bool arg)
@@ -235,6 +190,14 @@ namespace ViewProject
         private void fmCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            //TESTE///////////////DELETAR DEPOIS
+            MessageBox.Show(fmCPF.Text);
+            MessageBox.Show(fmTelefone.Text);
+            MessageBox.Show(fmSenha.Text);
         }
         //IMPLEMENTAR VALIDAÇÃO DE CPF
     }

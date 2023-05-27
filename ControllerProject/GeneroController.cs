@@ -14,8 +14,8 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "insert into tbGeneros(generoDesc) values (@generoDesc)";
-            command.Parameters.AddWithValue("@generoDesc", genero.generoDesc);
+            command.CommandText = "insert into Tb_Genero(Nome) values (@Nome)";
+            command.Parameters.AddWithValue("@Nome", genero.Nome);
             command.ExecuteNonQuery();
             conn.Close();
         }
@@ -24,8 +24,8 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "delete from tbGeneros where idGenero = @idGenero";
-            command.Parameters.AddWithValue("@idGenero", genero.idGenero);
+            command.CommandText = "delete from Tb_Genero where ID_Genero = @idGenero";
+            command.Parameters.AddWithValue("@idGenero", genero.ID_Genero);
             command.ExecuteNonQuery();
             conn.Close();
         }
@@ -34,16 +34,35 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "UPDATE tbGeneros SET generoDesc=@generoDesc WHERE idGenero=@idGenero";
-            command.Parameters.AddWithValue("@idGenero", genero.idGenero);
-            command.Parameters.AddWithValue("@generoDesc", genero.generoDesc);
+            command.CommandText = "UPDATE Tb_Genero SET Nome=@Nome WHERE ID_Genero=@idGenero";
+            command.Parameters.AddWithValue("@idGenero", genero.ID_Genero);
+            command.Parameters.AddWithValue("@Nome", genero.Nome);
             command.ExecuteNonQuery();
             conn.Close();
         }
 
-        
+        public bool checkIfProtectedGenero(Genero genero)
+        {
+            if (genero.ID_Genero == "0")
+                return true;
+            else
+                return false;
 
-        
+        }
+
+        public bool generoIsReferenced(Genero genero)
+        {
+            SqlConnection conn = DBCon.Conn();
+            SqlCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT COUNT(ID_Livro) FROM Tb_Livro WHERE ID_Genero=@ID_Genero";
+            command.Parameters.AddWithValue("@ID_Genero", genero.ID_Genero);
+            var query = DBCon.queryDataTable(command);
+            conn.Close();
+            var result = Convert.ToInt32(query.Rows[0][0].ToString()) == 0 ? false : true;
+            return result;
+        }
+
+
 
     }
 }

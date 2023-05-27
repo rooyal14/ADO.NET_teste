@@ -22,6 +22,7 @@ namespace ViewProject.adminForms
         }
 
         GeneroController generoController = new GeneroController();
+        LivroController livroController = new LivroController();
 
         private void dgv_SelectionChanged(object sender, EventArgs e)
         {
@@ -44,7 +45,7 @@ namespace ViewProject.adminForms
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "select * from tbGeneros";
+            command.CommandText = "select * from Tb_Genero";
             var table = DBCon.queryDataTable(command);
             dgvGeneros.DataSource = table;
             conn.Close();
@@ -77,8 +78,26 @@ namespace ViewProject.adminForms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Genero genero = new Genero(fmIdGenero.Text, fmNome.Text);
-            
-            generoController.deleteGeneroFromDB(genero);
+
+            if (generoController.checkIfProtectedGenero(genero))
+            {
+                MessageBox.Show("Não é possível deletar o gênero padrão");
+            }
+            else if (generoController.generoIsReferenced(genero))
+            {
+                MessageBox.Show("Genero cadastrado em livros, deseja substituí-lo e deletar mesmo assim?");
+                //TODO: perguntar se o usuário quer mesmo deletar
+                if (true)
+                {
+                    livroController.substituirPorGeneroIndefinido(genero);
+                    generoController.deleteGeneroFromDB(genero);
+                }
+            }
+            else
+            {
+                generoController.deleteGeneroFromDB(genero);
+                MessageBox.Show("Gênero excluído com sucesso");
+            }
             fillDgv();
         }
 

@@ -8,18 +8,16 @@ namespace ModelProject
 {
     public class Livro
     {
-        public string nr;
+        public string ID_Livro;
         public string nome;
         public int estoque;
-        public string autor;
         public double precoUnitario;
 
-        public Livro(string nr, string nome, int estoque, string autor, double precoUnitario)
+        public Livro(string nr, string nome, int estoque, double precoUnitario)
         {
-            this.nr = nr;
+            this.ID_Livro = nr;
             this.nome = nome;
             this.estoque = estoque;
-            this.autor = autor;
             this.precoUnitario = precoUnitario;
         }
     }

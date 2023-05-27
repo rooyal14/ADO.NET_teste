@@ -35,7 +35,7 @@ namespace ViewProject
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.fmAutor = new System.Windows.Forms.TextBox();
+            this.fmGenero = new System.Windows.Forms.TextBox();
             this.fmEstoque = new System.Windows.Forms.TextBox();
             this.fmNome = new System.Windows.Forms.TextBox();
             this.fmNr = new System.Windows.Forms.TextBox();
@@ -50,6 +50,8 @@ namespace ViewProject
             this.btnRemoveFromCart = new System.Windows.Forms.Button();
             this.carrinhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnConfirmarCompra = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.fmAutores = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCarrinho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQtd)).BeginInit();
@@ -60,6 +62,7 @@ namespace ViewProject
             // 
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AllowUserToOrderColumns = true;
             this.dgv.AllowUserToResizeColumns = false;
             this.dgv.AllowUserToResizeRows = false;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -69,14 +72,14 @@ namespace ViewProject
             this.dgv.Name = "dgv";
             this.dgv.ReadOnly = true;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(533, 290);
+            this.dgv.Size = new System.Drawing.Size(691, 290);
             this.dgv.TabIndex = 22;
             this.dgv.SelectionChanged += new System.EventHandler(this.dgv_SelectionChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(573, 156);
+            this.label4.Location = new System.Drawing.Point(173, 464);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 13);
             this.label4.TabIndex = 20;
@@ -85,16 +88,16 @@ namespace ViewProject
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(573, 192);
+            this.label3.Location = new System.Drawing.Point(173, 496);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(45, 13);
             this.label3.TabIndex = 21;
-            this.label3.Text = "Autor:";
+            this.label3.Text = "Genero:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(573, 118);
+            this.label2.Location = new System.Drawing.Point(173, 392);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 19;
@@ -103,24 +106,24 @@ namespace ViewProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(573, 80);
+            this.label1.Location = new System.Drawing.Point(173, 354);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 18;
             this.label1.Text = "Número:";
             // 
-            // fmAutor
+            // fmGenero
             // 
-            this.fmAutor.Enabled = false;
-            this.fmAutor.Location = new System.Drawing.Point(614, 189);
-            this.fmAutor.Name = "fmAutor";
-            this.fmAutor.Size = new System.Drawing.Size(212, 20);
-            this.fmAutor.TabIndex = 17;
+            this.fmGenero.Enabled = false;
+            this.fmGenero.Location = new System.Drawing.Point(224, 493);
+            this.fmGenero.Name = "fmGenero";
+            this.fmGenero.Size = new System.Drawing.Size(202, 20);
+            this.fmGenero.TabIndex = 17;
             // 
             // fmEstoque
             // 
             this.fmEstoque.Enabled = false;
-            this.fmEstoque.Location = new System.Drawing.Point(644, 153);
+            this.fmEstoque.Location = new System.Drawing.Point(244, 461);
             this.fmEstoque.Name = "fmEstoque";
             this.fmEstoque.Size = new System.Drawing.Size(182, 20);
             this.fmEstoque.TabIndex = 16;
@@ -128,7 +131,7 @@ namespace ViewProject
             // fmNome
             // 
             this.fmNome.Enabled = false;
-            this.fmNome.Location = new System.Drawing.Point(617, 115);
+            this.fmNome.Location = new System.Drawing.Point(217, 389);
             this.fmNome.Name = "fmNome";
             this.fmNome.Size = new System.Drawing.Size(209, 20);
             this.fmNome.TabIndex = 15;
@@ -136,7 +139,7 @@ namespace ViewProject
             // fmNr
             // 
             this.fmNr.Enabled = false;
-            this.fmNr.Location = new System.Drawing.Point(626, 77);
+            this.fmNr.Location = new System.Drawing.Point(226, 351);
             this.fmNr.Name = "fmNr";
             this.fmNr.Size = new System.Drawing.Size(200, 20);
             this.fmNr.TabIndex = 14;
@@ -158,7 +161,7 @@ namespace ViewProject
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(573, 261);
+            this.label5.Location = new System.Drawing.Point(173, 576);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(176, 13);
             this.label5.TabIndex = 28;
@@ -167,14 +170,14 @@ namespace ViewProject
             // numQtd
             // 
             this.numQtd.Enabled = false;
-            this.numQtd.Location = new System.Drawing.Point(755, 259);
+            this.numQtd.Location = new System.Drawing.Point(355, 574);
             this.numQtd.Name = "numQtd";
             this.numQtd.Size = new System.Drawing.Size(71, 20);
             this.numQtd.TabIndex = 29;
             // 
             // btnAddToCarrinho
             // 
-            this.btnAddToCarrinho.Location = new System.Drawing.Point(705, 293);
+            this.btnAddToCarrinho.Location = new System.Drawing.Point(305, 608);
             this.btnAddToCarrinho.Name = "btnAddToCarrinho";
             this.btnAddToCarrinho.Size = new System.Drawing.Size(121, 36);
             this.btnAddToCarrinho.TabIndex = 30;
@@ -185,7 +188,7 @@ namespace ViewProject
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(573, 226);
+            this.label6.Location = new System.Drawing.Point(173, 427);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 32;
@@ -194,7 +197,7 @@ namespace ViewProject
             // fmPrecoUnitario
             // 
             this.fmPrecoUnitario.Enabled = false;
-            this.fmPrecoUnitario.Location = new System.Drawing.Point(652, 223);
+            this.fmPrecoUnitario.Location = new System.Drawing.Point(252, 424);
             this.fmPrecoUnitario.Name = "fmPrecoUnitario";
             this.fmPrecoUnitario.Size = new System.Drawing.Size(174, 20);
             this.fmPrecoUnitario.TabIndex = 31;
@@ -222,7 +225,7 @@ namespace ViewProject
             // btnRemoveFromCart
             // 
             this.btnRemoveFromCart.Enabled = false;
-            this.btnRemoveFromCart.Location = new System.Drawing.Point(576, 293);
+            this.btnRemoveFromCart.Location = new System.Drawing.Point(176, 608);
             this.btnRemoveFromCart.Name = "btnRemoveFromCart";
             this.btnRemoveFromCart.Size = new System.Drawing.Size(123, 36);
             this.btnRemoveFromCart.TabIndex = 35;
@@ -244,11 +247,30 @@ namespace ViewProject
             this.btnConfirmarCompra.UseVisualStyleBackColor = true;
             this.btnConfirmarCompra.Click += new System.EventHandler(this.btnConfirmarCompra_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(173, 535);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 13);
+            this.label8.TabIndex = 38;
+            this.label8.Text = "Autores:";
+            // 
+            // fmAutores
+            // 
+            this.fmAutores.Enabled = false;
+            this.fmAutores.Location = new System.Drawing.Point(226, 532);
+            this.fmAutores.Name = "fmAutores";
+            this.fmAutores.Size = new System.Drawing.Size(200, 20);
+            this.fmAutores.TabIndex = 37;
+            // 
             // FormLojaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 599);
+            this.ClientSize = new System.Drawing.Size(1370, 665);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.fmAutores);
             this.Controls.Add(this.btnConfirmarCompra);
             this.Controls.Add(this.btnRemoveFromCart);
             this.Controls.Add(this.lblTotal);
@@ -264,7 +286,7 @@ namespace ViewProject
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.fmAutor);
+            this.Controls.Add(this.fmGenero);
             this.Controls.Add(this.fmEstoque);
             this.Controls.Add(this.fmNome);
             this.Controls.Add(this.fmNr);
@@ -285,7 +307,7 @@ namespace ViewProject
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox fmAutor;
+        private System.Windows.Forms.TextBox fmGenero;
         private System.Windows.Forms.TextBox fmEstoque;
         private System.Windows.Forms.TextBox fmNome;
         private System.Windows.Forms.TextBox fmNr;
@@ -300,5 +322,7 @@ namespace ViewProject
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnRemoveFromCart;
         private System.Windows.Forms.Button btnConfirmarCompra;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox fmAutores;
     }
 }
