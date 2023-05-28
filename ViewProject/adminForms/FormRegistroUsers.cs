@@ -112,9 +112,7 @@ namespace ViewProject
         
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if ((fmCPF.Text != null) || (fmNome.Text != null) || (fmSenha.Text != null) || (fmEmail.Text != null)
-                || (fmTelefone.Text != null))
-            {
+           
                 string senhaHash = Criptografia.GerarHash(fmSenha.Text);
                 User usuario = new User(fmCPF.Text,
                                         fmNome.Text,
@@ -134,9 +132,7 @@ namespace ViewProject
                 {
                     userController.updateUserFromDB(usuario);
                 }
-            }
-            else MessageBox.Show("Por favor, preencha todos os campos.");
-
+           
             fillDgv();
 
         }
