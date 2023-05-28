@@ -53,6 +53,7 @@ namespace ViewProject
             fmCPF.Text = "";
             fmNome.Text = "";
             fmSenha.Text = "";
+            fmConfirmaSenha.Text = "";
             fmEmail.Text = "";
             fmTelefone.Text = "";
             ActiveControl = fmCPF;
@@ -65,13 +66,14 @@ namespace ViewProject
         {
             bool validaCPF = TesteCpf.IsCpf(fmCPF.Text);
 
-            if (validaCPF == false)
+            if ((fmCPF.Text != "") && (!validaCPF))
             {
                 MessageBox.Show("O CPF digitado está incorreto.\nPor favor, " +
                 "verifique os dados inseridos.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                fmCPF.Text = "";
                 ActiveControl = fmCPF;
             }
+            
         }
 
         private void fmCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -118,7 +120,7 @@ namespace ViewProject
         private void fmNome_Leave(object sender, EventArgs e)
         {
             int contaCaracteres = fmNome.Text.Length;
-            if ((contaCaracteres <= 3) || (contaCaracteres > 100))
+            if ((contaCaracteres < 3) || (contaCaracteres > 100))
             {
                 MessageBox.Show("O Nome deve ter o tamanho mínimo de 3 caracteres " +
                     "e máximo de 100 caracteres.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -129,7 +131,7 @@ namespace ViewProject
         private void fmEmail_Leave(object sender, EventArgs e)
         {
             int contaCaracteres = fmEmail.Text.Length;
-            if ((contaCaracteres <= 3) || (contaCaracteres > 100))
+            if ((contaCaracteres < 3) || (contaCaracteres > 100))
             {
                 MessageBox.Show("O e-mail deve ter o tamanho mínimo de 3 caracteres " +
                     "e máximo de 100 caracteres.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -148,6 +150,21 @@ namespace ViewProject
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fmSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fmConfirmaSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fmNome_TextChanged(object sender, EventArgs e)
         {
 
         }

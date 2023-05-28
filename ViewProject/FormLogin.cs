@@ -78,5 +78,32 @@ namespace ViewProject
 
         }
 
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fmCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void fmEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRecuperarSenha_Click(object sender, EventArgs e)
+        {
+                this.Hide();
+                var FormRecuperarSenha = new FormRecuperarSenha();
+                FormRecuperarSenha.Show();
+          
+        }
     }
 }

@@ -64,6 +64,17 @@ namespace ControllerProject
             conn.Close();
         }
 
+        public void updatePasswordFromDB(User user)
+        {
+            string senhaHash = Criptografia.GerarHash(user.senha);
+            SqlConnection conn = DBCon.Conn();
+            SqlCommand command = conn.CreateCommand();
+            command.CommandText = "UPDATE Tb_Usuarios SET senha=@senha WHERE cpf=@cpf";
+            command.Parameters.AddWithValue("@cpf", user.cpf);
+            command.Parameters.AddWithValue("@senha", senhaHash);        
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
 
         public bool loginUser(string email, string password, out string currentUserCpf, out bool currentUsertrueAdmin)
         {
@@ -91,7 +102,7 @@ namespace ControllerProject
 
         public bool checkIfProtectedUser(User usuario)
         {
-            if (usuario.email == "admin" || usuario.email == "cliente deletado")
+            if (usuario.email == "admin" || usuario.email == "cliente deletado" || usuario.cpf == "99999999999")
                 return true;
             else
                 return false;

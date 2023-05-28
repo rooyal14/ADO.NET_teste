@@ -42,42 +42,59 @@ namespace ViewProject
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnRecuperarSenha = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // fmEmail
             // 
-            this.fmEmail.Location = new System.Drawing.Point(55, 31);
+            this.fmEmail.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.fmEmail.Location = new System.Drawing.Point(472, 5);
+            this.fmEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fmEmail.Name = "fmEmail";
-            this.fmEmail.Size = new System.Drawing.Size(330, 20);
+            this.fmEmail.Size = new System.Drawing.Size(740, 65);
             this.fmEmail.TabIndex = 9;
             this.fmEmail.Text = "admin";
             this.toolTip1.SetToolTip(this.fmEmail, "Informe o e-mail cadastrado para acessar o sistema.");
+            this.fmEmail.TextChanged += new System.EventHandler(this.fmEmail_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 33);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.label3.Location = new System.Drawing.Point(4, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(173, 58);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Email:";
+            this.label3.Text = "E-mail:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 57);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.label1.Location = new System.Drawing.Point(4, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.Size = new System.Drawing.Size(173, 58);
             this.label1.TabIndex = 10;
             this.label1.Text = "Senha:";
             // 
             // fmSenha
             // 
-            this.fmSenha.Location = new System.Drawing.Point(55, 55);
+            this.fmSenha.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.fmSenha.Location = new System.Drawing.Point(472, 96);
+            this.fmSenha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fmSenha.Name = "fmSenha";
             this.fmSenha.PasswordChar = '*';
-            this.fmSenha.Size = new System.Drawing.Size(331, 20);
+            this.fmSenha.Size = new System.Drawing.Size(741, 65);
             this.fmSenha.TabIndex = 11;
             this.fmSenha.Text = "123";
             this.toolTip2.SetToolTip(this.fmSenha, "Informe a senha cadastrada, caso precise de ajuda, contate o administrador do sis" +
@@ -86,9 +103,11 @@ namespace ViewProject
             // 
             // btnCadastro
             // 
-            this.btnCadastro.Location = new System.Drawing.Point(17, 78);
+            this.btnCadastro.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
+            this.btnCadastro.Location = new System.Drawing.Point(4, 5);
+            this.btnCadastro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(75, 23);
+            this.btnCadastro.Size = new System.Drawing.Size(473, 109);
             this.btnCadastro.TabIndex = 13;
             this.btnCadastro.Text = "Cadastre-se";
             this.btnCadastro.UseVisualStyleBackColor = true;
@@ -96,9 +115,11 @@ namespace ViewProject
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(300, 78);
+            this.btnEntrar.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
+            this.btnEntrar.Location = new System.Drawing.Point(966, 5);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(85, 23);
+            this.btnEntrar.Size = new System.Drawing.Size(473, 109);
             this.btnEntrar.TabIndex = 16;
             this.btnEntrar.Text = "Login";
             this.btnEntrar.UseVisualStyleBackColor = true;
@@ -106,23 +127,25 @@ namespace ViewProject
             // 
             // btnEntrarAnonimo
             // 
-            this.btnEntrarAnonimo.Location = new System.Drawing.Point(172, 78);
+            this.btnEntrarAnonimo.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
+            this.btnEntrarAnonimo.Location = new System.Drawing.Point(485, 5);
+            this.btnEntrarAnonimo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEntrarAnonimo.Name = "btnEntrarAnonimo";
-            this.btnEntrarAnonimo.Size = new System.Drawing.Size(122, 23);
+            this.btnEntrarAnonimo.Size = new System.Drawing.Size(473, 109);
             this.btnEntrarAnonimo.TabIndex = 15;
-            this.btnEntrarAnonimo.Text = "Entrar como Anônimo";
+            this.btnEntrarAnonimo.Text = "Anônimo";
             this.btnEntrarAnonimo.UseVisualStyleBackColor = true;
             this.btnEntrarAnonimo.Click += new System.EventHandler(this.btnEntrarAnonimo_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.iniciarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(402, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1586, 33);
             this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -131,13 +154,13 @@ namespace ViewProject
             this.iniciarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sobreToolStripMenuItem});
             this.iniciarToolStripMenuItem.Name = "iniciarToolStripMenuItem";
-            this.iniciarToolStripMenuItem.Size = new System.Drawing.Size(51, 22);
-            this.iniciarToolStripMenuItem.Text = "Iniciar";
+            this.iniciarToolStripMenuItem.Size = new System.Drawing.Size(75, 29);
+            this.iniciarToolStripMenuItem.Text = "Sobre";
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(161, 34);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
@@ -153,27 +176,101 @@ namespace ViewProject
             this.toolTip2.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip2.ToolTipTitle = "Atenção!";
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.481F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.519F));
+            this.tableLayoutPanel1.Controls.Add(this.fmSenha, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.fmEmail, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(72, 181);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1443, 182);
+            this.tableLayoutPanel1.TabIndex = 17;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel2.Controls.Add(this.btnCadastro, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnEntrarAnonimo, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnEntrar, 2, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(72, 427);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1443, 119);
+            this.tableLayoutPanel2.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(60, 63);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(902, 68);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Livraria Visual - Faça seu Login";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.btnRecuperarSenha, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(76, 576);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1443, 123);
+            this.tableLayoutPanel3.TabIndex = 20;
+            // 
+            // btnRecuperarSenha
+            // 
+            this.btnRecuperarSenha.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
+            this.btnRecuperarSenha.Location = new System.Drawing.Point(4, 5);
+            this.btnRecuperarSenha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRecuperarSenha.Name = "btnRecuperarSenha";
+            this.btnRecuperarSenha.Size = new System.Drawing.Size(1435, 109);
+            this.btnRecuperarSenha.TabIndex = 13;
+            this.btnRecuperarSenha.Text = "Recuperar Senha";
+            this.btnRecuperarSenha.UseVisualStyleBackColor = true;
+            this.btnRecuperarSenha.Click += new System.EventHandler(this.btnRecuperarSenha_Click);
+            // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(402, 120);
-            this.Controls.Add(this.btnEntrarAnonimo);
-            this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(this.btnCadastro);
-            this.Controls.Add(this.fmSenha);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.fmEmail);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1586, 764);
+            this.Controls.Add(this.tableLayoutPanel3);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Livraria ADO.NET - Login";
+            this.Text = "Livraria Visual - Login";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +290,10 @@ namespace ViewProject
         private System.Windows.Forms.ToolStripMenuItem sobreToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button btnRecuperarSenha;
     }
 }

@@ -31,29 +31,31 @@ namespace ViewProject
         {
             stateAdicionando = true;
             btnChange.Enabled = false;
+            btnNew.Enabled = false;
             btnDelete.Enabled = false;
             btnInsert.Enabled = true;
             fmCPF.Text = "";
             fmNome.Text = "";
             fmSenha.Text = "";
+            fmConfirmaSenha.Text = "";
             fmEmail.Text = "";
             fmTelefone.Text = "";
             cbxIsAdmin.Checked = false;
             changeFormularioEnabled(true);
-
+            ActiveControl = fmCPF;
         }
 
         private void btnChange_Click(object sender, EventArgs e)
         {
             //fmSenha.Text = " ";
             string senhaHash = Criptografia.GerarHash(fmSenha.Text);
+            string senhaHash1 = Criptografia.GerarHash(fmConfirmaSenha.Text);
             User usuario = new User(fmCPF.Text,
                         fmNome.Text,
                         senhaHash,
                         fmEmail.Text,
                         fmTelefone.Text,
                         cbxIsAdmin.Checked);
-
             //Comando apenas habilita a edição do registro
             //Implementação feita na função btnInsert_Click
 
@@ -67,14 +69,11 @@ namespace ViewProject
                 btnChange.Enabled = false;
                 btnDelete.Enabled = false;
                 btnInsert.Enabled = true;
+                btnVoltar.Enabled = true;
                 changeFormularioEnabled(true);
                 fmCPF.Enabled = false;
             }
-            
-            
-            
         }
-
         
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -85,7 +84,6 @@ namespace ViewProject
                         fmEmail.Text,
                         fmTelefone.Text,
                         cbxIsAdmin.Checked);
-
 
             if (userController.checkIfProtectedUser(usuario))
             {
@@ -112,16 +110,26 @@ namespace ViewProject
         
         private void btnInsert_Click(object sender, EventArgs e)
         {
-           
+
+            if (fmCPF.Text == "")
+            {
+                MessageBox.Show("Preencha os dados solicitados ou clique em Voltar",
+                    "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                fmCPF.Text = "";
+                
+            }
+            
+            
+            else
+            {
                 string senhaHash = Criptografia.GerarHash(fmSenha.Text);
+                string senhaHash1 = Criptografia.GerarHash(fmConfirmaSenha.Text);
                 User usuario = new User(fmCPF.Text,
-                                        fmNome.Text,
-                                        senhaHash,
-                                        fmEmail.Text,
-                                        fmTelefone.Text,
-                                        cbxIsAdmin.Checked);
-
-
+                                            fmNome.Text,
+                                            senhaHash,
+                                            fmEmail.Text,
+                                            fmTelefone.Text,
+                                            cbxIsAdmin.Checked);
 
                 if (stateAdicionando)
                 {
@@ -132,9 +140,8 @@ namespace ViewProject
                 {
                     userController.updateUserFromDB(usuario);
                 }
-           
+            }
             fillDgv();
-
         }
 
         private void dgvClientes_SelectionChanged(object sender, EventArgs e)
@@ -152,6 +159,7 @@ namespace ViewProject
                 fmCPF.Text = dgvClientes.CurrentRow.Cells[2].Value.ToString();
                 fmNome.Text = dgvClientes.CurrentRow.Cells[1].Value.ToString();
                 fmSenha.Text = dgvClientes.CurrentRow.Cells[4].Value.ToString();
+                fmConfirmaSenha.Text = dgvClientes.CurrentRow.Cells[4].Value.ToString();
                 fmEmail.Text = dgvClientes.CurrentRow.Cells[3].Value.ToString();
                 fmTelefone.Text = dgvClientes.CurrentRow.Cells[6].Value.ToString();
             }
@@ -174,10 +182,10 @@ namespace ViewProject
             fmCPF.Enabled = arg;
             fmNome.Enabled = arg;
             fmSenha.Enabled = arg;
+            fmConfirmaSenha.Enabled = arg;
             fmEmail.Enabled = arg;
             fmTelefone.Enabled = arg;
             cbxIsAdmin.Enabled = arg;
-
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -206,6 +214,118 @@ namespace ViewProject
             MessageBox.Show(fmCPF.Text);
             MessageBox.Show(fmTelefone.Text);
             MessageBox.Show(fmSenha.Text);
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fmConfirmaSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fmSenha_Leave(object sender, EventArgs e)
+        {
+            int contaCaracteres = fmSenha.Text.Length;
+            if ((contaCaracteres <= 7) || (contaCaracteres > 10))
+            {
+                MessageBox.Show("A senha deve ter o tamanho mínimo de 8 caracteres " +
+                    "e máximo de 10 caracteres.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fmSenha.Text = "";
+                fmConfirmaSenha.Text = "";
+                ActiveControl = fmSenha;
+            }
+        }
+
+        private void fmConfirmaSenha_Leave(object sender, EventArgs e)
+        {
+            if (fmSenha.Text != fmConfirmaSenha.Text)
+            {
+                MessageBox.Show("As senhas digitadas são diferentes. " +
+                    "\nPor favor, refaça o processo.", "Atenção!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fmSenha.Text = "";
+                fmConfirmaSenha.Text = "";
+                ActiveControl = fmSenha;
+            }
+        }
+
+        private void fmCPF_Leave(object sender, EventArgs e)
+        {
+            bool validaCPF = TesteCpf.IsCpf(fmCPF.Text);
+            User usuario = new User(fmCPF.Text, null, null, null, null, true);
+            bool cpfCadastrado = userController.userIsDuplicated(usuario);
+
+            if (fmCPF.Text == "") 
+               {
+                    MessageBox.Show("Preencha os dados solicitados ou clique em Voltar",
+                        "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+ 
+                    fmCPF.Text = "";
+                    
+                }
+
+            else if ((fmCPF.Text != "") && (!validaCPF))
+            {
+                MessageBox.Show("O CPF digitado está incorreto.\nPor favor, " +
+                "verifique os dados inseridos.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fmCPF.Text = "";
+                
+            }
+
+            else if (cpfCadastrado)
+            {
+                MessageBox.Show("O Usuário já está Cadastrado.\n\nSelecione o usuário para alterar.",
+                    "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                
+            }
+
+            else if (userController.checkIfProtectedUser(usuario))
+            {
+                MessageBox.Show("Não é possível mudar o valor do administrador padrão", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                
+            }
+        }
+
+        private void fmNome_Leave(object sender, EventArgs e)
+        {
+            int contaCaracteres = fmNome.Text.Length;
+            if ((contaCaracteres < 3) || (contaCaracteres > 100))
+            {
+                MessageBox.Show("O Nome deve ter o tamanho mínimo de 3 caracteres " +
+                    "e máximo de 100 caracteres.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ActiveControl = fmNome;
+            }
+        }
+
+        private void fmEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fmEmail_Leave(object sender, EventArgs e)
+        {
+            int contaCaracteres = fmEmail.Text.Length;
+            if ((contaCaracteres < 3) || (contaCaracteres > 100))
+            {
+                MessageBox.Show("O e-mail deve ter o tamanho mínimo de 3 caracteres " +
+                    "e máximo de 100 caracteres.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ActiveControl = fmEmail;
+            }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new adminForms.FormMenuAdmin().ShowDialog(); 
+            this.Show();
         }
         //IMPLEMENTAR VALIDAÇÃO DE CPF
     }

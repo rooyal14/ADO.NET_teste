@@ -40,14 +40,14 @@ namespace ViewProject
             this.btnVoltar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.fmConfirmaSenha = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.fmSenha = new System.Windows.Forms.TextBox();
             this.fmCPF = new System.Windows.Forms.MaskedTextBox();
             this.fmTelefone = new System.Windows.Forms.MaskedTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.fmConfirmaSenha = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -109,6 +109,7 @@ namespace ViewProject
             this.fmNome.Name = "fmNome";
             this.fmNome.Size = new System.Drawing.Size(969, 65);
             this.fmNome.TabIndex = 3;
+            this.fmNome.TextChanged += new System.EventHandler(this.fmNome_TextChanged);
             this.fmNome.Leave += new System.EventHandler(this.fmNome_Leave);
             // 
             // fmEmail
@@ -187,6 +188,32 @@ namespace ViewProject
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1447, 550);
             this.tableLayoutPanel1.TabIndex = 13;
             // 
+            // fmConfirmaSenha
+            // 
+            this.fmConfirmaSenha.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fmConfirmaSenha.Location = new System.Drawing.Point(474, 460);
+            this.fmConfirmaSenha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fmConfirmaSenha.MaxLength = 10;
+            this.fmConfirmaSenha.Name = "fmConfirmaSenha";
+            this.fmConfirmaSenha.PasswordChar = '*';
+            this.fmConfirmaSenha.Size = new System.Drawing.Size(368, 65);
+            this.fmConfirmaSenha.TabIndex = 12;
+            this.fmConfirmaSenha.UseSystemPasswordChar = true;
+            this.fmConfirmaSenha.TextChanged += new System.EventHandler(this.fmConfirmaSenha_TextChanged);
+            this.fmConfirmaSenha.Leave += new System.EventHandler(this.fmConfirmaSenha_Leave);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.label7.Location = new System.Drawing.Point(4, 455);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(418, 58);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Confirme a Senha:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
+            // 
             // fmSenha
             // 
             this.fmSenha.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -198,6 +225,7 @@ namespace ViewProject
             this.fmSenha.Size = new System.Drawing.Size(368, 65);
             this.fmSenha.TabIndex = 10;
             this.fmSenha.UseSystemPasswordChar = true;
+            this.fmSenha.TextChanged += new System.EventHandler(this.fmSenha_TextChanged);
             this.fmSenha.Leave += new System.EventHandler(this.fmSenha_Leave);
             // 
             // fmCPF
@@ -263,38 +291,13 @@ namespace ViewProject
             this.label6.Text = "Livraria Visual - Cadastro de Usuários";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 24F);
-            this.label7.Location = new System.Drawing.Point(4, 455);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(418, 58);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Confirme a Senha:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // fmConfirmaSenha
-            // 
-            this.fmConfirmaSenha.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmConfirmaSenha.Location = new System.Drawing.Point(474, 460);
-            this.fmConfirmaSenha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.fmConfirmaSenha.MaxLength = 10;
-            this.fmConfirmaSenha.Name = "fmConfirmaSenha";
-            this.fmConfirmaSenha.PasswordChar = '*';
-            this.fmConfirmaSenha.Size = new System.Drawing.Size(368, 65);
-            this.fmConfirmaSenha.TabIndex = 12;
-            this.fmConfirmaSenha.UseSystemPasswordChar = true;
-            this.fmConfirmaSenha.Leave += new System.EventHandler(this.fmConfirmaSenha_Leave);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(945, 546);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(831, 36);
+            this.label9.Size = new System.Drawing.Size(554, 24);
             this.label9.TabIndex = 17;
             this.label9.Text = "A senha deve conter no mínimo 8 e no máximo 10 carateres.";
             // 
@@ -303,7 +306,7 @@ namespace ViewProject
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1986, 1084);
+            this.ClientSize = new System.Drawing.Size(1585, 996);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel2);
