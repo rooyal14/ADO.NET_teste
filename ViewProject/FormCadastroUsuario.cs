@@ -24,6 +24,13 @@ namespace ViewProject
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             string senhaHash = Criptografia.GerarHash(fmSenha.Text);
+
+            bool validaCPF = TesteCpf.IsCpf(fmCPF.Text);
+
+            if (validaCPF == true) MessageBox.Show("CPF Valido");
+            else MessageBox.Show("CPF INvalido");
+
+
             User usuario = new User(fmCPF.Text,
                                     fmNome.Text,
                                     senhaHash,
