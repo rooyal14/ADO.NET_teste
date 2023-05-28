@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutorController.cs" />
+    <Compile Include="Criptografia.cs" />
     <Compile Include="GeneroController.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="UserController.cs" />
     <Compile Include="LivroController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,6 +55,25 @@
       <Project>{2779D289-C343-41E0-91F3-7DE55ED2BE05}</Project>
       <Name>ModelProject</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\ControllerProject.dll" />
+    <Content Include="bin\Debug\ControllerProject.pdb" />
+    <Content Include="bin\Debug\ModelProject.dll" />
+    <Content Include="bin\Debug\ModelProject.pdb" />
+    <Content Include="obj\Debug\ControllerProject.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ControllerProject.dll" />
+    <Content Include="obj\Debug\ControllerProject.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\ControllerProject.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\ControllerProject.csproj.CopyComplete" />
+    <None Include="obj\Debug\ControllerProject.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
