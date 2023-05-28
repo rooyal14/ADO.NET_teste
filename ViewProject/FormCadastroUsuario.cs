@@ -1,4 +1,5 @@
 ﻿using ControllerProject;
+using CpfLibrary;
 using ModelProject;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ namespace ViewProject
         public FormCadastroUsuario()
         {
             InitializeComponent();
+            ActiveControl = fmCPF;
         }
 
         UserController userController = new UserController();
@@ -25,10 +27,14 @@ namespace ViewProject
         {
             string senhaHash = Criptografia.GerarHash(fmSenha.Text);
 
+<<<<<<< HEAD
             bool validaCPF = TesteCpf.IsCpf(fmCPF.Text);
 
             if (validaCPF == true) MessageBox.Show("CPF Valido");
             else MessageBox.Show("CPF INvalido");
+=======
+            
+>>>>>>> ValidaçãoCPF - Implementada. Formulário Cadastro de Usuários Finalizado.
 
 
             User usuario = new User(fmCPF.Text,
@@ -40,7 +46,7 @@ namespace ViewProject
             if (userController.addUserToDB(usuario))
             {
                 MessageBox.Show("Usuário cadastrado com sucesso."
-                    + "\nSenha Criptofada: ",(senhaHash));
+                    + "\nSenha Criptografada: ",(senhaHash));
                 this.Close();
             } else
             {
@@ -51,6 +57,110 @@ namespace ViewProject
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            fmCPF.Text = "";
+            fmNome.Text = "";
+            fmSenha.Text = "";
+            fmEmail.Text = "";
+            fmTelefone.Text = "";
+            ActiveControl = fmCPF;
+        }
+        private void fmCPF_TabIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void fmCPF_Leave(object sender, EventArgs e)
+        {
+            bool validaCPF = TesteCpf.IsCpf(fmCPF.Text);
+
+            if (validaCPF == false)
+            {
+                MessageBox.Show("O CPF digitado está incorreto.\nPor favor, " +
+                "verifique os dados inseridos.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                ActiveControl = fmCPF;
+            }
+        }
+
+        private void fmCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fmSenha_Leave(object sender, EventArgs e)
+        {
+            int contaCaracteres = fmSenha.Text.Length;
+            if ((contaCaracteres <= 7) || (contaCaracteres > 10))
+            {
+                MessageBox.Show("A senha deve ter o tamanho mínimo de 8 caracteres " +
+                    "e máximo de 10 caracteres.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fmSenha.Text = "";
+                fmConfirmaSenha.Text = "";
+                ActiveControl = fmSenha;
+            }
+        }
+
+        private void fmConfirmaSenha_Leave(object sender, EventArgs e)
+        {
+            if (fmSenha.Text != fmConfirmaSenha.Text)
+            {
+                MessageBox.Show("As senhas digitadas são diferentes. " +
+                    "\nPor favor, refaça o processo.", "Atenção!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fmSenha.Text = "";
+                fmConfirmaSenha.Text = "";
+                ActiveControl = fmSenha;
+            }
+        }
+
+        private void fmNome_Leave(object sender, EventArgs e)
+        {
+            int contaCaracteres = fmNome.Text.Length;
+            if ((contaCaracteres <= 3) || (contaCaracteres > 100))
+            {
+                MessageBox.Show("O Nome deve ter o tamanho mínimo de 3 caracteres " +
+                    "e máximo de 100 caracteres.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ActiveControl = fmNome;
+            }
+        }
+
+        private void fmEmail_Leave(object sender, EventArgs e)
+        {
+            int contaCaracteres = fmEmail.Text.Length;
+            if ((contaCaracteres <= 3) || (contaCaracteres > 100))
+            {
+                MessageBox.Show("O e-mail deve ter o tamanho mínimo de 3 caracteres " +
+                    "e máximo de 100 caracteres.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ActiveControl = fmEmail;
+            }
+        }
+
+        private void fmTelefone_Leave(object sender, EventArgs e)
+        {
+            int contaCaracteres = fmTelefone.Text.Length;
+            if (contaCaracteres <10)
+            {
+                MessageBox.Show("O Telefone deve ter o tamanho mínimo de 10 caracteres.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ActiveControl = fmEmail;
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -544,7 +544,7 @@
     <value>111, 32</value>
   </data>
   <data name="fmCPF.Mask" xml:space="preserve">
-    <value>000.000.000-00</value>
+    <value>000,000,000-00</value>
   </data>
   <data name="fmCPF.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 26</value>

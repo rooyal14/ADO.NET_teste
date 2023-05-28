@@ -14,7 +14,7 @@ namespace ControllerProject
 
         public bool addUserToDB(User user)
         {
-            if (!userIsDuplicated(user))
+            if (!userIsDuplicated(user) && !emailIsDuplicated(user))
             {
                 string senhaHash = Criptografia.GerarHash(user.senha);
                 
@@ -98,7 +98,7 @@ namespace ControllerProject
 
         }
 
-        public bool userIsDuplicated(User user)
+        public bool userIsDuplicated (User user)
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
@@ -106,10 +106,24 @@ namespace ControllerProject
             command.Parameters.AddWithValue("@cpf", user.cpf);
             DataTable query = DBCon.queryDataTable(command);
             conn.Close();
+             
+            var result = Convert.ToInt32(query.Rows[0][0].ToString()) == 0 ? false : true;
+            return result;
+
+        }
+
+        public bool emailIsDuplicated(User user)
+        {
+            SqlConnection conn = DBCon.Conn();
+            SqlCommand command = conn.CreateCommand();
+            command.CommandText = "select count (Email) from Tb_Usuarios where Email = @Email";
+            command.Parameters.AddWithValue("@Email", user.email);
+            DataTable query = DBCon.queryDataTable(command);
+            conn.Close();
 
             var result = Convert.ToInt32(query.Rows[0][0].ToString()) == 0 ? false : true;
             return result;
-            
+
         }
 
         public bool userIsReferenced(User user)
