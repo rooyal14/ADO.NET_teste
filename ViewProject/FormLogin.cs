@@ -34,7 +34,8 @@ namespace ViewProject
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            bool validado = clienteController.loginUser(fmEmail.Text, fmSenha.Text, out currentUserEmail, out currentUserIsAdmin);
+            string senhaHash = Criptografia.GerarHash(fmSenha.Text);
+            bool validado = clienteController.loginUser(fmEmail.Text, senhaHash, out currentUserEmail, out currentUserIsAdmin);
 
             if (validado && currentUserIsAdmin)
             {

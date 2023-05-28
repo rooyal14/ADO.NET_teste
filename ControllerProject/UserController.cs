@@ -16,13 +16,15 @@ namespace ControllerProject
         {
             if (!userIsDuplicated(user))
             {
+                string senhaHash = Criptografia.GerarHash(user.senha);
+                
                 SqlConnection conn = DBCon.Conn();
                 SqlCommand command = conn.CreateCommand();
                 command.CommandText = "insert into Tb_Usuarios(cpf, nome, senha, email, telefone, trueAdmin) values " +
                     "(@cpf, @nome, @senha, @email, @telefone, @trueAdmin)";
                 command.Parameters.AddWithValue("@cpf", user.cpf);
                 command.Parameters.AddWithValue("@nome", user.nome);
-                command.Parameters.AddWithValue("@senha", user.senha);
+                command.Parameters.AddWithValue("@senha", senhaHash);
                 command.Parameters.AddWithValue("@email", user.email);
                 command.Parameters.AddWithValue("@telefone", user.telefone);
                 command.Parameters.AddWithValue("@trueAdmin", user.trueAdmin == true ? 1 : 0);
@@ -48,13 +50,14 @@ namespace ControllerProject
 
         public void updateUserFromDB(User user)
         {
+            string senhaHash = Criptografia.GerarHash(user.senha);
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
             command.CommandText = "UPDATE Tb_Usuarios SET nome=@nome, senha=@senha, " +
                                 "email=@email, telefone=@telefone WHERE cpf=@cpf";
             command.Parameters.AddWithValue("@cpf", user.cpf);
             command.Parameters.AddWithValue("@nome", user.nome);
-            command.Parameters.AddWithValue("@senha", user.senha);
+            command.Parameters.AddWithValue("@senha", senhaHash);
             command.Parameters.AddWithValue("@email", user.email);
             command.Parameters.AddWithValue("@telefone", user.telefone);
             command.ExecuteNonQuery();
@@ -66,9 +69,10 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
+            string senhaHash = Criptografia.GerarHash(password);
             command.CommandText = "select cpf, trueAdmin from Tb_Usuarios where email = @email and senha = @senha";
             command.Parameters.AddWithValue("@email", email);
-            command.Parameters.AddWithValue("@senha", password);
+            command.Parameters.AddWithValue("@senha", senhaHash);
             DataTable query = DBCon.queryDataTable(command);
             conn.Close();
             if(query.Rows.Count > 0)

@@ -23,15 +23,17 @@ namespace ViewProject
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            string senhaHash = Criptografia.GerarHash(fmSenha.Text);
             User usuario = new User(fmCPF.Text,
                                     fmNome.Text,
-                                    fmSenha.Text,
+                                    senhaHash,
                                     fmEmail.Text,
                                     fmTelefone.Text,
                                     false);
             if (userController.addUserToDB(usuario))
             {
-                MessageBox.Show("Usuário cadastrado com sucesso");
+                MessageBox.Show("Usuário cadastrado com sucesso."
+                    + "\nSenha Criptofada: ",(senhaHash));
                 this.Close();
             } else
             {

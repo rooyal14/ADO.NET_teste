@@ -45,9 +45,11 @@ namespace ViewProject
 
         private void btnChange_Click(object sender, EventArgs e)
         {
+            //fmSenha.Text = " ";
+            string senhaHash = Criptografia.GerarHash(fmSenha.Text);
             User usuario = new User(fmCPF.Text,
                         fmNome.Text,
-                        fmSenha.Text,
+                        senhaHash,
                         fmEmail.Text,
                         fmTelefone.Text,
                         cbxIsAdmin.Checked);
@@ -61,7 +63,7 @@ namespace ViewProject
             }
             else
             {
-                btnNew.Enabled = true;
+                btnNew.Enabled = false;
                 btnChange.Enabled = false;
                 btnDelete.Enabled = false;
                 btnInsert.Enabled = true;
@@ -76,9 +78,10 @@ namespace ViewProject
         
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            string senhaHash = Criptografia.GerarHash(fmSenha.Text);
             User usuario = new User(fmCPF.Text,
                         fmNome.Text,
-                        fmSenha.Text,
+                        senhaHash,
                         fmEmail.Text,
                         fmTelefone.Text,
                         cbxIsAdmin.Checked);
@@ -108,22 +111,31 @@ namespace ViewProject
         }
         
         private void btnInsert_Click(object sender, EventArgs e)
-        {            
-            User usuario = new User(fmCPF.Text,
-                                    fmNome.Text,
-                                    fmSenha.Text,
-                                    fmEmail.Text,
-                                    fmTelefone.Text,
-                                    cbxIsAdmin.Checked);
+        {
+            if ((fmCPF.Text != null) || (fmNome.Text != null) || (fmSenha.Text != null) || (fmEmail.Text != null)
+                || (fmTelefone.Text != null))
+            {
+                string senhaHash = Criptografia.GerarHash(fmSenha.Text);
+                User usuario = new User(fmCPF.Text,
+                                        fmNome.Text,
+                                        senhaHash,
+                                        fmEmail.Text,
+                                        fmTelefone.Text,
+                                        cbxIsAdmin.Checked);
 
-            if (stateAdicionando)
-            {
-                //TODO: Alerta caso haja repetição de nomes
-                userController.addUserToDB(usuario);
-            } else
-            {
-                userController.updateUserFromDB(usuario);
+
+
+                if (stateAdicionando)
+                {
+                    //TODO: Alerta caso haja repetição de nomes
+                    userController.addUserToDB(usuario);
+                }
+                else
+                {
+                    userController.updateUserFromDB(usuario);
+                }
             }
+            else MessageBox.Show("Por favor, preencha todos os campos.");
 
             fillDgv();
 
