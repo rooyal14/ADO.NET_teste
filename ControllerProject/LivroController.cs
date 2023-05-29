@@ -15,11 +15,27 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "insert into Tb_Livro(nome, estoque, precoUnitario) values(@nome, @estoque, @precoUnitario)";
-            command.Parameters.AddWithValue("@nome", livro.nome);
+            command.CommandText = "INSERT INTO Tb_Livro(ID_Genero, Nome, estoque, precoUnitario) VALUES ((SELECT ID_Genero FROM Tb_Genero WHERE Nome=@genero), @Nome, @estoque, @precoUnitario)";
+            command.Parameters.AddWithValue("@genero", livro.genero);
+            command.Parameters.AddWithValue("@Nome", livro.nome);
             command.Parameters.AddWithValue("@estoque", livro.estoque);
             command.Parameters.AddWithValue("@precoUnitario", livro.precoUnitario);
             command.ExecuteNonQuery();
+
+            command = conn.CreateCommand();
+            command.CommandText = "SELECT ID_Livro FROM Tb_Livro WHERE Nome=@Nome";
+            command.Parameters.AddWithValue("@Nome", livro.nome);
+            livro.ID_Livro = DBCon.queryDataTable(command).Rows[0].ItemArray[0].ToString();
+
+            foreach(string autor in AutorList.listaDeAutoresSelecionados)
+            {
+                command = conn.CreateCommand();
+                command.CommandText = "INSERT INTO Tb_AutorEscreve(ID_Autor, ID_Livro) VALUES " +
+                    "((SELECT ID_Autor FROM Tb_Autor WHERE Nome = @NomeAutor), @ID_Livro)";
+                command.Parameters.AddWithValue("@NomeAutor", autor);
+                command.Parameters.AddWithValue("@ID_Livro", livro.ID_Livro);
+                command.ExecuteNonQuery();
+            }
             conn.Close();
 
         }
@@ -28,7 +44,12 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "delete from Tb_Livro where ID_Livro = @ID_Livro";
+            command.CommandText = "DELETE FROM Tb_AutorEscreve WHERE ID_Livro = @ID_Livro";
+            command.Parameters.AddWithValue("@ID_Livro", livro.ID_Livro);
+            command.ExecuteNonQuery();
+
+            command = conn.CreateCommand();
+            command.CommandText = "DELETE FROM Tb_Livro WHERE ID_Livro = @ID_Livro";
             command.Parameters.AddWithValue("@ID_Livro", livro.ID_Livro);
             command.ExecuteNonQuery();
             conn.Close();
@@ -38,12 +59,32 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "UPDATE Tb_Livro SET nome=@nome, estoque=@estoque, precoUnitario=@precoUnitario WHERE ID_Livro=@ID_Livro";
+            command.CommandText = "UPDATE Tb_Livro SET ID_GENERO=(SELECT ID_Genero FROM Tb_Genero WHERE Nome=@genero), " +
+                "Nome=@Nome, " +
+                "estoque=@estoque, " +
+                "precoUnitario=@precoUnitario " +
+                "WHERE ID_Livro=@ID_Livro";
             command.Parameters.AddWithValue("@ID_Livro", livro.ID_Livro);
-            command.Parameters.AddWithValue("@nome", livro.nome);
+            command.Parameters.AddWithValue("@genero", livro.genero);
+            command.Parameters.AddWithValue("@Nome", livro.nome);
             command.Parameters.AddWithValue("@estoque", livro.estoque);
             command.Parameters.AddWithValue("@precoUnitario", livro.precoUnitario);
             command.ExecuteNonQuery();
+
+            command = conn.CreateCommand();
+            command.CommandText = "DELETE FROM Tb_AutorEscreve WHERE ID_Livro = @ID_Livro";
+            command.Parameters.AddWithValue("@ID_Livro", livro.ID_Livro);
+            command.ExecuteNonQuery();
+
+            foreach (string autor in AutorList.listaDeAutoresSelecionados)
+            {
+                command = conn.CreateCommand();
+                command.CommandText = "INSERT INTO Tb_AutorEscreve(ID_Autor, ID_Livro) VALUES " +
+                    "((SELECT ID_Autor FROM Tb_Autor WHERE Nome = @NomeAutor), @ID_Livro)";
+                command.Parameters.AddWithValue("@NomeAutor", autor);
+                command.Parameters.AddWithValue("@ID_Livro", livro.ID_Livro);
+                command.ExecuteNonQuery();
+            }
             conn.Close();
         }
 
@@ -58,6 +99,7 @@ namespace ControllerProject
                 "ON Tb_AutorEscreve.ID_Autor = Tb_Autor.ID_Autor INNER JOIN Tb_Genero " +
                 "ON tbL.ID_Genero = Tb_Genero.ID_Genero) AS query GROUP BY ID_Livro, Nome, precoUnitario, estoque, Genero";
             var tb = DBCon.queryDataTable(command);
+            tb.Rows[0].Delete();
             conn.Close();
             return tb;
         }

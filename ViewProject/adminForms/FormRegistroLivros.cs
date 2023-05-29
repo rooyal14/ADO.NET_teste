@@ -105,17 +105,18 @@ namespace ViewProject
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Livro livro = new Livro(fmNr.Text,
+                    cbxGenero.GetItemText(cbxGenero.SelectedItem),
                     fmNome.Text,
                     Convert.ToInt32(fmEstoque.Text),
                     Convert.ToDouble(fmPrecoUnitario.Text));
 
             if (livroController.checkIfProtectedLivro(livro))
             {
-                MessageBox.Show("Não é possível deletar o gênero padrão");
+                MessageBox.Show("Não é possível deletar o livro padrão");
             }
             else if (livroController.livroIsReferenced(livro))
             {
-                MessageBox.Show("livro cadastrado em livros, deseja substituí-lo e deletar mesmo assim?");
+                MessageBox.Show("Livro cadastrado em vendas, deseja substituí-lo e deletar mesmo assim?");
                 //TODO: perguntar se o usuário quer mesmo deletar
                 if (true)
                 {
@@ -135,6 +136,7 @@ namespace ViewProject
         private void btnInsert_Click(object sender, EventArgs e)
         {
             Livro livro = new Livro(fmNr.Text,
+                    cbxGenero.GetItemText(cbxGenero.SelectedItem),
                     fmNome.Text,
                     Convert.ToInt32(fmEstoque.Text),
                     Convert.ToDouble(fmPrecoUnitario.Text));
@@ -147,10 +149,7 @@ namespace ViewProject
             {
                 livroController.updateLivroFromDB(livro);
             }
-
             fillDgv();
-
-
 
 
         }
@@ -158,6 +157,10 @@ namespace ViewProject
         private void btnAutorPopup_Click(object sender, EventArgs e)
         {
             new FormPopupSelectAutores().ShowDialog();
+            fmAutor.Text = string.Join(", ", AutorList.listaDeAutoresSelecionados);
+
         }
+
+
     }
 }

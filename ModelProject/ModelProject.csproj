@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Autor.cs" />
+    <Compile Include="AutorList.cs" />
     <Compile Include="Carrinho.cs" />
     <Compile Include="Genero.cs" />
     <Compile Include="ItemCarrinho.cs" />

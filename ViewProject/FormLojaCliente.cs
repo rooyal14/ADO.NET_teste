@@ -31,9 +31,6 @@ namespace ViewProject
             this.currentUserEmail = currentUserCpf;
             InitializeComponent();
             fillDgvLivros();
-
-            //repositorioCarrinho.adicionarItemAoCarrinho(new ItemCarrinho(new Livro("12", "a", 1, "b", 12), 3));
-            //repositorioCarrinho.adicionarItemAoCarrinho(new ItemCarrinho(new Livro("9999", "aafha", 1, "bdfah", 90), 5));
             fillDgvCarrinho();
         }
  
@@ -108,6 +105,7 @@ namespace ViewProject
         private void btnAddToCarrinho_Click(object sender, EventArgs e)
         {
             Livro livro = new Livro(fmNr.Text,
+                    fmGenero.Text,
                     fmNome.Text,
                     Convert.ToInt32(fmEstoque.Text),
                     Convert.ToDouble(fmPrecoUnitario.Text));
@@ -128,6 +126,7 @@ namespace ViewProject
         private void btnRemoveFromCart_Click(object sender, EventArgs e)
         {
             Livro livro = new Livro(fmNr.Text,
+                    fmGenero.Text,
                     fmNome.Text,
                     Convert.ToInt32(fmEstoque.Text),
                     Convert.ToDouble(fmPrecoUnitario.Text));

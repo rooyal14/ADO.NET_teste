@@ -42,6 +42,37 @@ namespace ControllerProject
             conn.Close();
         }
 
+        public void substituirPorAutorIndefinido(Autor autor)
+        {
+            SqlConnection conn = DBCon.Conn();
+            SqlCommand command = conn.CreateCommand();
+            command.CommandText = "UPDATE Tb_AutorEscreve SET ID_Autor=0 WHERE ID_Autor=@ID_Autor";
+            command.Parameters.AddWithValue("@ID_Autor", autor.ID_Autor);
+            command.ExecuteNonQuery();
+            conn.Close();
+        }
+
+        public bool checkIfProtectedAutor(Autor autor)
+        {
+            if (autor.ID_Autor== "0")
+                return true;
+            else
+                return false;
+
+        }
+
+        public bool autorIsReferenced(Autor autor)
+        {
+            SqlConnection conn = DBCon.Conn();
+            SqlCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT COUNT(ID_AutorEscreve) FROM Tb_AutorEscreve WHERE ID_Autor=@ID_Autor";
+            command.Parameters.AddWithValue("@ID_Autor", autor.ID_Autor);
+            var query = DBCon.queryDataTable(command);
+            conn.Close();
+            var result = Convert.ToInt32(query.Rows[0][0].ToString()) == 0 ? false : true;
+            return result;
+        }
+
         public class PopupInsertLivro
         {
             private List<string> allAutores = new List<string>();

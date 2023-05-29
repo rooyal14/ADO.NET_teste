@@ -51,6 +51,7 @@ namespace ViewProject.adminForms
             resources.ApplyResources(this.btnRegistroVendas, "btnRegistroVendas");
             this.btnRegistroVendas.Name = "btnRegistroVendas";
             this.btnRegistroVendas.UseVisualStyleBackColor = true;
+            this.btnRegistroVendas.Click += new System.EventHandler(this.btnRegistroVendas_Click);
             // 
             // btnRegistroGeneros
             // 

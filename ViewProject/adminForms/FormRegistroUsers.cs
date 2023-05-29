@@ -170,7 +170,7 @@ namespace ViewProject
         {
             var conn = DBCon.Conn();
             var command = conn.CreateCommand();
-            command.CommandText = "select * from Tb_Usuarios";
+            command.CommandText = "select * from Tb_Usuarios WHERE ID_Cliente > 1";
             var table = DBCon.queryDataTable(command);
             dgvClientes.DataSource = table;
 

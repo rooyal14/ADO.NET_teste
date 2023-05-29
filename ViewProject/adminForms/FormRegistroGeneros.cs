@@ -53,7 +53,7 @@ namespace ViewProject.adminForms
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "select * from Tb_Genero";
+            command.CommandText = "SELECT * FROM Tb_Genero WHERE ID_Genero > 0";
             var table = DBCon.queryDataTable(command);
             dgvGeneros.DataSource = table;
             conn.Close();

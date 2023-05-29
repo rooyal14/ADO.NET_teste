@@ -44,7 +44,7 @@ namespace ViewProject.adminForms
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "select * from tbAutores";
+            command.CommandText = "select * from Tb_Autor";
             var table = DBCon.queryDataTable(command);
             dgvAutores.DataSource = table;
             conn.Close();
@@ -77,8 +77,26 @@ namespace ViewProject.adminForms
         private void btnDelete_Click(object sender, EventArgs e)
         {
             Autor autor = new Autor(fmIdAutor.Text, fmNome.Text);
-
-            autorController.deleteAutorFromDB(autor);
+            if (autorController.checkIfProtectedAutor(autor))
+            {
+                MessageBox.Show("Não é possível deletar o gênero padrão");
+            }
+            else if (autorController.autorIsReferenced(autor))
+            {
+                MessageBox.Show("Autor cadastrado em livros, deseja substituí-lo e deletar mesmo assim?");
+                //TODO: perguntar se o usuário quer mesmo deletar
+                if (true)
+                {
+                    autorController.substituirPorAutorIndefinido(autor);
+                    autorController.deleteAutorFromDB(autor);
+                }
+            }
+            else
+            {
+                autorController.deleteAutorFromDB(autor);
+                MessageBox.Show("Autor excluído com sucesso");
+            }
+            
             fillDgv();
         }
 

@@ -89,6 +89,12 @@
     <Compile Include="adminForms\FormRegistroGeneros.Designer.cs">
       <DependentUpon>FormRegistroGeneros.cs</DependentUpon>
     </Compile>
+    <Compile Include="adminForms\FormRelatorioVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="adminForms\FormRelatorioVenda.Designer.cs">
+      <DependentUpon>FormRelatorioVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCadastroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="adminForms\FormRegistroGeneros.resx">
       <DependentUpon>FormRegistroGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="adminForms\FormRelatorioVenda.resx">
+      <DependentUpon>FormRelatorioVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadastroUsuario.resx">
       <DependentUpon>FormCadastroUsuario.cs</DependentUpon>

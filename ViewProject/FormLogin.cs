@@ -83,11 +83,6 @@ namespace ViewProject
 
         }
 
-        private void fmCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
         private void fmEmail_TextChanged(object sender, EventArgs e)
         {
 

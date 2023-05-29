@@ -14,6 +14,7 @@ namespace ViewProject.adminForms
 {
     public partial class FormPopupSelectAutores : Form
     {
+
         public FormPopupSelectAutores()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace ViewProject.adminForms
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             //implementar pergunta pro usuário
+            AutorList.listaDeAutoresSelecionados = popupAutorController.getSelectedAutores();
             this.Close();
         }
 
@@ -66,5 +68,6 @@ namespace ViewProject.adminForms
             for (int i = 0; i < popupAutorController.getSelectedAutores().Count; i++)
                 lbxAutores.SetSelected(i, true);
         }
+
     }
 }
