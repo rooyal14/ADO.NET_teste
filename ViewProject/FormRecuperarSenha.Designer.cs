@@ -28,19 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.fmConfirmaSenha = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.fmSenha = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.fmCPF = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.fmConfirmaSenha = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -71,10 +74,10 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.28739F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.71261F));
+            this.tableLayoutPanel1.Controls.Add(this.fmCPF, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.fmSenha, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.fmCPF, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.fmConfirmaSenha, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(42, 168);
@@ -85,19 +88,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1451, 284);
             this.tableLayoutPanel1.TabIndex = 18;
-            // 
-            // fmConfirmaSenha
-            // 
-            this.fmConfirmaSenha.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmConfirmaSenha.Location = new System.Drawing.Point(487, 193);
-            this.fmConfirmaSenha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.fmConfirmaSenha.MaxLength = 10;
-            this.fmConfirmaSenha.Name = "fmConfirmaSenha";
-            this.fmConfirmaSenha.PasswordChar = '*';
-            this.fmConfirmaSenha.Size = new System.Drawing.Size(368, 65);
-            this.fmConfirmaSenha.TabIndex = 12;
-            this.fmConfirmaSenha.UseSystemPasswordChar = true;
-            this.fmConfirmaSenha.Leave += new System.EventHandler(this.fmConfirmaSenha_Leave);
             // 
             // label7
             // 
@@ -124,6 +114,17 @@
             this.fmSenha.TextChanged += new System.EventHandler(this.fmSenha_TextChanged);
             this.fmSenha.Leave += new System.EventHandler(this.fmSenha_Leave);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.label5.Location = new System.Drawing.Point(4, 94);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(173, 58);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Senha:";
+            // 
             // fmCPF
             // 
             this.fmCPF.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -147,16 +148,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "CPF:";
             // 
-            // label5
+            // fmConfirmaSenha
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 24F);
-            this.label5.Location = new System.Drawing.Point(4, 94);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 58);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Senha:";
+            this.fmConfirmaSenha.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fmConfirmaSenha.Location = new System.Drawing.Point(487, 193);
+            this.fmConfirmaSenha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.fmConfirmaSenha.MaxLength = 10;
+            this.fmConfirmaSenha.Name = "fmConfirmaSenha";
+            this.fmConfirmaSenha.PasswordChar = '*';
+            this.fmConfirmaSenha.Size = new System.Drawing.Size(368, 65);
+            this.fmConfirmaSenha.TabIndex = 12;
+            this.fmConfirmaSenha.UseSystemPasswordChar = true;
+            this.fmConfirmaSenha.Leave += new System.EventHandler(this.fmConfirmaSenha_Leave);
             // 
             // tableLayoutPanel2
             // 
@@ -164,10 +167,10 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Controls.Add(this.btnLimpar, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnVoltar, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnConfirmar, 2, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(42, 517);
+            this.tableLayoutPanel2.Controls.Add(this.btnLimpar, 1, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(42, 537);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -211,11 +214,29 @@
             this.btnConfirmar.UseVisualStyleBackColor = true;
             this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(52, 474);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(554, 24);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "A senha deve conter no mínimo 8 e no máximo 10 carateres.";
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ToolTipTitle = "Informe o CPF Cadastrado no Sistema";
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // FormRecuperarSenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1528, 701);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
@@ -248,5 +269,7 @@
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnConfirmar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

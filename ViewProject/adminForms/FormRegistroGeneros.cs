@@ -112,9 +112,7 @@ namespace ViewProject.adminForms
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new adminForms.FormMenuAdmin().ShowDialog();
-            this.Show();
+            this.Close();
         }
 
         private void btnInsert_Click_1(object sender, EventArgs e)

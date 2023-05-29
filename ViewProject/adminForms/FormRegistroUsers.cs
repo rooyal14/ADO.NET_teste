@@ -48,6 +48,7 @@ namespace ViewProject
         private void btnChange_Click(object sender, EventArgs e)
         {
             //fmSenha.Text = " ";
+            
             string senhaHash = Criptografia.GerarHash(fmSenha.Text);
             string senhaHash1 = Criptografia.GerarHash(fmConfirmaSenha.Text);
             User usuario = new User(fmCPF.Text,
@@ -71,6 +72,7 @@ namespace ViewProject
                 btnInsert.Enabled = true;
                 btnVoltar.Enabled = true;
                 changeFormularioEnabled(true);
+                cbxIsAdmin.Enabled = false;
                 fmCPF.Enabled = false;
             }
         }
@@ -323,9 +325,7 @@ namespace ViewProject
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new adminForms.FormMenuAdmin().ShowDialog(); 
-            this.Show();
+            this.Close();
         }
         //IMPLEMENTAR VALIDAÇÃO DE CPF
     }

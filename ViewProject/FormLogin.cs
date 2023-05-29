@@ -96,8 +96,8 @@ namespace ViewProject
         private void btnRecuperarSenha_Click(object sender, EventArgs e)
         {
                 this.Hide();
-                var FormRecuperarSenha = new FormRecuperarSenha();
-                FormRecuperarSenha.Show();
+                new FormRecuperarSenha().ShowDialog();
+                this.Show();
           
         }
     }

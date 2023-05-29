@@ -24,10 +24,7 @@ namespace ViewProject
         UserController userController = new UserController();
         private void FormRecuperarSenha_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Para redefinir a Senha Cadastrada " +
-                "informe o CPF.\nA nova senha deve ter o " +
-                "tamanho mínimo de 8 caracteres e máximo de 10 caracteres."
-                , "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
 
         private void fmSenha_TextChanged(object sender, EventArgs e)
@@ -51,49 +48,56 @@ namespace ViewProject
                 MessageBox.Show("O CPF digitado está incorreto.\nPor favor, " +
                 "verifique os dados inseridos.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 fmCPF.Text = "";
-                ActiveControl = fmCPF;
+               // ActiveControl = fmCPF;
             }
             
             else if (!cpfCadastrado)
             {
                 MessageBox.Show("Usuário Não Cadastrado.\n\nVerifique os Dados Cadastrados" +
                     " ou Clique em 'VOLTAR' e Cadastre-se.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                ActiveControl = fmCPF;
+               // ActiveControl = fmCPF;
             }
             
             else if (userController.checkIfProtectedUser(usuario))
             {
                 MessageBox.Show("Não é possível mudar o valor do administrador padrão", "Atenção",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                ActiveControl = fmCPF;
+             //   ActiveControl = fmCPF;
             }
         }
 
         private void fmSenha_Leave(object sender, EventArgs e)
         {
             int contaCaracteres = fmSenha.Text.Length;
-            if ((contaCaracteres <= 7) || (contaCaracteres > 10))
+            if (fmCPF.Text != "")
             {
-                MessageBox.Show("A senha deve ter o tamanho mínimo de 8 caracteres " +
-                    "e máximo de 10 caracteres.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                fmSenha.Text = "";
-                fmConfirmaSenha.Text = "";
-                ActiveControl = fmSenha;
+
+                if ((contaCaracteres <= 7) || (contaCaracteres > 10))
+                {
+                    MessageBox.Show("A senha deve ter o tamanho mínimo de 8 caracteres " +
+                        "e máximo de 10 caracteres.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    fmSenha.Text = "";
+                    fmConfirmaSenha.Text = "";
+                    // ActiveControl = fmSenha;
+                }
             }
             
         }
 
         private void fmConfirmaSenha_Leave(object sender, EventArgs e)
         {
-            if (fmSenha.Text != fmConfirmaSenha.Text)
-            {
-                MessageBox.Show("As senhas digitadas são diferentes. " +
-                    "\nPor favor, refaça o processo.", "Atenção!",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                fmSenha.Text = "";
-                fmConfirmaSenha.Text = "";
-                ActiveControl = fmSenha;
-            }
 
+            if ((fmCPF.Text != "") && (fmSenha.Text != ""))
+            {
+                if (fmSenha.Text != fmConfirmaSenha.Text)
+                {
+                    MessageBox.Show("As senhas digitadas são diferentes. " +
+                        "\nPor favor, refaça o processo.", "Atenção!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    fmSenha.Text = "";
+                    fmConfirmaSenha.Text = "";
+                    //ActiveControl = fmSenha;
+                }
+            }
 
         }
 
@@ -102,26 +106,56 @@ namespace ViewProject
             fmCPF.Text = "";
             fmSenha.Text = "";
             fmConfirmaSenha.Text = "";
-            ActiveControl = fmCPF;
+            //ActiveControl = fmCPF;
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
+           
             string senhaHash = Criptografia.GerarHash(fmSenha.Text);
             User usuario = new User(fmCPF.Text, null, senhaHash, null, null, true);
-            userController.updatePasswordFromDB(usuario);
-            MessageBox.Show("Senha Redefinida com Sucesso!", "Atenção!", 
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
-            var FormLogin = new FormLogin();
-            FormLogin.Show();
+
+            bool validaCPF = TesteCpf.IsCpf(fmCPF.Text);
+                bool cpfCadastrado = userController.userIsDuplicated(usuario);
+
+            if ((fmCPF.Text != "") && (!validaCPF))
+            {
+                MessageBox.Show("O CPF digitado está incorreto.\nPor favor, " +
+                "verifique os dados inseridos.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                fmCPF.Text = "";
+                // ActiveControl = fmCPF;
+            }
+
+            else if (!cpfCadastrado)
+            {
+                MessageBox.Show("Usuário Não Cadastrado.\n\nVerifique os Dados Cadastrados" +
+                    " ou Clique em 'VOLTAR' e Cadastre-se.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                // ActiveControl = fmCPF;
+            }
+
+            else if (userController.checkIfProtectedUser(usuario))
+            {
+                MessageBox.Show("Não é possível mudar o valor do administrador padrão", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //   ActiveControl = fmCPF;
+            }
+
+            else
+            {
+                userController.updatePasswordFromDB(usuario);
+                MessageBox.Show("Senha Redefinida com Sucesso!", "Atenção!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var FormLogin = new FormLogin();
-            FormLogin.Show();
+            this.Close();
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+
         }
     }
 }

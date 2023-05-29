@@ -45,9 +45,11 @@ namespace ViewProject.adminForms
             this.btnChange = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnInsert = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // fmIdGenero
@@ -123,7 +125,7 @@ namespace ViewProject.adminForms
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 39);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Nome:";
+            this.label4.Text = "Nome Gênero:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label10
@@ -268,6 +270,18 @@ namespace ViewProject.adminForms
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click_1);
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.dgvGeneros, 0, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(41, 419);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1434, 361);
+            this.tableLayoutPanel3.TabIndex = 45;
+            // 
             // FormRegistroGeneros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,6 +301,7 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,5 +322,6 @@ namespace ViewProject.adminForms
         private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }
