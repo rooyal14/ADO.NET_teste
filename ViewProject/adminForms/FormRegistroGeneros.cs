@@ -133,7 +133,7 @@ namespace ViewProject.adminForms
 
             else if (contaCaracteres < 3)
             {
-                MessageBox.Show("O Gênero deve ter o tamanho mínimo de 3 caracteres "
+                MessageBox.Show("O Gênero deve ter o tamanho mínimo de 3 caracteres."
                     , "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 ActiveControl = fmNome;
             }
