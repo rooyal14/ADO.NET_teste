@@ -59,7 +59,7 @@ namespace ViewProject
             this.fmEmail.Location = new System.Drawing.Point(472, 5);
             this.fmEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fmEmail.Name = "fmEmail";
-            this.fmEmail.Size = new System.Drawing.Size(740, 65);
+            this.fmEmail.Size = new System.Drawing.Size(967, 65);
             this.fmEmail.TabIndex = 9;
             this.fmEmail.Text = "admin";
             this.toolTip1.SetToolTip(this.fmEmail, "Informe o e-mail cadastrado para acessar o sistema.");
@@ -94,7 +94,7 @@ namespace ViewProject
             this.fmSenha.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fmSenha.Name = "fmSenha";
             this.fmSenha.PasswordChar = '*';
-            this.fmSenha.Size = new System.Drawing.Size(741, 65);
+            this.fmSenha.Size = new System.Drawing.Size(967, 65);
             this.fmSenha.TabIndex = 11;
             this.fmSenha.Text = "123";
             this.toolTip2.SetToolTip(this.fmSenha, "Informe a senha cadastrada, caso precise de ajuda, contate o administrador do sis" +
@@ -160,7 +160,7 @@ namespace ViewProject
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(161, 34);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.sobreToolStripMenuItem.Text = "Sobre";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 

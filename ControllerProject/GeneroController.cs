@@ -1,6 +1,7 @@
 ﻿using ModelProject;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -10,15 +11,25 @@ namespace ControllerProject
 {
     public class GeneroController
     {
-        public void addGeneroToDB(Genero genero)
+        public bool addGeneroToDB(Genero genero)
         {
-            SqlConnection conn = DBCon.Conn();
-            SqlCommand command = conn.CreateCommand();
-            command.CommandText = "insert into Tb_Genero(Nome) values (@Nome)";
-            command.Parameters.AddWithValue("@Nome", genero.Nome);
-            command.ExecuteNonQuery();
-            conn.Close();
+            if (!generoIsDuplicated(genero))
+            {
+                SqlConnection conn = DBCon.Conn();
+                SqlCommand command = conn.CreateCommand();
+                command.CommandText = "insert into Tb_Genero(Nome) values (@Nome)";
+                command.Parameters.AddWithValue("@Nome", genero.Nome);
+                command.ExecuteNonQuery();
+                conn.Close();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+           
+        
 
         public void deleteGeneroFromDB(Genero genero)
         {
@@ -62,6 +73,19 @@ namespace ControllerProject
             return result;
         }
 
+        public bool generoIsDuplicated(Genero genero)
+        {
+            SqlConnection conn = DBCon.Conn();
+            SqlCommand command = conn.CreateCommand();
+            command.CommandText = "select count(nome) from Tb_Genero where nome = @nome";
+            command.Parameters.AddWithValue("@nome", genero.Nome);
+            DataTable query = DBCon.queryDataTable(command);
+            conn.Close();
+
+            var result = Convert.ToInt32(query.Rows[0][0].ToString()) == 0 ? false : true;
+            return result;
+
+        }
 
 
     }
