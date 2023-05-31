@@ -29,224 +29,415 @@ namespace ViewProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.fmNome = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dgv = new System.Windows.Forms.DataGridView();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnInsert = new System.Windows.Forms.Button();
-            this.btnChange = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
             this.fmEstoque = new System.Windows.Forms.TextBox();
             this.fmAutor = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.fmNr = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.fmPrecoUnitario = new System.Windows.Forms.TextBox();
             this.cbxGenero = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.btnAutorPopup = new System.Windows.Forms.Button();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnChange = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.fmPrecoUnitario = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // fmNome
             // 
+            this.fmNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.fmNome.Enabled = false;
-            this.fmNome.Location = new System.Drawing.Point(664, 128);
+            this.fmNome.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fmNome.Location = new System.Drawing.Point(316, 55);
+            this.fmNome.MaxLength = 100;
             this.fmNome.Name = "fmNome";
-            this.fmNome.Size = new System.Drawing.Size(209, 20);
+            this.fmNome.Size = new System.Drawing.Size(646, 46);
             this.fmNome.TabIndex = 2;
             // 
-            // label2
+            // fmEstoque
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(620, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Nome:";
+            this.fmEstoque.Enabled = false;
+            this.fmEstoque.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fmEstoque.Location = new System.Drawing.Point(316, 263);
+            this.fmEstoque.Name = "fmEstoque";
+            this.fmEstoque.Size = new System.Drawing.Size(194, 46);
+            this.fmEstoque.TabIndex = 3;
+            // 
+            // fmAutor
+            // 
+            this.fmAutor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.fmAutor.Enabled = false;
+            this.fmAutor.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fmAutor.Location = new System.Drawing.Point(3, 3);
+            this.fmAutor.MaxLength = 100;
+            this.fmAutor.Name = "fmAutor";
+            this.fmAutor.Size = new System.Drawing.Size(583, 46);
+            this.fmAutor.TabIndex = 4;
+            // 
+            // fmNr
+            // 
+            this.fmNr.Enabled = false;
+            this.fmNr.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fmNr.Location = new System.Drawing.Point(316, 3);
+            this.fmNr.Name = "fmNr";
+            this.fmNr.Size = new System.Drawing.Size(194, 46);
+            this.fmNr.TabIndex = 1;
+            // 
+            // cbxGenero
+            // 
+            this.cbxGenero.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxGenero.FormattingEnabled = true;
+            this.cbxGenero.Location = new System.Drawing.Point(316, 107);
+            this.cbxGenero.Name = "cbxGenero";
+            this.cbxGenero.Size = new System.Drawing.Size(646, 47);
+            this.cbxGenero.TabIndex = 40;
+            // 
+            // btnAutorPopup
+            // 
+            this.btnAutorPopup.Location = new System.Drawing.Point(592, 3);
+            this.btnAutorPopup.Name = "btnAutorPopup";
+            this.btnAutorPopup.Size = new System.Drawing.Size(51, 40);
+            this.btnAutorPopup.TabIndex = 41;
+            this.btnAutorPopup.Text = "...";
+            this.btnAutorPopup.UseVisualStyleBackColor = true;
+            this.btnAutorPopup.Click += new System.EventHandler(this.btnAutorPopup_Click);
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.dgv, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(43, 526);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1230, 301);
+            this.tableLayoutPanel4.TabIndex = 48;
             // 
             // dgv
             // 
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
+            this.dgv.AllowUserToOrderColumns = true;
             this.dgv.AllowUserToResizeColumns = false;
             this.dgv.AllowUserToResizeRows = false;
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv.ColumnHeadersHeight = 34;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgv.Location = new System.Drawing.Point(36, 76);
+            this.dgv.Location = new System.Drawing.Point(3, 3);
             this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
-            this.dgv.ReadOnly = true;
+            this.dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv.RowHeadersWidth = 62;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(542, 287);
-            this.dgv.TabIndex = 8;
+            this.dgv.Size = new System.Drawing.Size(1224, 295);
+            this.dgv.TabIndex = 20;
+            this.dgv.Text = global::ViewProject.Properties.Settings.Default.teste;
             this.dgv.SelectionChanged += new System.EventHandler(this.dgv_SelectionChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label6.Location = new System.Drawing.Point(36, 467);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(425, 39);
+            this.label6.TabIndex = 47;
+            this.label6.Text = "Lista de Títulos Cadastrados:";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.btnVoltar, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.btnNew, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnChange, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.btnDelete, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.btnInsert, 0, 4);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1025, 115);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 5;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(248, 313);
+            this.tableLayoutPanel2.TabIndex = 45;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
+            this.btnVoltar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnVoltar.Location = new System.Drawing.Point(3, 189);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(242, 56);
+            this.btnVoltar.TabIndex = 27;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
+            this.btnNew.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnNew.Location = new System.Drawing.Point(3, 3);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(242, 56);
+            this.btnNew.TabIndex = 16;
+            this.btnNew.Text = "Novo";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnChange
+            // 
+            this.btnChange.Enabled = false;
+            this.btnChange.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
+            this.btnChange.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnChange.Location = new System.Drawing.Point(3, 65);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(242, 56);
+            this.btnChange.TabIndex = 17;
+            this.btnChange.Text = "Alterar";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(754, 330);
+            this.btnDelete.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnDelete.Location = new System.Drawing.Point(3, 127);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(58, 23);
-            this.btnDelete.TabIndex = 10;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Size = new System.Drawing.Size(242, 56);
+            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Text = "Apagar";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnInsert
             // 
             this.btnInsert.Enabled = false;
-            this.btnInsert.Location = new System.Drawing.Point(818, 330);
+            this.btnInsert.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
+            this.btnInsert.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnInsert.Location = new System.Drawing.Point(3, 251);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(58, 23);
-            this.btnInsert.TabIndex = 11;
-            this.btnInsert.Text = "Insert";
+            this.btnInsert.Size = new System.Drawing.Size(242, 57);
+            this.btnInsert.TabIndex = 19;
+            this.btnInsert.Text = "Confirmar";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // btnChange
+            // label7
             // 
-            this.btnChange.Enabled = false;
-            this.btnChange.Location = new System.Drawing.Point(690, 330);
-            this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(58, 23);
-            this.btnChange.TabIndex = 12;
-            this.btnChange.Text = "Change";
-            this.btnChange.UseVisualStyleBackColor = true;
-            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold);
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(25, 40);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(658, 46);
+            this.label7.TabIndex = 43;
+            this.label7.Text = "Livraria Visual - Gestão de Títulos";
             // 
-            // btnNew
+            // tableLayoutPanel1
             // 
-            this.btnNew.Location = new System.Drawing.Point(626, 330);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(58, 23);
-            this.btnNew.TabIndex = 13;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.481F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.519F));
+            this.tableLayoutPanel1.Controls.Add(this.fmPrecoUnitario, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label10, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label12, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label13, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label14, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.cbxGenero, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label15, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.fmNr, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.fmNome, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.fmEstoque, 1, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(33, 115);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(965, 313);
+            this.tableLayoutPanel1.TabIndex = 42;
             // 
-            // fmEstoque
+            // label10
             // 
-            this.fmEstoque.Enabled = false;
-            this.fmEstoque.Location = new System.Drawing.Point(691, 208);
-            this.fmEstoque.Name = "fmEstoque";
-            this.fmEstoque.Size = new System.Drawing.Size(182, 20);
-            this.fmEstoque.TabIndex = 3;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label10.Location = new System.Drawing.Point(3, 260);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(141, 39);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Estoque:";
             // 
-            // fmAutor
+            // label11
             // 
-            this.fmAutor.Enabled = false;
-            this.fmAutor.Location = new System.Drawing.Point(664, 278);
-            this.fmAutor.Name = "fmAutor";
-            this.fmAutor.Size = new System.Drawing.Size(179, 20);
-            this.fmAutor.TabIndex = 4;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label11.Location = new System.Drawing.Point(3, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(151, 39);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "ID Título:";
             // 
-            // label3
+            // label12
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(623, 281);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Autor:";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label12.Location = new System.Drawing.Point(3, 52);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(199, 39);
+            this.label12.TabIndex = 2;
+            this.label12.Text = "Nome Título:";
             // 
-            // label4
+            // label13
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(620, 211);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Quantidade:";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label13.Location = new System.Drawing.Point(3, 104);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(219, 39);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Gênero Título:";
             // 
-            // fmNr
+            // label14
             // 
-            this.fmNr.Enabled = false;
-            this.fmNr.Location = new System.Drawing.Point(673, 90);
-            this.fmNr.Name = "fmNr";
-            this.fmNr.Size = new System.Drawing.Size(200, 20);
-            this.fmNr.TabIndex = 1;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label14.Location = new System.Drawing.Point(3, 156);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(239, 39);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Autor do Título:";
             // 
-            // label1
+            // label15
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(620, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Número:";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label15.Location = new System.Drawing.Point(3, 208);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(220, 39);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "Valor Unitário:";
             // 
-            // label5
+            // tableLayoutPanel5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(623, 174);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Valor Unitário:";
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.tableLayoutPanel5.Controls.Add(this.btnAutorPopup, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.fmAutor, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(316, 159);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(646, 46);
+            this.tableLayoutPanel5.TabIndex = 50;
             // 
             // fmPrecoUnitario
             // 
             this.fmPrecoUnitario.Enabled = false;
-            this.fmPrecoUnitario.Location = new System.Drawing.Point(702, 171);
+            this.fmPrecoUnitario.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fmPrecoUnitario.Location = new System.Drawing.Point(316, 211);
             this.fmPrecoUnitario.Name = "fmPrecoUnitario";
-            this.fmPrecoUnitario.Size = new System.Drawing.Size(174, 20);
-            this.fmPrecoUnitario.TabIndex = 14;
-            // 
-            // cbxGenero
-            // 
-            this.cbxGenero.FormattingEnabled = true;
-            this.cbxGenero.Location = new System.Drawing.Point(676, 243);
-            this.cbxGenero.Name = "cbxGenero";
-            this.cbxGenero.Size = new System.Drawing.Size(200, 21);
-            this.cbxGenero.TabIndex = 40;
-            // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(623, 246);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 18);
-            this.label8.TabIndex = 39;
-            this.label8.Text = "Gênero:";
-            // 
-            // btnAutorPopup
-            // 
-            this.btnAutorPopup.Location = new System.Drawing.Point(852, 276);
-            this.btnAutorPopup.Name = "btnAutorPopup";
-            this.btnAutorPopup.Size = new System.Drawing.Size(24, 23);
-            this.btnAutorPopup.TabIndex = 41;
-            this.btnAutorPopup.Text = "...";
-            this.btnAutorPopup.UseVisualStyleBackColor = true;
-            this.btnAutorPopup.Click += new System.EventHandler(this.btnAutorPopup_Click);
+            this.fmPrecoUnitario.Size = new System.Drawing.Size(194, 46);
+            this.fmPrecoUnitario.TabIndex = 49;
             // 
             // FormRegistroLivros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 468);
-            this.Controls.Add(this.btnAutorPopup);
-            this.Controls.Add(this.cbxGenero);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.fmPrecoUnitario);
-            this.Controls.Add(this.btnNew);
-            this.Controls.Add(this.btnChange);
-            this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.dgv);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.fmAutor);
-            this.Controls.Add(this.fmEstoque);
-            this.Controls.Add(this.fmNome);
-            this.Controls.Add(this.fmNr);
+            this.ClientSize = new System.Drawing.Size(1296, 845);
+            this.Controls.Add(this.tableLayoutPanel4);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.tableLayoutPanel2);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormRegistroLivros";
-            this.Text = "Form1";
+            this.Text = "Livraria Visual - Gestão de Títulos";
+            this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,23 +445,30 @@ namespace ViewProject
 
         #endregion
         private System.Windows.Forms.TextBox fmNome;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnInsert;
-        private System.Windows.Forms.Button btnChange;
-        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.TextBox fmEstoque;
         private System.Windows.Forms.TextBox fmAutor;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox fmNr;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox fmPrecoUnitario;
         private System.Windows.Forms.ComboBox cbxGenero;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnAutorPopup;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnChange;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TextBox fmPrecoUnitario;
     }
 }
 

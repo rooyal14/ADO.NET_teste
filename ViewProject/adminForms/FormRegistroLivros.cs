@@ -25,6 +25,8 @@ namespace ViewProject
 
         }
 
+        
+
         LivroController livroController = new LivroController();
         VendaController vendaController = new VendaController();
 
@@ -161,6 +163,9 @@ namespace ViewProject
 
         }
 
-
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

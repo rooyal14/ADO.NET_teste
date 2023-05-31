@@ -127,7 +127,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnRelatorios.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 24pt, style=Bold</value>
+    <value>Tahoma, 27.75pt, style=Bold</value>
   </data>
   <data name="btnRelatorios.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -163,7 +163,7 @@
     <value>True</value>
   </data>
   <data name="btnRegistroVendas.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 24pt, style=Bold</value>
+    <value>Tahoma, 27.75pt, style=Bold</value>
   </data>
   <data name="btnRegistroVendas.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -178,7 +178,7 @@
     <value>10</value>
   </data>
   <data name="btnRegistroVendas.Text" xml:space="preserve">
-    <value>Registro de Vendas</value>
+    <value>Gestão de Vendas</value>
   </data>
   <data name="&gt;&gt;btnRegistroVendas.Name" xml:space="preserve">
     <value>btnRegistroVendas</value>
@@ -199,7 +199,7 @@
     <value>True</value>
   </data>
   <data name="btnRegistroGeneros.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 24pt, style=Bold</value>
+    <value>Tahoma, 27.75pt, style=Bold</value>
   </data>
   <data name="btnRegistroGeneros.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -214,7 +214,7 @@
     <value>9</value>
   </data>
   <data name="btnRegistroGeneros.Text" xml:space="preserve">
-    <value>Registro de Gêneros</value>
+    <value>Gestão de Gêneros</value>
   </data>
   <data name="&gt;&gt;btnRegistroGeneros.Name" xml:space="preserve">
     <value>btnRegistroGeneros</value>
@@ -235,7 +235,7 @@
     <value>True</value>
   </data>
   <data name="btnRegistroLivros.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 24pt, style=Bold</value>
+    <value>Tahoma, 27.75pt, style=Bold</value>
   </data>
   <data name="btnRegistroLivros.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -250,7 +250,7 @@
     <value>7</value>
   </data>
   <data name="btnRegistroLivros.Text" xml:space="preserve">
-    <value>Registro de Livros</value>
+    <value>Gestão de Títulos</value>
   </data>
   <data name="&gt;&gt;btnRegistroLivros.Name" xml:space="preserve">
     <value>btnRegistroLivros</value>
@@ -271,7 +271,7 @@
     <value>True</value>
   </data>
   <data name="btnRegistroAutores.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 24pt, style=Bold</value>
+    <value>Tahoma, 27.75pt, style=Bold</value>
   </data>
   <data name="btnRegistroAutores.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -286,7 +286,7 @@
     <value>8</value>
   </data>
   <data name="btnRegistroAutores.Text" xml:space="preserve">
-    <value>Registro de Autores</value>
+    <value>Gestão de Autores</value>
   </data>
   <data name="&gt;&gt;btnRegistroAutores.Name" xml:space="preserve">
     <value>btnRegistroAutores</value>
@@ -307,7 +307,7 @@
     <value>True</value>
   </data>
   <data name="btnRegistroUsuarios.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 24pt, style=Bold</value>
+    <value>Tahoma, 27.75pt, style=Bold</value>
   </data>
   <data name="btnRegistroUsuarios.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>

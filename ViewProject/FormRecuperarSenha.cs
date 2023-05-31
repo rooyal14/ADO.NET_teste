@@ -71,6 +71,7 @@ namespace ViewProject
             if (fmCPF.Text != "")
             {
 
+                //fmCPF.BackColor = System.Drawing.Color.MediumVioletRed;
                 if ((contaCaracteres <= 7) || (contaCaracteres > 10))
                 {
                     MessageBox.Show("A senha deve ter o tamanho mínimo de 8 caracteres " +
