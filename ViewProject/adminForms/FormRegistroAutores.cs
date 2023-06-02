@@ -106,8 +106,14 @@ namespace ViewProject.adminForms
 
             if (String.IsNullOrEmpty(fmIdAutor.Text))
             {
-                //TODO: Alerta caso haja repetição de nomes
-                autorController.addAutorToDB(autor);
+                if (autorController.autorIsDuplicated(autor))
+                {
+                    MessageBox.Show("Autor já cadastrado");
+                }
+                else
+                {
+                    autorController.addAutorToDB(autor);
+                }
             }
             else
             {

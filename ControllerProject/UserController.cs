@@ -76,24 +76,25 @@ namespace ControllerProject
             conn.Close();
         }
 
-        public bool loginUser(string email, string password, out string currentUserCpf, out bool currentUsertrueAdmin)
+        public bool loginUser(string email, string password, out string currentUserEmail, out bool currentUsertrueAdmin)
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
             string senhaHash = Criptografia.GerarHash(password);
-            command.CommandText = "select cpf, trueAdmin from Tb_Usuarios where email = @email and senha = @senha";
+            command.CommandText = "select Email, trueAdmin from Tb_Usuarios where Email = @email and Senha = @senha";
             command.Parameters.AddWithValue("@email", email);
             command.Parameters.AddWithValue("@senha", senhaHash);
             DataTable query = DBCon.queryDataTable(command);
             conn.Close();
-            if(query.Rows.Count > 0)
+            if (query.Rows.Count > 0)
             {
-                currentUserCpf = query.Rows[0][0].ToString();
+                currentUserEmail = query.Rows[0][0].ToString();
                 currentUsertrueAdmin = Convert.ToBoolean(query.Rows[0][1].ToString());
                 return true;
-            } else
+            }
+            else
             {
-                currentUserCpf = "";
+                currentUserEmail = "";
                 currentUsertrueAdmin = false;
                 return false;
             }

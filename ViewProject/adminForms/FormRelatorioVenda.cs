@@ -24,7 +24,7 @@ namespace ViewProject.adminForms
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "SELECT * FROM Tb_Venda";
+            command.CommandText = "SELECT tbv.ID_Venda, tbv.total, tbu.Nome, tbv.Data FROM Tb_Venda as tbv LEFT JOIN Tb_Usuarios as tbu on tbv.ID_Cliente = tbu.ID_Cliente";
             var table = DBCon.queryDataTable(command);
             dgvVendas.DataSource = table;
             conn.Close();
@@ -36,22 +36,22 @@ namespace ViewProject.adminForms
             {
                 SqlConnection conn = DBCon.Conn();
                 SqlCommand command = conn.CreateCommand();
-                command.CommandText = "SELECT tbiv.ID_ItemVendido, tbu.Nome, tbl.Nome as Livro, tbiv.quantidade, " +
-                    "tbiv.subtotal FROM Tb_ItemVendido AS tbiv LEFT JOIN Tb_Venda AS tbv ON tbiv.ID_Venda = " +
-                    "tbv.ID_Venda LEFT JOIN Tb_Usuarios AS tbu ON tbv.ID_Cliente = tbu.ID_Cliente LEFT JOIN " +
-                    "Tb_Livro AS tbl ON tbiv.ID_Livro = tbl.ID_Livro WHERE tbiv.ID_Venda = @ID_Venda";
+                command.CommandText = "SELECT tbiv.ID_ItemVendido, tbl.Nome as Livro, tbiv.quantidade, tbiv.subtotal FROM Tb_ItemVendido " +
+                    "AS tbiv LEFT JOIN Tb_Venda AS tbv ON tbiv.ID_Venda = tbv.ID_Venda LEFT JOIN Tb_Livro AS tbl ON " +
+                    "tbiv.ID_Livro = tbl.ID_Livro WHERE tbiv.ID_Venda = @ID_Venda";
                 command.Parameters.AddWithValue("@ID_Venda", dgvVendas.CurrentRow.Cells[0].Value.ToString());
                 var table = DBCon.queryDataTable(command);
                 dgvItensVendidos.DataSource = table;
+                command.CommandText = "SELECT CPF FROM Tb_Usuarios WHERE ID_Cliente = (SELECT ID_Cliente FROM Tb_Venda WHERE ID_Venda = @ID_Venda)";
+                var cpf = DBCon.queryDataTable(command).Rows[0][0].ToString();
                 conn.Close();
+                lblTotal.Text = dgvVendas.CurrentRow.Cells[1].Value.ToString();
+                lblNome.Text = dgvVendas.CurrentRow.Cells[2].Value.ToString();
+                lblCPF.Text = cpf;
             }
             
             
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

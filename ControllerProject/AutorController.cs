@@ -42,6 +42,20 @@ namespace ControllerProject
             conn.Close();
         }
 
+        public bool autorIsDuplicated(Autor autor)
+        {
+            SqlConnection conn = DBCon.Conn();
+            SqlCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT COUNT(ID_Autor) FROM Tb_Autor WHERE ID_Autor = @ID_Autor";
+            command.Parameters.AddWithValue("@ID_Autor", autor.ID_Autor);
+            DataTable query = DBCon.queryDataTable(command);
+            conn.Close();
+
+            var result = Convert.ToInt32(query.Rows[0][0].ToString()) == 0 ? false : true;
+            return result;
+
+        }
+
         public void substituirPorAutorIndefinido(Autor autor)
         {
             SqlConnection conn = DBCon.Conn();

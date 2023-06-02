@@ -26,9 +26,9 @@ namespace ViewProject
         private BindingSource binding = new BindingSource();
 
         private string currentUserEmail;
-        public FormLojaCliente(string currentUserCpf)
+        public FormLojaCliente(string currentUserEmail)
         {
-            this.currentUserEmail = currentUserCpf;
+            this.currentUserEmail = currentUserEmail;
             InitializeComponent();
             fillDgvLivros();
             fillDgvCarrinho();
