@@ -53,5 +53,14 @@ namespace ViewProject.adminForms
             
         }
 
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormRelatorioVenda_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

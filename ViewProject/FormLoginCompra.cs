@@ -52,7 +52,22 @@ namespace ViewProject
             }
         }
 
+        private void FormLoginCompra_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void fmSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRecuperarSenha_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormRecuperarSenha().ShowDialog();
+            this.Show();
+        }
     }
 }
 

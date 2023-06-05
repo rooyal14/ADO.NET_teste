@@ -167,5 +167,10 @@ namespace ViewProject
         {
             this.Close();
         }
+
+        private void fmPrecoUnitario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

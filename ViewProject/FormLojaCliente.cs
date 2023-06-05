@@ -143,14 +143,58 @@ namespace ViewProject
                 a.ShowDialog();
                 currentUserEmail = a.CurrentUserEmail;
                 this.Show();
-                if(String.IsNullOrEmpty(currentUserEmail))
+                if (String.IsNullOrEmpty(currentUserEmail))
                     MessageBox.Show("Usuário Logado com sucesso, confirme sua compra");
+                else
+                {
+                    MessageBox.Show("Necessário logar para confirmar compra");
+                }
                 return;
             }
+            
+            
             vendaController.confirmarCompra(repositorioCarrinho, currentUserEmail);
             repositorioCarrinho.limparCarrinho();
             fillDgvLivros();
-            MessageBox.Show("Você comprou!");
+            this.Hide();
+            new FormPagamento().Show() ;
+            //FormPagamento.Show();
+            //MessageBox.Show("Você comprou!");
+        }
+
+        private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormLojaCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numQtd_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -338,6 +338,7 @@ namespace ViewProject
             this.fmPrecoUnitario.Name = "fmPrecoUnitario";
             this.fmPrecoUnitario.Size = new System.Drawing.Size(194, 46);
             this.fmPrecoUnitario.TabIndex = 49;
+            this.fmPrecoUnitario.TextChanged += new System.EventHandler(this.fmPrecoUnitario_TextChanged);
             // 
             // tableLayoutPanel5
             // 

@@ -20,7 +20,7 @@ namespace ViewProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormRelatorioVenda());
+            Application.Run(new FormLogin());
         }
     }
 }
