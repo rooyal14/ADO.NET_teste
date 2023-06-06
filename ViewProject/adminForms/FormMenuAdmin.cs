@@ -51,5 +51,12 @@ namespace ViewProject.adminForms
             new FormRelatorioVenda().ShowDialog();
             this.Show();
         }
+
+        private void btnRelatorios_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new FormRelatorios().ShowDialog();
+            this.Show();
+        }
     }
 }

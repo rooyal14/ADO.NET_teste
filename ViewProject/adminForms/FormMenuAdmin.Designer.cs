@@ -45,6 +45,7 @@ namespace ViewProject.adminForms
             resources.ApplyResources(this.btnRelatorios, "btnRelatorios");
             this.btnRelatorios.Name = "btnRelatorios";
             this.btnRelatorios.UseVisualStyleBackColor = true;
+            this.btnRelatorios.Click += new System.EventHandler(this.btnRelatorios_Click);
             // 
             // btnRegistroVendas
             // 
