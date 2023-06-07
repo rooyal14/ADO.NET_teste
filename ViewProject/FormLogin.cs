@@ -23,7 +23,7 @@ namespace ViewProject
         string currentUserEmail;
         bool currentUserIsAdmin;
 
-        UserController clienteController = new UserController();
+        UserController userController = new UserController();
         private void btnCadastro_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -35,7 +35,7 @@ namespace ViewProject
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             string senhaHash = Criptografia.GerarHash(fmSenha.Text);
-            bool validado = clienteController.loginUser(fmEmail.Text, senhaHash, out currentUserEmail, out currentUserIsAdmin);
+            bool validado = userController.loginUser(fmEmail.Text, senhaHash, out currentUserEmail, out currentUserIsAdmin);
 
             if (validado && currentUserIsAdmin)
             {
@@ -47,7 +47,8 @@ namespace ViewProject
             else if (validado && !currentUserIsAdmin)
             {
                 this.Hide();
-                var FormLojaCliente= new FormLojaCliente(currentUserEmail);
+                User user = userController.getUser(currentUserEmail);
+                var FormLojaCliente= new FormLojaCliente(user);
                 FormLojaCliente.Closed += (s, args) => this.Close();
                 FormLojaCliente.Show();
             } 
@@ -60,7 +61,7 @@ namespace ViewProject
         private void btnEntrarAnonimo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var FormLojaCliente = new FormLojaCliente(currentUserEmail);
+            var FormLojaCliente = new FormLojaCliente(null);
             FormLojaCliente.Closed += (s, args) => this.Close();
             FormLojaCliente.Show();
         }

@@ -150,6 +150,23 @@ namespace ControllerProject
             return result;
         }
 
+        public User getUser(string email)
+        {
+            SqlConnection conn = DBCon.Conn();
+            SqlCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT cpf, Nome, Senha, Email, Telefone, trueAdmin FROM Tb_Usuarios WHERE Email = @Email";
+            command.Parameters.AddWithValue("@Email", email);
+            DataTable query = DBCon.queryDataTable(command);
+            conn.Close();
+            User usuario = new User(query.Rows[0][0].ToString(),
+                query.Rows[0][1].ToString(),
+                query.Rows[0][2].ToString(),
+                query.Rows[0][3].ToString(),
+                query.Rows[0][4].ToString(),
+                Convert.ToBoolean(query.Rows[0][5]));
+            return usuario;
+        }
+
 
 
 

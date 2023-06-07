@@ -16,6 +16,7 @@ namespace ViewProject
     public partial class FormLojaCliente : Form
     {
         //Separar classe do controller carrinho
+        UserController userController = new UserController();
 
         LivroController livroController = new LivroController();
 
@@ -23,17 +24,24 @@ namespace ViewProject
 
         private Carrinho repositorioCarrinho = new Carrinho();
 
-        private BindingSource binding = new BindingSource();
-
-        private string currentUserEmail;
-        public FormLojaCliente(string currentUserEmail)
+        User user;
+        public FormLojaCliente(User user)
         {
-            this.currentUserEmail = currentUserEmail;
             InitializeComponent();
             fillDgvLivros();
+            this.user = user;
             fillDgvCarrinho();
+            if (user != null)
+            {
+                fillUserInfo();
+            }
         }
- 
+
+        private void fillUserInfo()
+        {
+            lblCPF.Text = user.cpf;
+            lblNome.Text = user.nome;
+        }
 
         private void fillDgvLivros()
         {
@@ -135,28 +143,31 @@ namespace ViewProject
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(currentUserEmail))
+            if (user == null)
             {
                 MessageBox.Show("Necessário logar para confirmar compra");
                 this.Hide();
                 var a = new FormLoginCompra();
                 a.ShowDialog();
-                currentUserEmail = a.CurrentUserEmail;
-                this.Show();
-                if (!String.IsNullOrEmpty(currentUserEmail))
+                if (String.IsNullOrEmpty(a.CurrentUserEmail))
                 {
-                    MessageBox.Show("Usuário Logado com sucesso, confirme sua compra");
-                }    
-                else
-                {
+                    this.Show();
                     MessageBox.Show("Necessário logar para confirmar compra");
                     return;
+                }   
+                else
+                {
+                    user = userController.getUser(a.CurrentUserEmail);
+                    fillUserInfo();
+                    this.Show();
+                    MessageBox.Show("Usuário Logado com sucesso, confirme sua compra");
                 }
                     
             }
             
             this.Hide();
-            var telaDePagamento = new FormPagamento(vendaController, repositorioCarrinho, currentUserEmail);
+            var telaDePagamento = new FormPagamento(vendaController, repositorioCarrinho, user.email, 
+                lblNome.Text, lblCPF.Text);
             telaDePagamento.ShowDialog();
             this.Show();
             if (telaDePagamento.CompraRealizada)

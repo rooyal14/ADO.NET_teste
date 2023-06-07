@@ -19,14 +19,17 @@ namespace ViewProject
         private string currentUserEmail;
         public bool CompraRealizada { get; set; }
 
-        public FormPagamento(VendaController vendaController, Carrinho repositorioCarrinho, string currentUserEmail)
+        public FormPagamento(VendaController vendaController, Carrinho repositorioCarrinho, 
+            string currentUserEmail, string nome, string cpf)
         {
             this.vendaController = vendaController;
             this.repositorioCarrinho = repositorioCarrinho;
             this.currentUserEmail = currentUserEmail;
             InitializeComponent();
             fillDgvCarrinho();
-            CompraRealizada = false;
+            this.CompraRealizada = false;
+            this.lblNome.Text = nome;
+            this.lblCPF.Text = cpf;
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -59,6 +62,7 @@ namespace ViewProject
             dgvCarrinho.Columns[3].HeaderText = "Preço Unitário";
             dgvCarrinho.Columns[4].HeaderText = "Subtotal";
 
+            lblTotal.Text = repositorioCarrinho.getTotal().ToString();
         }
     }
 }
