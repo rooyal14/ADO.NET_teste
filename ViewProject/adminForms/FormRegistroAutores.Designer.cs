@@ -72,7 +72,6 @@ namespace ViewProject.adminForms
             this.fmIdAutor.Name = "fmIdAutor";
             this.fmIdAutor.Size = new System.Drawing.Size(646, 46);
             this.fmIdAutor.TabIndex = 26;
-            this.fmIdAutor.TextChanged += new System.EventHandler(this.fmIdAutor_TextChanged);
             // 
             // tableLayoutPanel3
             // 

@@ -63,7 +63,6 @@ namespace ViewProject.adminForms
             this.fmIdGenero.Name = "fmIdGenero";
             this.fmIdGenero.Size = new System.Drawing.Size(646, 46);
             this.fmIdGenero.TabIndex = 35;
-            this.fmIdGenero.TextChanged += new System.EventHandler(this.fmIdGenero_TextChanged);
             // 
             // fmNome
             // 
@@ -75,7 +74,6 @@ namespace ViewProject.adminForms
             this.fmNome.Name = "fmNome";
             this.fmNome.Size = new System.Drawing.Size(646, 46);
             this.fmNome.TabIndex = 29;
-            this.fmNome.Leave += new System.EventHandler(this.fmNome_Leave);
             // 
             // label8
             // 
@@ -128,7 +126,6 @@ namespace ViewProject.adminForms
             this.label4.Size = new System.Drawing.Size(222, 39);
             this.label4.TabIndex = 2;
             this.label4.Text = "Nome Gênero:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label10
             // 
@@ -317,7 +314,6 @@ namespace ViewProject.adminForms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Livraria Visual - Registro de Gêneros Literários";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FormRegistroGeneros_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).EndInit();

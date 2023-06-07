@@ -58,10 +58,7 @@ namespace ViewProject
             fmTelefone.Text = "";
             ActiveControl = fmCPF;
         }
-        private void fmCPF_TabIndexChanged(object sender, EventArgs e)
-        {
-        }
-
+        
         private void fmCPF_Leave(object sender, EventArgs e)
         {
             bool validaCPF = TesteCpf.IsCpf(fmCPF.Text);
@@ -74,21 +71,6 @@ namespace ViewProject
                 ActiveControl = fmCPF;
             }
             
-        }
-
-        private void fmCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void fmSenha_Leave(object sender, EventArgs e)
@@ -149,24 +131,5 @@ namespace ViewProject
             }
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fmSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fmConfirmaSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fmNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -154,55 +154,5 @@ namespace ViewProject.adminForms
             fillDgv();
         }
 
-
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void btnChange_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnInsert_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormRegistroGeneros_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fmIdGenero_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void fmNome_Leave(object sender, EventArgs e)
-        {
-
-            
-
-            
-        }
-
     }
 }

@@ -73,26 +73,6 @@ namespace ViewProject
                 "Sobre os Autores", MessageBoxButtons.OK);
         }
 
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
-
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fmEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnRecuperarSenha_Click(object sender, EventArgs e)
         {
                 this.Hide();

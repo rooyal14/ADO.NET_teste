@@ -97,7 +97,6 @@ namespace ViewProject
             this.label4.Size = new System.Drawing.Size(224, 58);
             this.label4.TabIndex = 6;
             this.label4.Text = "Telefone:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // fmNome
             // 
@@ -109,7 +108,6 @@ namespace ViewProject
             this.fmNome.Name = "fmNome";
             this.fmNome.Size = new System.Drawing.Size(969, 65);
             this.fmNome.TabIndex = 3;
-            this.fmNome.TextChanged += new System.EventHandler(this.fmNome_TextChanged);
             this.fmNome.Leave += new System.EventHandler(this.fmNome_Leave);
             // 
             // fmEmail
@@ -199,7 +197,6 @@ namespace ViewProject
             this.fmConfirmaSenha.Size = new System.Drawing.Size(368, 65);
             this.fmConfirmaSenha.TabIndex = 12;
             this.fmConfirmaSenha.UseSystemPasswordChar = true;
-            this.fmConfirmaSenha.TextChanged += new System.EventHandler(this.fmConfirmaSenha_TextChanged);
             this.fmConfirmaSenha.Leave += new System.EventHandler(this.fmConfirmaSenha_Leave);
             // 
             // label7
@@ -212,7 +209,6 @@ namespace ViewProject
             this.label7.Size = new System.Drawing.Size(418, 58);
             this.label7.TabIndex = 11;
             this.label7.Text = "Confirme a Senha:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // fmSenha
             // 
@@ -225,7 +221,6 @@ namespace ViewProject
             this.fmSenha.Size = new System.Drawing.Size(368, 65);
             this.fmSenha.TabIndex = 10;
             this.fmSenha.UseSystemPasswordChar = true;
-            this.fmSenha.TextChanged += new System.EventHandler(this.fmSenha_TextChanged);
             this.fmSenha.Leave += new System.EventHandler(this.fmSenha_Leave);
             // 
             // fmCPF
@@ -237,7 +232,6 @@ namespace ViewProject
             this.fmCPF.Size = new System.Drawing.Size(369, 65);
             this.fmCPF.TabIndex = 1;
             this.fmCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.fmCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.fmCPF_MaskInputRejected);
             this.fmCPF.Leave += new System.EventHandler(this.fmCPF_Leave);
             // 
             // fmTelefone
@@ -289,7 +283,6 @@ namespace ViewProject
             this.label6.Size = new System.Drawing.Size(1082, 68);
             this.label6.TabIndex = 15;
             this.label6.Text = "Livraria Visual - Cadastro de Usuários";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label9
             // 

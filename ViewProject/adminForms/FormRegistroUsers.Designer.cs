@@ -100,7 +100,6 @@ namespace ViewProject
             resources.ApplyResources(this.cbxIsAdmin, "cbxIsAdmin");
             this.cbxIsAdmin.Name = "cbxIsAdmin";
             this.cbxIsAdmin.UseVisualStyleBackColor = true;
-            this.cbxIsAdmin.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // dgvClientes
             // 
@@ -114,8 +113,7 @@ namespace ViewProject
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            resources.ApplyResources(this.dgvClientes, "dgvClientes");
-            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -128,6 +126,7 @@ namespace ViewProject
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(this.dgvClientes, "dgvClientes");
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -151,7 +150,6 @@ namespace ViewProject
             this.dgvClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvClientes.Text = global::ViewProject.Properties.Settings.Default.teste;
-            this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             this.dgvClientes.SelectionChanged += new System.EventHandler(this.dgvClientes_SelectionChanged);
             // 
             // label9
@@ -186,7 +184,6 @@ namespace ViewProject
             resources.ApplyResources(this.fmConfirmaSenha, "fmConfirmaSenha");
             this.fmConfirmaSenha.Name = "fmConfirmaSenha";
             this.fmConfirmaSenha.UseSystemPasswordChar = true;
-            this.fmConfirmaSenha.TextChanged += new System.EventHandler(this.fmConfirmaSenha_TextChanged);
             this.fmConfirmaSenha.Leave += new System.EventHandler(this.fmConfirmaSenha_Leave);
             // 
             // label7
@@ -235,7 +232,6 @@ namespace ViewProject
             this.fmEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             resources.ApplyResources(this.fmEmail, "fmEmail");
             this.fmEmail.Name = "fmEmail";
-            this.fmEmail.TextChanged += new System.EventHandler(this.fmEmail_TextChanged);
             this.fmEmail.Leave += new System.EventHandler(this.fmEmail_Leave);
             // 
             // label4
@@ -280,7 +276,6 @@ namespace ViewProject
             // 
             resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // tableLayoutPanel4
             // 
@@ -304,7 +299,6 @@ namespace ViewProject
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FormRegistroClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

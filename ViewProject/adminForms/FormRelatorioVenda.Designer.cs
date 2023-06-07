@@ -351,7 +351,6 @@ namespace ViewProject.adminForms
             this.Controls.Add(this.label6);
             this.Name = "FormRelatorioVenda";
             this.Text = "Livraria Visual - Relatório de Vendas por Pedido";
-            this.Load += new System.EventHandler(this.FormRelatorioVenda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvItensVendidos)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVendas)).EndInit();

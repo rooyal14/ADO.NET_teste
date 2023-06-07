@@ -147,7 +147,6 @@ namespace ViewProject
             this.fmSenha.TabIndex = 11;
             this.fmSenha.Text = "123";
             this.fmSenha.UseSystemPasswordChar = true;
-            this.fmSenha.TextChanged += new System.EventHandler(this.fmSenha_TextChanged);
             // 
             // label2
             // 
@@ -189,7 +188,6 @@ namespace ViewProject
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormLoginCompra";
             this.Text = "Livraria Visual - Login";
-            this.Load += new System.EventHandler(this.FormLoginCompra_Load);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

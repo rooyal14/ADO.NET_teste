@@ -49,8 +49,9 @@ namespace ViewProject
 
         private void fillDgvCarrinho()
         {
-            binding.DataSource = repositorioCarrinho.obterCarrinho();
-            dgvCarrinho.DataSource = binding;
+            //binding.DataSource = repositorioCarrinho.obterCarrinho();
+            //dgvCarrinho.DataSource = binding;
+            dgvCarrinho.DataSource = repositorioCarrinho.obterCarrinho();
 
             dgvCarrinho.Columns[0].HeaderText = "Código";
             dgvCarrinho.Columns[1].HeaderText = "Nome do Livro";
@@ -93,7 +94,6 @@ namespace ViewProject
                 fmNr.Text = livro.ID_Livro;
                 fmNome.Text = livro.nome;
                 fmEstoque.Text = livro.estoque.ToString();
-                //fmAutor.Text = livro.autor;
                 fmPrecoUnitario.Text = livro.precoUnitario.ToString();
                 numQtd.Enabled = true;
                 numQtd.Value = item.Qtd;
@@ -143,38 +143,33 @@ namespace ViewProject
                 a.ShowDialog();
                 currentUserEmail = a.CurrentUserEmail;
                 this.Show();
-                if (String.IsNullOrEmpty(currentUserEmail))
+                if (!String.IsNullOrEmpty(currentUserEmail))
+                {
                     MessageBox.Show("Usuário Logado com sucesso, confirme sua compra");
+                }    
                 else
                 {
                     MessageBox.Show("Necessário logar para confirmar compra");
+                    return;
                 }
-                return;
+                    
             }
             
-            
-            vendaController.confirmarCompra(repositorioCarrinho, currentUserEmail);
-            repositorioCarrinho.limparCarrinho();
-            fillDgvLivros();
             this.Hide();
-            new FormPagamento().Show() ;
-            //FormPagamento.Show();
-            //MessageBox.Show("Você comprou!");
-        }
-
-        private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
-        {
-
+            var telaDePagamento = new FormPagamento(vendaController, repositorioCarrinho, currentUserEmail);
+            telaDePagamento.ShowDialog();
+            this.Show();
+            if (telaDePagamento.CompraRealizada)
+            {
+                MessageBox.Show("Compra efetuada com sucesso");
+                repositorioCarrinho.limparCarrinho();
+            }
+            else
+            {
+                MessageBox.Show("Erro na compra");
+            }
+            fillDgvLivros();
+            
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -182,19 +177,5 @@ namespace ViewProject
             this.Close();
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormLojaCliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numQtd_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

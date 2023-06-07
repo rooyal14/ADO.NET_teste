@@ -122,11 +122,6 @@ namespace ViewProject.adminForms
             fillDgv();
         }
 
-        private void fmIdAutor_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();

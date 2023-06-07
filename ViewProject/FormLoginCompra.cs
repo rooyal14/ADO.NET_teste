@@ -32,7 +32,6 @@ namespace ViewProject
             this.Show();
 
         }
-
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             string senhaHash = Criptografia.GerarHash(fmSenha.Text);
@@ -50,16 +49,6 @@ namespace ViewProject
                 CurrentUserEmail = "";
                 MessageBox.Show("Email ou usuário incorretos, tente novamente");
             }
-        }
-
-        private void FormLoginCompra_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fmSenha_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnRecuperarSenha_Click(object sender, EventArgs e)

@@ -24,20 +24,6 @@ namespace ViewProject
         }
         
         UserController userController = new UserController();
-        private void FormRecuperarSenha_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void fmSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fmCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
 
         private void fmCPF_Leave(object sender, EventArgs e)
         {
@@ -105,7 +91,6 @@ namespace ViewProject
             else fmSenha.BackColor = System.Drawing.Color.White;
 
         }
-
         private void fmConfirmaSenha_Leave(object sender, EventArgs e)
         {
 
@@ -204,9 +189,5 @@ namespace ViewProject
             this.Close();
         }
 
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-
-        }
     }
 }

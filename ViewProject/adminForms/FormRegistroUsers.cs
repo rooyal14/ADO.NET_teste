@@ -190,49 +190,6 @@ namespace ViewProject
             cbxIsAdmin.Enabled = arg;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormRegistroClientes_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void fmCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            //TESTE///////////////DELETAR DEPOIS
-            MessageBox.Show(fmCPF.Text);
-            MessageBox.Show(fmTelefone.Text);
-            MessageBox.Show(fmSenha.Text);
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void fmConfirmaSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void fmSenha_Leave(object sender, EventArgs e)
         {
             int contaCaracteres = fmSenha.Text.Length;
@@ -307,11 +264,6 @@ namespace ViewProject
             }
         }
 
-        private void fmEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void fmEmail_Leave(object sender, EventArgs e)
         {
             int contaCaracteres = fmEmail.Text.Length;
@@ -327,6 +279,6 @@ namespace ViewProject
         {
             this.Close();
         }
-        //IMPLEMENTAR VALIDAÇÃO DE CPF
+        
     }
 }

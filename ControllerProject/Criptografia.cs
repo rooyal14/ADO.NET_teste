@@ -29,7 +29,7 @@ namespace ControllerProject
                 strHexa.Append(item.ToString("x2")); 
             }
 
-            return strHexa.ToString();  
+            return strHexa.ToString();
 
         }
      }

@@ -111,7 +111,6 @@
             this.fmSenha.Size = new System.Drawing.Size(368, 65);
             this.fmSenha.TabIndex = 10;
             this.fmSenha.UseSystemPasswordChar = true;
-            this.fmSenha.TextChanged += new System.EventHandler(this.fmSenha_TextChanged);
             this.fmSenha.Leave += new System.EventHandler(this.fmSenha_Leave);
             // 
             // label5
@@ -134,7 +133,6 @@
             this.fmCPF.Size = new System.Drawing.Size(369, 65);
             this.fmCPF.TabIndex = 1;
             this.fmCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.fmCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.fmCPF_MaskInputRejected);
             this.fmCPF.Leave += new System.EventHandler(this.fmCPF_Leave);
             // 
             // label1
@@ -229,7 +227,6 @@
             // 
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ToolTipTitle = "Informe o CPF Cadastrado no Sistema";
-            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // FormRecuperarSenha
             // 
@@ -245,7 +242,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Livraria Visual - Redefinir Senha";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.FormRecuperarSenha_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

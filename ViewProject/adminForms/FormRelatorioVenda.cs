@@ -58,9 +58,5 @@ namespace ViewProject.adminForms
             this.Close();
         }
 
-        private void FormRelatorioVenda_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
