@@ -278,7 +278,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.10865F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.89135F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156F));
             this.tableLayoutPanel4.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label10, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.lblNome, 1, 0);
@@ -318,7 +318,7 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Enabled = false;
             this.lblNome.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(97, 0);
+            this.lblNome.Location = new System.Drawing.Point(96, 0);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(66, 25);
             this.lblNome.TabIndex = 40;
@@ -329,7 +329,7 @@
             this.lblCPF.AutoSize = true;
             this.lblCPF.Enabled = false;
             this.lblCPF.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPF.Location = new System.Drawing.Point(97, 50);
+            this.lblCPF.Location = new System.Drawing.Point(96, 50);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(164, 25);
             this.lblCPF.TabIndex = 41;
@@ -340,7 +340,7 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Enabled = false;
             this.lblTotal.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(615, 0);
+            this.lblTotal.Location = new System.Drawing.Point(612, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(58, 25);
             this.lblTotal.TabIndex = 45;
@@ -350,7 +350,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(522, 0);
+            this.label12.Location = new System.Drawing.Point(519, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 25);
             this.label12.TabIndex = 44;

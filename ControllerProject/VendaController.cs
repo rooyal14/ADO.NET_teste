@@ -1,6 +1,7 @@
 ﻿using ModelProject;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -67,6 +68,50 @@ namespace ControllerProject
             command.Parameters.AddWithValue("@ID_Livro", livro.ID_Livro);
             command.ExecuteNonQuery();
             conn.Close();
+        }
+
+        public DataTable getVendasFromDB()
+        {
+            SqlConnection conn = DBCon.Conn();
+            SqlCommand command = conn.CreateCommand();
+            command.CommandText = "SELECT tbv.ID_Venda, tbv.total, tbu.Nome, tbv.Data FROM Tb_Venda as tbv LEFT JOIN Tb_Usuarios as tbu on tbv.ID_Cliente = tbu.ID_Cliente";
+            var table = DBCon.queryDataTable(command);
+            conn.Close();
+            return table;
+        }
+
+        public DataTable searchVendasByColumn(string tipoPesquisado, string pesquisa, DataTable tbVendasOriginal)
+        {
+            string colunaPesquisada;
+            string filtro = "";
+            try
+            {
+                switch (tipoPesquisado)
+                {
+                    case "Código":
+                        colunaPesquisada = "ID_Venda";
+                        filtro = String.Format("{0} = {1}", colunaPesquisada, pesquisa);
+                        break;
+                    case "Valor total":
+                        colunaPesquisada = "total";
+                        filtro = String.Format("{0} = {1}", colunaPesquisada, pesquisa);
+                        break;
+                    case "Nome":
+                        colunaPesquisada = "Nome";
+                        filtro = String.Format("{0} LIKE '%{1}%'", colunaPesquisada, pesquisa);
+                        break;
+
+                }
+
+
+                var tbFiltrado = tbVendasOriginal.Select(filtro, "ID_Venda ASC").CopyToDataTable();
+                return tbFiltrado;
+            }
+            catch
+            {
+                return null;
+            }
+
         }
     }
 }

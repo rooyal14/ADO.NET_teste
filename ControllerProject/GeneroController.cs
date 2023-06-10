@@ -28,8 +28,8 @@ namespace ControllerProject
                 return false;
             }
         }
-           
-        
+
+
 
         public void deleteGeneroFromDB(Genero genero)
         {
@@ -50,6 +50,25 @@ namespace ControllerProject
             command.Parameters.AddWithValue("@Nome", genero.Nome);
             command.ExecuteNonQuery();
             conn.Close();
+        }
+
+        public DataTable getGenerosFromDB()
+        {
+            var conn = DBCon.Conn();
+            var command = conn.CreateCommand();
+            command.CommandText = "SELECT Nome, ID_Genero FROM Tb_Genero";
+            var query = DBCon.queryDataTable(command);
+            return query;
+        }
+
+        public DataTable getChangeableGenerosFromDB()
+        {
+            var conn = DBCon.Conn();
+            var command = conn.CreateCommand();
+            command.CommandText = "SELECT * FROM Tb_Genero WHERE ID_Genero > 0";
+            var table = DBCon.queryDataTable(command);
+            conn.Close();
+            return table;
         }
 
         public bool checkIfProtectedGenero(Genero genero)
@@ -84,6 +103,34 @@ namespace ControllerProject
 
             var result = Convert.ToInt32(query.Rows[0][0].ToString()) == 0 ? false : true;
             return result;
+
+        }
+
+        public DataTable searchGenerosByColumn(string tipoPesquisado, string pesquisa, DataTable tbGenerosOriginal)
+        {
+            string colunaPesquisada;
+            string filtro = "";
+            try
+            {
+                switch (tipoPesquisado)
+                {
+                    case "Código":
+                        colunaPesquisada = "ID_Genero";
+                        filtro = String.Format("{0} = {1}", colunaPesquisada, pesquisa);
+                        break;
+                    case "Nome":
+                        colunaPesquisada = "Nome";
+                        filtro = String.Format("{0} LIKE '%{1}%'", colunaPesquisada, pesquisa);
+                        break;
+                }
+
+                var tbFiltrado = tbGenerosOriginal.Select(filtro, "ID_Genero ASC").CopyToDataTable();
+                return tbFiltrado;
+            }
+            catch
+            {
+                return null;
+            }
 
         }
 

@@ -76,6 +76,16 @@ namespace ControllerProject
             conn.Close();
         }
 
+        public DataTable getChangeableUsersFromDB()
+        {
+            var conn = DBCon.Conn();
+            var command = conn.CreateCommand();
+            command.CommandText = "SELECT * FROM Tb_Usuarios WHERE ID_Cliente > 1";
+            var table = DBCon.queryDataTable(command);
+            conn.Close();
+            return table;
+        }
+
         public bool loginUser(string email, string password, out string currentUserEmail, out bool currentUsertrueAdmin)
         {
             SqlConnection conn = DBCon.Conn();
@@ -165,6 +175,50 @@ namespace ControllerProject
                 query.Rows[0][4].ToString(),
                 Convert.ToBoolean(query.Rows[0][5]));
             return usuario;
+        }
+
+        public DataTable searchUsersByColumn(string tipoPesquisado, string pesquisa, DataTable tbUsersOriginal)
+        {
+            string colunaPesquisada;
+            string filtro = "";
+            try
+            {
+                switch (tipoPesquisado)
+                {
+                    case "Código":
+                        colunaPesquisada = "ID_Cliente";
+                        filtro = String.Format("{0} = {1}", colunaPesquisada, pesquisa);
+                        break;
+                    case "Nome":
+                        colunaPesquisada = "Nome";
+                        filtro = String.Format("{0} LIKE '%{1}%'", colunaPesquisada, pesquisa);
+                        break;
+                    case "CPF":
+                        colunaPesquisada = "CPF";
+                        filtro = String.Format("{0} LIKE '%{1}%'", colunaPesquisada, pesquisa);
+                        break;
+                    case "Email":
+                        colunaPesquisada = "Email";
+                        filtro = String.Format("{0} LIKE '%{1}%'", colunaPesquisada, pesquisa);
+                        break;
+                    case "Senha":
+                        colunaPesquisada = "Senha";
+                        filtro = String.Format("{0} LIKE '%{1}%'", colunaPesquisada, pesquisa);
+                        break;
+                    case "Telefone":
+                        colunaPesquisada = "Telefone";
+                        filtro = String.Format("{0} LIKE '%{1}%'", colunaPesquisada, pesquisa);
+                        break;
+                }
+
+                var tbFiltrado = tbUsersOriginal.Select(filtro, "ID_Cliente ASC").CopyToDataTable();
+                return tbFiltrado;
+            }
+            catch
+            {
+                return null;
+            }
+
         }
 
 

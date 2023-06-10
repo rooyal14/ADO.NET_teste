@@ -16,16 +16,20 @@ namespace ViewProject
 {
     public partial class FormRegistroClientes : Form
     {
+        UserController userController = new UserController();
+        VendaController vendaController = new VendaController();
+        DataTable tbUsers;
         public FormRegistroClientes()
         {
+            tbUsers = userController.getChangeableUsersFromDB();
             InitializeComponent();
             fillDgv();
+            cbxPesquisa.SelectedIndex = 0;
         }
 
         bool stateAdicionando = false;
 
-        UserController userController = new UserController();
-        VendaController vendaController = new VendaController();
+        
 
          private void btnNew_Click(object sender, EventArgs e)
         {
@@ -170,13 +174,8 @@ namespace ViewProject
 
         private void fillDgv()
         {
-            var conn = DBCon.Conn();
-            var command = conn.CreateCommand();
-            command.CommandText = "select * from Tb_Usuarios WHERE ID_Cliente > 1";
-            var table = DBCon.queryDataTable(command);
-            dgvClientes.DataSource = table;
+            dgvClientes.DataSource = tbUsers;
 
-            conn.Close();
         }
 
         private void changeFormularioEnabled(bool arg)
@@ -279,6 +278,22 @@ namespace ViewProject
         {
             this.Close();
         }
-        
+
+        private void fmPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(fmPesquisa.Text))
+            {
+                dgvClientes.DataSource = tbUsers;
+                return;
+            }
+            else
+            {
+                dgvClientes.DataSource = userController.searchUsersByColumn(cbxPesquisa.SelectedItem.ToString(), fmPesquisa.Text, tbUsers);
+            }
+
+
+
+        }
+
     }
 }

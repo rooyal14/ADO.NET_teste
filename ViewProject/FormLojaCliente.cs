@@ -25,16 +25,22 @@ namespace ViewProject
         private Carrinho repositorioCarrinho = new Carrinho();
 
         User user;
+
+        DataTable livrosTable;
+        
         public FormLojaCliente(User user)
         {
             InitializeComponent();
-            fillDgvLivros();
+            livrosTable = livroController.getDisplayLivros();
             this.user = user;
+            fillDgvLivros();
             fillDgvCarrinho();
             if (user != null)
             {
                 fillUserInfo();
             }
+            cbxPesquisa.SelectedIndex = 0;
+            
         }
 
         private void fillUserInfo()
@@ -45,13 +51,15 @@ namespace ViewProject
 
         private void fillDgvLivros()
         {
-            dgv.DataSource = livroController.getDisplayLivros(); ;
+
+            dgv.DataSource = livrosTable;
 
             dgv.Columns[0].HeaderText = "Código";
-            dgv.Columns[1].HeaderText = "Genero";
-            dgv.Columns[2].HeaderText = "Quantidade em Estoque";
-            dgv.Columns[3].HeaderText = "Valor Unitário";
-            dgv.Columns[4].HeaderText = "Nome";
+            dgv.Columns[1].HeaderText = "Nome";
+            dgv.Columns[2].HeaderText = "Valor Unitário";
+            dgv.Columns[3].HeaderText = "Quantidade em Estoque";
+            dgv.Columns[4].HeaderText = "Gênero";
+            dgv.Columns[5].HeaderText = "Autores";
 
         }
 
@@ -188,5 +196,20 @@ namespace ViewProject
             this.Close();
         }
 
+        private void fmPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(fmPesquisa.Text))
+            {
+                dgv.DataSource = livrosTable;
+                return;
+            } 
+            else
+            {
+                dgv.DataSource = livroController.searchLivrosByColumn(cbxPesquisa.SelectedItem.ToString(), fmPesquisa.Text, livrosTable);
+            }
+            
+            
+
+        }
     }
 }

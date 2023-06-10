@@ -135,5 +135,49 @@ namespace ControllerProject
             return result;
         }
 
+        public DataTable searchLivrosByColumn(string tipoPesquisado, string pesquisa, DataTable tbLivrosOriginal)
+        {
+            string colunaPesquisada;
+            string filtro = "";
+            try
+            {
+                switch (tipoPesquisado)
+                {
+                    case "Código":
+                        colunaPesquisada = "ID_Livro";
+                        filtro = String.Format("{0} = {1}", colunaPesquisada, pesquisa);
+                        break;
+                    case "Nome":
+                        colunaPesquisada = "Nome";
+                        filtro = String.Format("{0} LIKE '%{1}%'", colunaPesquisada, pesquisa);
+                        break;
+                    case "Valor Unitário":
+                        colunaPesquisada = "precoUnitario";
+                        filtro = String.Format("{0} = {1}", colunaPesquisada, pesquisa);
+                        break;
+                    case "Quantidade em Estoque":
+                        colunaPesquisada = "estoque";
+                        filtro = String.Format("{0} = {1}", colunaPesquisada, pesquisa);
+                        break;
+                    case "Gênero":
+                        colunaPesquisada = "Genero";
+                        filtro = String.Format("{0} LIKE '%{1}%'", colunaPesquisada, pesquisa);
+                        break;
+                    case "Autor":
+                        colunaPesquisada = "Autores";
+                        filtro = String.Format("{0} LIKE '%{1}%'", colunaPesquisada, pesquisa);
+                        break;
+                }
+
+                var tbFiltrado = tbLivrosOriginal.Select(filtro, "ID_Livro ASC").CopyToDataTable();
+                return tbFiltrado;
+            }
+            catch
+            {
+                return null;
+            }
+            
+        }
+
     }
 }

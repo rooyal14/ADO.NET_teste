@@ -1,4 +1,5 @@
 ﻿using ModelProject;
+using ControllerProject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,20 +15,20 @@ namespace ViewProject.adminForms
 {
     public partial class FormRelatorioVenda : Form
     {
+        VendaController vendaController = new VendaController();
+        DataTable tbVendas;
         public FormRelatorioVenda()
         {
+            tbVendas = vendaController.getVendasFromDB();
             InitializeComponent();
             fillDgvVendas();
+            cbxPesquisa.SelectedIndex = 0;
         }
 
         private void fillDgvVendas()
         {
-            SqlConnection conn = DBCon.Conn();
-            SqlCommand command = conn.CreateCommand();
-            command.CommandText = "SELECT tbv.ID_Venda, tbv.total, tbu.Nome, tbv.Data FROM Tb_Venda as tbv LEFT JOIN Tb_Usuarios as tbu on tbv.ID_Cliente = tbu.ID_Cliente";
-            var table = DBCon.queryDataTable(command);
-            dgvVendas.DataSource = table;
-            conn.Close();
+            dgvVendas.DataSource = tbVendas;
+            
         }
 
         private void dgvVendas_SelectionChanged(object sender, EventArgs e)
@@ -56,6 +57,22 @@ namespace ViewProject.adminForms
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void fmPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(fmPesquisa.Text))
+            {
+                dgvVendas.DataSource = tbVendas;
+                return;
+            }
+            else
+            {
+                dgvVendas.DataSource = vendaController.searchVendasByColumn(cbxPesquisa.SelectedItem.ToString(), fmPesquisa.Text, tbVendas);
+            }
+
+
+
         }
 
     }

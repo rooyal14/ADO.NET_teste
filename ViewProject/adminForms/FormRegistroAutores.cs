@@ -15,13 +15,18 @@ namespace ViewProject.adminForms
 {
     public partial class FormRegistroAutores : Form
     {
+        AutorController autorController = new AutorController();
+        DataTable tbAutores;
+
         public FormRegistroAutores()
         {
+            tbAutores = autorController.getChangeableAutoresFromDB();
             InitializeComponent();
             fillDgv();
+            cbxPesquisa.SelectedIndex = 0;
         }
 
-        AutorController autorController = new AutorController();
+        
 
         private void dgv_SelectionChanged(object sender, EventArgs e)
         {
@@ -125,6 +130,22 @@ namespace ViewProject.adminForms
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void fmPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(fmPesquisa.Text))
+            {
+                dgvAutores.DataSource = tbAutores;
+                return;
+            }
+            else
+            {
+                dgvAutores.DataSource = autorController.searchAutoresByColumn(cbxPesquisa.SelectedItem.ToString(), fmPesquisa.Text, tbAutores);
+            }
+
+
+
         }
     }
 }

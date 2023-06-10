@@ -17,30 +17,33 @@ namespace ViewProject
 {
     public partial class FormRegistroLivros : Form
     {
+        
+        LivroController livroController = new LivroController();
+        GeneroController generoController = new GeneroController();
+        VendaController vendaController = new VendaController();
+
+        DataTable livrosTable;
         public FormRegistroLivros()
         {
+            livrosTable = livroController.getDisplayLivros();
             InitializeComponent();
             fillDgv();
             fillCbx();
+            cbxPesquisa.SelectedIndex = 0;
 
         }
 
-        LivroController livroController = new LivroController();
-        VendaController vendaController = new VendaController();
-
         private void fillCbx()
         {
-            var comm = DBCon.Conn().CreateCommand();
-            comm.CommandText = "SELECT Nome, ID_Genero FROM Tb_Genero";
-            var d = DBCon.queryDataTable(comm);
-            cbxGenero.ValueMember = d.Columns[1].ToString();
-            cbxGenero.DisplayMember = d.Columns[0].ToString();
-            cbxGenero.DataSource = d;
+            var tbGeneros = generoController.getGenerosFromDB();
+            cbxGenero.ValueMember = tbGeneros.Columns[1].ToString();
+            cbxGenero.DisplayMember = tbGeneros.Columns[0].ToString();
+            cbxGenero.DataSource = tbGeneros;
         }
 
         private void fillDgv()
         {
-            dgv.DataSource = livroController.getDisplayLivros();
+            dgv.DataSource = livrosTable;
 
         }
 
@@ -164,6 +167,22 @@ namespace ViewProject
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void fmPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(fmPesquisa.Text))
+            {
+                dgv.DataSource = livrosTable;
+                return;
+            }
+            else
+            {
+                dgv.DataSource = livroController.searchLivrosByColumn(cbxPesquisa.SelectedItem.ToString(), fmPesquisa.Text, livrosTable);
+            }
+
+
+
         }
 
     }

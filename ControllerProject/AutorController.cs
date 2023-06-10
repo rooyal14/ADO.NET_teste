@@ -42,6 +42,16 @@ namespace ControllerProject
             conn.Close();
         }
 
+        public DataTable getChangeableAutoresFromDB()
+        {
+            var conn = DBCon.Conn();
+            var command = conn.CreateCommand();
+            command.CommandText = "SELECT * FROM Tb_Autor WHERE ID_Autor > 1";
+            var table = DBCon.queryDataTable(command);
+            conn.Close();
+            return table;
+        }
+
         public bool autorIsDuplicated(Autor autor)
         {
             SqlConnection conn = DBCon.Conn();
@@ -86,6 +96,35 @@ namespace ControllerProject
             var result = Convert.ToInt32(query.Rows[0][0].ToString()) == 0 ? false : true;
             return result;
         }
+
+        public DataTable searchAutoresByColumn(string tipoPesquisado, string pesquisa, DataTable tbAutoresOriginal)
+        {
+            string colunaPesquisada;
+            string filtro = "";
+            try
+            {
+                switch (tipoPesquisado)
+                {
+                    case "Código":
+                        colunaPesquisada = "ID_Autor";
+                        filtro = String.Format("{0} = {1}", colunaPesquisada, pesquisa);
+                        break;
+                    case "Nome":
+                        colunaPesquisada = "Nome";
+                        filtro = String.Format("{0} LIKE '%{1}%'", colunaPesquisada, pesquisa);
+                        break;
+                }
+
+                var tbFiltrado = tbAutoresOriginal.Select(filtro, "ID_Autor ASC").CopyToDataTable();
+                return tbFiltrado;
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
+
 
         public class PopupInsertLivro
         {

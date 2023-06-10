@@ -16,8 +16,12 @@ namespace ViewProject.adminForms
 {
     public partial class FormRegistroGeneros : Form
     {
+        GeneroController generoController = new GeneroController();
+        LivroController livroController = new LivroController();
+        DataTable tbGeneros;
         public FormRegistroGeneros()
         {
+            tbGeneros = generoController.getChangeableGenerosFromDB();
             InitializeComponent();
             fillDgv();
             if (dgvGeneros.CurrentRow != null)
@@ -26,10 +30,10 @@ namespace ViewProject.adminForms
                 fmNome.Text = dgvGeneros.CurrentRow.Cells[1].Value.ToString();
 
             }
+            cbxPesquisa.SelectedIndex = 0;
         }
 
-        GeneroController generoController = new GeneroController();
-        LivroController livroController = new LivroController();
+        
         
 
         private void dgv_SelectionChanged(object sender, EventArgs e)
@@ -51,16 +55,9 @@ namespace ViewProject.adminForms
 
         private void fillDgv()
         {
-            SqlConnection conn = DBCon.Conn();
-            SqlCommand command = conn.CreateCommand();
-            command.CommandText = "SELECT * FROM Tb_Genero WHERE ID_Genero > 0";
-            var table = DBCon.queryDataTable(command);
-            dgvGeneros.DataSource = table;
-            conn.Close();
+            dgvGeneros.DataSource = tbGeneros;   
 
         }
-
- 
 
         private void btnNew_Click_1(object sender, EventArgs e)
         {
@@ -152,6 +149,22 @@ namespace ViewProject.adminForms
              
             
             fillDgv();
+        }
+
+        private void fmPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(fmPesquisa.Text))
+            {
+                dgvGeneros.DataSource = tbGeneros;
+                return;
+            }
+            else
+            {
+                dgvGeneros.DataSource = generoController.searchGenerosByColumn(cbxPesquisa.SelectedItem.ToString(), fmPesquisa.Text, tbGeneros);
+            }
+
+
+
         }
 
     }
