@@ -147,5 +147,10 @@ namespace ViewProject.adminForms
 
 
         }
+
+        private void cbxPesquisa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
