@@ -69,6 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutorController.cs" />
+    <Compile Include="GerarRelatorioPDF.cs" />
+    <Compile Include="RodapeRelatorioPDF.cs" />
     <Compile Include="TesteCpf.cs" />
     <Compile Include="Criptografia.cs" />
     <Compile Include="GeneroController.cs" />
