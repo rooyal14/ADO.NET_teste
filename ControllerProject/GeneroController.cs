@@ -65,7 +65,8 @@ namespace ControllerProject
         {
             var conn = DBCon.Conn();
             var command = conn.CreateCommand();
-            command.CommandText = "SELECT * FROM Tb_Genero WHERE ID_Genero > 0";
+            //command.CommandText = "SELECT * FROM Tb_Genero WHERE ID_Genero > 0";
+            command.CommandText = "EXEC RelatorioEstoqueLivros";
             var table = DBCon.queryDataTable(command);
             conn.Close();
             return table;

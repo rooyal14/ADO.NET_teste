@@ -7,12 +7,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace ControllerProject
 {
-    class GerarRelatorioPDF
+    public class GerarRelatorioPDF
     {
-
+        UserController userController = new UserController();
+        /*
         static void GerarReltoriosPDF()
         {
             //https://www.youtube.com/watch?v=Gm2pJfCJyUw
@@ -199,6 +201,52 @@ namespace ControllerProject
             {
                 tabela.AddCell("ERRO");
             }
+        }
+        */
+        public void geralRelatorioClientesCadastrados()
+        {
+            var pxPorMm = 72 / 25.2F;
+            var pdf = new Document(PageSize.A4, 15 * pxPorMm, 15 * pxPorMm,
+                15 * pxPorMm, 20 * pxPorMm);
+            var nomeArquivo = "meuPdfTesteClientes.pdf";
+            var arquivo = new FileStream(nomeArquivo, FileMode.Create);
+            var writer = PdfWriter.GetInstance(pdf, arquivo);
+            writer.PageEvent = new RodapeRelatorioPDF(1);
+            pdf.Open();
+
+            //adiciona um título
+            var titulo = new Paragraph("Relatório de Pessoas\n\n");
+            titulo.Alignment = Element.ALIGN_CENTER;
+            titulo.SpacingAfter = 4;
+            pdf.Add(titulo);
+
+            //adiciona a tabela
+            DataTable tbUsuarios = userController.getChangeableUsersFromDB();
+            PdfPTable pdfTable = new PdfPTable(tbUsuarios.Columns.Count);
+            foreach (DataColumn c in tbUsuarios.Columns)
+            {
+
+                pdfTable.AddCell(new Phrase(c.ColumnName));
+            }
+
+            foreach (DataRow r in tbUsuarios.Rows)
+            {
+                if (tbUsuarios.Rows.Count > 0)
+                {
+                    foreach(var content in r.ItemArray)
+                    {
+                        pdfTable.AddCell(new Phrase(content.ToString()));
+                    }
+                    /*
+                    pdfTable.AddCell(new Phrase(r[0].ToString()));
+                    pdfTable.AddCell(new Phrase(r[1].ToString()));
+                    pdfTable.AddCell(new Phrase(r[2].ToString()));
+                    pdfTable.AddCell(new Phrase(r[3].ToString()));
+                    */
+                }
+            }
+            pdf.Add(pdfTable);
+            pdf.Close();
         }
 
     }
