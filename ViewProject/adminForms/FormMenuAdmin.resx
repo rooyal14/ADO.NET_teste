@@ -133,13 +133,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRelatorios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>699, 483</value>
+    <value>854, 578</value>
   </data>
   <data name="btnRelatorios.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="btnRelatorios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>687, 229</value>
+    <value>840, 276</value>
   </data>
   <data name="btnRelatorios.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -172,13 +172,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRegistroVendas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 483</value>
+    <value>5, 578</value>
   </data>
   <data name="btnRegistroVendas.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="btnRegistroVendas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>687, 229</value>
+    <value>839, 276</value>
   </data>
   <data name="btnRegistroVendas.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -211,13 +211,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRegistroGeneros.Location" type="System.Drawing.Point, System.Drawing">
-    <value>699, 244</value>
+    <value>854, 292</value>
   </data>
   <data name="btnRegistroGeneros.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="btnRegistroGeneros.Size" type="System.Drawing.Size, System.Drawing">
-    <value>687, 229</value>
+    <value>840, 274</value>
   </data>
   <data name="btnRegistroGeneros.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -250,13 +250,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRegistroLivros.Location" type="System.Drawing.Point, System.Drawing">
-    <value>699, 5</value>
+    <value>854, 6</value>
   </data>
   <data name="btnRegistroLivros.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="btnRegistroLivros.Size" type="System.Drawing.Size, System.Drawing">
-    <value>687, 229</value>
+    <value>840, 274</value>
   </data>
   <data name="btnRegistroLivros.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -289,13 +289,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRegistroAutores.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 244</value>
+    <value>5, 292</value>
   </data>
   <data name="btnRegistroAutores.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="btnRegistroAutores.Size" type="System.Drawing.Size, System.Drawing">
-    <value>687, 229</value>
+    <value>839, 274</value>
   </data>
   <data name="btnRegistroAutores.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -328,13 +328,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnRegistroUsuarios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 5</value>
+    <value>5, 6</value>
   </data>
   <data name="btnRegistroUsuarios.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="btnRegistroUsuarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>687, 229</value>
+    <value>839, 274</value>
   </data>
   <data name="btnRegistroUsuarios.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -364,13 +364,16 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 12</value>
+    <value>15, 14</value>
+  </data>
+  <data name="tableLayoutPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
   </data>
   <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1390, 717</value>
+    <value>1699, 860</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -394,13 +397,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>9, 20</value>
+    <value>11, 24</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1366, 742</value>
+    <value>1670, 890</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 5, 4, 5</value>
+    <value>5, 6, 5, 6</value>
   </data>
   <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
@@ -409,7 +412,7 @@
     <value>WindowsDefaultBounds</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Livraria Visual - Menu Principal</value>
+    <value>Livraria Visual - Menu de Gestão</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMenuAdmin</value>

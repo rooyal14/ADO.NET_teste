@@ -167,5 +167,9 @@ namespace ViewProject.adminForms
 
         }
 
+        private void FormRegistroGeneros_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
