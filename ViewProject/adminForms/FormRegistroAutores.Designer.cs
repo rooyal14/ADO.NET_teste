@@ -48,8 +48,8 @@ namespace ViewProject.adminForms
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.gridPesquisa = new System.Windows.Forms.TableLayoutPanel();
-            this.fmPesquisa = new System.Windows.Forms.TextBox();
             this.cbxPesquisa = new System.Windows.Forms.ComboBox();
+            this.fmPesquisa = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAutores)).BeginInit();
@@ -317,16 +317,6 @@ namespace ViewProject.adminForms
             this.gridPesquisa.Size = new System.Drawing.Size(491, 167);
             this.gridPesquisa.TabIndex = 60;
             // 
-            // fmPesquisa
-            // 
-            this.fmPesquisa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fmPesquisa.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmPesquisa.Location = new System.Drawing.Point(3, 3);
-            this.fmPesquisa.Name = "fmPesquisa";
-            this.fmPesquisa.Size = new System.Drawing.Size(485, 75);
-            this.fmPesquisa.TabIndex = 0;
-            this.fmPesquisa.TextChanged += new System.EventHandler(this.fmPesquisa_TextChanged);
-            // 
             // cbxPesquisa
             // 
             this.cbxPesquisa.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -339,8 +329,18 @@ namespace ViewProject.adminForms
             this.cbxPesquisa.Name = "cbxPesquisa";
             this.cbxPesquisa.Size = new System.Drawing.Size(485, 76);
             this.cbxPesquisa.TabIndex = 1;
-            this.cbxPesquisa.Text = "Escolher pesquisa";
+            this.cbxPesquisa.Text = "Busca Otimizada";
             this.cbxPesquisa.SelectedIndexChanged += new System.EventHandler(this.cbxPesquisa_SelectedIndexChanged);
+            // 
+            // fmPesquisa
+            // 
+            this.fmPesquisa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fmPesquisa.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fmPesquisa.Location = new System.Drawing.Point(3, 3);
+            this.fmPesquisa.Name = "fmPesquisa";
+            this.fmPesquisa.Size = new System.Drawing.Size(485, 75);
+            this.fmPesquisa.TabIndex = 0;
+            this.fmPesquisa.TextChanged += new System.EventHandler(this.fmPesquisa_TextChanged);
             // 
             // tableLayoutPanel4
             // 
@@ -354,7 +354,7 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.88733F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 169F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 173F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(1317, 173);
             this.tableLayoutPanel4.TabIndex = 47;
             // 

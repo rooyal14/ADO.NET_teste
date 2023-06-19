@@ -74,5 +74,9 @@ namespace ViewProject.adminForms
             this.Close();
         }
 
+        private void lbxAutores_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

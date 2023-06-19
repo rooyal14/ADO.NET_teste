@@ -29,9 +29,9 @@ namespace ViewProject.adminForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.fmIdGenero = new System.Windows.Forms.TextBox();
             this.fmNome = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,43 +51,45 @@ namespace ViewProject.adminForms
             this.gridPesquisa = new System.Windows.Forms.TableLayoutPanel();
             this.fmPesquisa = new System.Windows.Forms.TextBox();
             this.cbxPesquisa = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.gridPesquisa.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // fmIdGenero
             // 
             this.fmIdGenero.Enabled = false;
             this.fmIdGenero.Font = new System.Drawing.Font("Tahoma", 24F);
-            this.fmIdGenero.Location = new System.Drawing.Point(316, 3);
+            this.fmIdGenero.Location = new System.Drawing.Point(387, 3);
             this.fmIdGenero.MaxLength = 1000;
             this.fmIdGenero.Name = "fmIdGenero";
-            this.fmIdGenero.Size = new System.Drawing.Size(646, 46);
-            this.fmIdGenero.TabIndex = 35;
+            this.fmIdGenero.Size = new System.Drawing.Size(787, 75);
+            this.fmIdGenero.TabIndex = 10;
             // 
             // fmNome
             // 
             this.fmNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.fmNome.Enabled = false;
             this.fmNome.Font = new System.Drawing.Font("Tahoma", 24F);
-            this.fmNome.Location = new System.Drawing.Point(316, 53);
+            this.fmNome.Location = new System.Drawing.Point(387, 84);
             this.fmNome.MaxLength = 100;
             this.fmNome.Name = "fmNome";
-            this.fmNome.Size = new System.Drawing.Size(646, 46);
-            this.fmNome.TabIndex = 29;
+            this.fmNome.Size = new System.Drawing.Size(784, 75);
+            this.fmNome.TabIndex = 2;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 24F);
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(38, 395);
+            this.label8.Location = new System.Drawing.Point(6, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(780, 68);
+            this.label8.Size = new System.Drawing.Size(458, 136);
             this.label8.TabIndex = 43;
             this.label8.Text = "Lista de Gêneros Cadastrados:";
             // 
@@ -112,14 +114,14 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel1.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.fmNome, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.fmIdGenero, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(18, 86);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(17, 144);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(965, 101);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1184, 162);
             this.tableLayoutPanel1.TabIndex = 38;
             // 
             // label4
@@ -127,10 +129,10 @@ namespace ViewProject.adminForms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 24F);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(6, 93);
+            this.label4.Location = new System.Drawing.Point(6, 81);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(386, 68);
+            this.label4.Size = new System.Drawing.Size(225, 81);
             this.label4.TabIndex = 2;
             this.label4.Text = "Nome Gênero:";
             // 
@@ -153,11 +155,11 @@ namespace ViewProject.adminForms
             this.dgvGeneros.AllowUserToOrderColumns = true;
             this.dgvGeneros.AllowUserToResizeColumns = false;
             this.dgvGeneros.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 15.75F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvGeneros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvGeneros.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvGeneros.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -166,33 +168,33 @@ namespace ViewProject.adminForms
             this.dgvGeneros.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvGeneros.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvGeneros.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGeneros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGeneros.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvGeneros.ColumnHeadersHeight = 34;
             this.dgvGeneros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 15.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGeneros.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGeneros.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvGeneros.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvGeneros.Location = new System.Drawing.Point(6, 6);
-            this.dgvGeneros.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvGeneros.Margin = new System.Windows.Forms.Padding(6);
             this.dgvGeneros.MultiSelect = false;
             this.dgvGeneros.Name = "dgvGeneros";
             this.dgvGeneros.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvGeneros.RowHeadersWidth = 62;
             this.dgvGeneros.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGeneros.Size = new System.Drawing.Size(946, 225);
+            this.dgvGeneros.Size = new System.Drawing.Size(1154, 392);
             this.dgvGeneros.TabIndex = 37;
             this.dgvGeneros.Text = global::ViewProject.Properties.Settings.Default.teste;
             this.dgvGeneros.Click += new System.EventHandler(this.dgv_SelectionChanged);
@@ -206,7 +208,7 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel2.Controls.Add(this.btnChange, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnDelete, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnInsert, 0, 4);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(1007, 86);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1283, 144);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
@@ -215,7 +217,7 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(261, 421);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(385, 790);
             this.tableLayoutPanel2.TabIndex = 44;
             // 
             // btnVoltar
@@ -223,11 +225,11 @@ namespace ViewProject.adminForms
             this.btnVoltar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnVoltar.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnVoltar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnVoltar.Location = new System.Drawing.Point(6, 471);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnVoltar.Location = new System.Drawing.Point(6, 480);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(6);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(255, 78);
-            this.btnVoltar.TabIndex = 27;
+            this.btnVoltar.Size = new System.Drawing.Size(373, 146);
+            this.btnVoltar.TabIndex = 7;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -238,10 +240,10 @@ namespace ViewProject.adminForms
             this.btnNew.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnNew.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnNew.Location = new System.Drawing.Point(6, 6);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(6);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(255, 78);
-            this.btnNew.TabIndex = 16;
+            this.btnNew.Size = new System.Drawing.Size(373, 146);
+            this.btnNew.TabIndex = 4;
             this.btnNew.Text = "Novo";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click_1);
@@ -252,11 +254,11 @@ namespace ViewProject.adminForms
             this.btnChange.Enabled = false;
             this.btnChange.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnChange.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnChange.Location = new System.Drawing.Point(6, 161);
-            this.btnChange.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnChange.Location = new System.Drawing.Point(6, 164);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(6);
             this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(255, 78);
-            this.btnChange.TabIndex = 17;
+            this.btnChange.Size = new System.Drawing.Size(373, 146);
+            this.btnChange.TabIndex = 5;
             this.btnChange.Text = "Alterar";
             this.btnChange.UseVisualStyleBackColor = true;
             this.btnChange.Click += new System.EventHandler(this.btnChange_Click_1);
@@ -267,11 +269,11 @@ namespace ViewProject.adminForms
             this.btnDelete.Enabled = false;
             this.btnDelete.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnDelete.Location = new System.Drawing.Point(6, 316);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDelete.Location = new System.Drawing.Point(6, 322);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(255, 78);
-            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Size = new System.Drawing.Size(373, 146);
+            this.btnDelete.TabIndex = 6;
             this.btnDelete.Text = "Apagar";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
@@ -282,11 +284,11 @@ namespace ViewProject.adminForms
             this.btnInsert.Enabled = false;
             this.btnInsert.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnInsert.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnInsert.Location = new System.Drawing.Point(6, 626);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnInsert.Location = new System.Drawing.Point(6, 638);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(6);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(255, 79);
-            this.btnInsert.TabIndex = 19;
+            this.btnInsert.Size = new System.Drawing.Size(373, 146);
+            this.btnInsert.TabIndex = 8;
             this.btnInsert.Text = "Confirmar";
             this.btnInsert.UseVisualStyleBackColor = true;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click_1);
@@ -307,11 +309,11 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.dgvGeneros, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(28, 276);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(35, 536);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(952, 231);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1166, 404);
             this.tableLayoutPanel4.TabIndex = 45;
             // 
             // gridPesquisa
@@ -323,48 +325,66 @@ namespace ViewProject.adminForms
             this.gridPesquisa.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.gridPesquisa.Controls.Add(this.fmPesquisa, 0, 0);
             this.gridPesquisa.Controls.Add(this.cbxPesquisa, 0, 1);
-            this.gridPesquisa.Location = new System.Drawing.Point(472, 191);
+            this.gridPesquisa.Location = new System.Drawing.Point(517, 3);
             this.gridPesquisa.Name = "gridPesquisa";
             this.gridPesquisa.RowCount = 2;
             this.gridPesquisa.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.gridPesquisa.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.gridPesquisa.Size = new System.Drawing.Size(0, 0);
+            this.gridPesquisa.Size = new System.Drawing.Size(664, 161);
             this.gridPesquisa.TabIndex = 60;
             // 
             // fmPesquisa
             // 
-            this.fmPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.fmPesquisa.Location = new System.Drawing.Point(109, 3);
+            this.fmPesquisa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fmPesquisa.Font = new System.Drawing.Font("Tahoma", 24F);
+            this.fmPesquisa.Location = new System.Drawing.Point(3, 3);
+            this.fmPesquisa.MaxLength = 100;
             this.fmPesquisa.Name = "fmPesquisa";
-            this.fmPesquisa.Size = new System.Drawing.Size(287, 20);
+            this.fmPesquisa.Size = new System.Drawing.Size(658, 75);
             this.fmPesquisa.TabIndex = 0;
             this.fmPesquisa.TextChanged += new System.EventHandler(this.fmPesquisa_TextChanged);
             // 
             // cbxPesquisa
             // 
-            this.cbxPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cbxPesquisa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cbxPesquisa.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxPesquisa.FormattingEnabled = true;
             this.cbxPesquisa.Items.AddRange(new object[] {
             "Código",
             "Nome"});
-            this.cbxPesquisa.Location = new System.Drawing.Point(110, 28);
+            this.cbxPesquisa.Location = new System.Drawing.Point(3, 83);
             this.cbxPesquisa.Name = "cbxPesquisa";
-            this.cbxPesquisa.Size = new System.Drawing.Size(284, 21);
+            this.cbxPesquisa.Size = new System.Drawing.Size(658, 76);
             this.cbxPesquisa.TabIndex = 1;
             this.cbxPesquisa.Text = "Escolher pesquisa";
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.45594F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.54406F));
+            this.tableLayoutPanel5.Controls.Add(this.label8, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.gridPesquisa, 1, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(17, 342);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1184, 167);
+            this.tableLayoutPanel5.TabIndex = 61;
             // 
             // FormRegistroGeneros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1322, 550);
-            this.Controls.Add(this.gridPesquisa);
+            this.ClientSize = new System.Drawing.Size(1748, 1002);
+            this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormRegistroGeneros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
             this.Text = "Livraria Visual - Registro de Gêneros Literários";
@@ -376,6 +396,8 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel4.ResumeLayout(false);
             this.gridPesquisa.ResumeLayout(false);
             this.gridPesquisa.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,5 +423,6 @@ namespace ViewProject.adminForms
         private System.Windows.Forms.TableLayoutPanel gridPesquisa;
         private System.Windows.Forms.TextBox fmPesquisa;
         private System.Windows.Forms.ComboBox cbxPesquisa;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
     }
 }
