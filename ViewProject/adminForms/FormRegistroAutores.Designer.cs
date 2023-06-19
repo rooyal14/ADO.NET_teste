@@ -64,10 +64,10 @@ namespace ViewProject.adminForms
             this.fmNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.fmNome.Enabled = false;
             this.fmNome.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmNome.Location = new System.Drawing.Point(420, 86);
+            this.fmNome.Location = new System.Drawing.Point(430, 86);
             this.fmNome.MaxLength = 100;
             this.fmNome.Name = "fmNome";
-            this.fmNome.Size = new System.Drawing.Size(862, 75);
+            this.fmNome.Size = new System.Drawing.Size(884, 75);
             this.fmNome.TabIndex = 15;
             // 
             // fmIdAutor
@@ -75,9 +75,9 @@ namespace ViewProject.adminForms
             this.fmIdAutor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fmIdAutor.Enabled = false;
             this.fmIdAutor.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmIdAutor.Location = new System.Drawing.Point(420, 3);
+            this.fmIdAutor.Location = new System.Drawing.Point(430, 3);
             this.fmIdAutor.Name = "fmIdAutor";
-            this.fmIdAutor.Size = new System.Drawing.Size(862, 75);
+            this.fmIdAutor.Size = new System.Drawing.Size(884, 75);
             this.fmIdAutor.TabIndex = 26;
             // 
             // tableLayoutPanel3
@@ -85,12 +85,12 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.dgvAutores, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(11, 522);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(32, 522);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1295, 342);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1306, 342);
             this.tableLayoutPanel3.TabIndex = 50;
             // 
             // dgvAutores
@@ -139,7 +139,7 @@ namespace ViewProject.adminForms
             this.dgvAutores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvAutores.RowHeadersWidth = 62;
             this.dgvAutores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAutores.Size = new System.Drawing.Size(1283, 330);
+            this.dgvAutores.Size = new System.Drawing.Size(1294, 330);
             this.dgvAutores.TabIndex = 37;
             this.dgvAutores.Text = global::ViewProject.Properties.Settings.Default.teste;
             this.dgvAutores.SelectionChanged += new System.EventHandler(this.dgv_SelectionChanged);
@@ -153,7 +153,7 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel2.Controls.Add(this.btnChange, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnDelete, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnInsert, 0, 4);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(1337, 124);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1390, 127);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
@@ -162,7 +162,7 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(337, 743);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(397, 743);
             this.tableLayoutPanel2.TabIndex = 49;
             // 
             // btnVoltar
@@ -172,7 +172,7 @@ namespace ViewProject.adminForms
             this.btnVoltar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnVoltar.Location = new System.Drawing.Point(3, 447);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(331, 142);
+            this.btnVoltar.Size = new System.Drawing.Size(391, 142);
             this.btnVoltar.TabIndex = 27;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -186,7 +186,7 @@ namespace ViewProject.adminForms
             this.btnNew.Location = new System.Drawing.Point(6, 6);
             this.btnNew.Margin = new System.Windows.Forms.Padding(6);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(325, 136);
+            this.btnNew.Size = new System.Drawing.Size(385, 136);
             this.btnNew.TabIndex = 16;
             this.btnNew.Text = "Novo";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -200,7 +200,7 @@ namespace ViewProject.adminForms
             this.btnChange.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnChange.Location = new System.Drawing.Point(3, 151);
             this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(331, 142);
+            this.btnChange.Size = new System.Drawing.Size(391, 142);
             this.btnChange.TabIndex = 17;
             this.btnChange.Text = "Alterar";
             this.btnChange.UseVisualStyleBackColor = true;
@@ -214,7 +214,7 @@ namespace ViewProject.adminForms
             this.btnDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnDelete.Location = new System.Drawing.Point(3, 299);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(331, 142);
+            this.btnDelete.Size = new System.Drawing.Size(391, 142);
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "Apagar";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -228,7 +228,7 @@ namespace ViewProject.adminForms
             this.btnInsert.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnInsert.Location = new System.Drawing.Point(3, 595);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(331, 145);
+            this.btnInsert.Size = new System.Drawing.Size(391, 145);
             this.btnInsert.TabIndex = 19;
             this.btnInsert.Text = "Confirmar";
             this.btnInsert.UseVisualStyleBackColor = true;
@@ -273,7 +273,7 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1285, 167);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1317, 167);
             this.tableLayoutPanel1.TabIndex = 46;
             // 
             // label4
@@ -309,7 +309,7 @@ namespace ViewProject.adminForms
             this.gridPesquisa.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.gridPesquisa.Controls.Add(this.cbxPesquisa, 0, 1);
             this.gridPesquisa.Controls.Add(this.fmPesquisa, 0, 0);
-            this.gridPesquisa.Location = new System.Drawing.Point(794, 3);
+            this.gridPesquisa.Location = new System.Drawing.Point(823, 3);
             this.gridPesquisa.Name = "gridPesquisa";
             this.gridPesquisa.RowCount = 2;
             this.gridPesquisa.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -355,7 +355,7 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 47.88733F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 169F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1288, 173);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1317, 173);
             this.tableLayoutPanel4.TabIndex = 47;
             // 
             // FormRegistroAutores
@@ -363,7 +363,7 @@ namespace ViewProject.adminForms
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1685, 940);
+            this.ClientSize = new System.Drawing.Size(1860, 940);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
