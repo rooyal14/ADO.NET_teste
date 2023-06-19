@@ -283,6 +283,7 @@ namespace ControllerProject
             }
             pdf.Add(pdfTable);
             pdf.Close();
+            arquivo.Close();
         }
 
     }
