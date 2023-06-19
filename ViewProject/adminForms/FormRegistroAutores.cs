@@ -20,7 +20,6 @@ namespace ViewProject.adminForms
 
         public FormRegistroAutores()
         {
-            tbAutores = autorController.getChangeableAutoresFromDB();
             InitializeComponent();
             fillDgv();
             cbxPesquisa.SelectedIndex = 0;
@@ -47,12 +46,8 @@ namespace ViewProject.adminForms
 
         private void fillDgv()
         {
-            SqlConnection conn = DBCon.Conn();
-            SqlCommand command = conn.CreateCommand();
-            command.CommandText = "select * from Tb_Autor";
-            var table = DBCon.queryDataTable(command);
-            dgvAutores.DataSource = table;
-            conn.Close();
+            tbAutores = autorController.getChangeableAutoresFromDB();
+            dgvAutores.DataSource = tbAutores;
 
         }
 
@@ -84,13 +79,16 @@ namespace ViewProject.adminForms
             Autor autor = new Autor(fmIdAutor.Text, fmNome.Text);
             if (autorController.checkIfProtectedAutor(autor))
             {
-                MessageBox.Show("Não é possível deletar o gênero padrão");
+                MessageBox.Show("Não é possível deletar o autor padrão");
             }
             else if (autorController.autorIsReferenced(autor))
             {
-                MessageBox.Show("Autor cadastrado em livros, deseja substituí-lo e deletar mesmo assim?");
-                //TODO: perguntar se o usuário quer mesmo deletar
-                if (true)
+                DialogResult dialogResult = MessageBox.Show(
+                    "Autor cadastrado em livros, deseja substituí-lo e deletar mesmo assim?",
+                    "", 
+                    MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
                 {
                     autorController.substituirPorAutorIndefinido(autor);
                     autorController.deleteAutorFromDB(autor);

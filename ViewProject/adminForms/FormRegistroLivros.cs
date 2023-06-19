@@ -25,7 +25,6 @@ namespace ViewProject
         DataTable livrosTable;
         public FormRegistroLivros()
         {
-            livrosTable = livroController.getDisplayLivros();
             InitializeComponent();
             fillDgv();
             fillCbx();
@@ -43,6 +42,7 @@ namespace ViewProject
 
         private void fillDgv()
         {
+            livrosTable = livroController.getDisplayLivros();
             dgv.DataSource = livrosTable;
 
         }

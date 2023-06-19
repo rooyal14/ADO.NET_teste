@@ -143,10 +143,10 @@
     <Compile Include="FormRecuperarSenha.Designer.cs">
       <DependentUpon>FormRecuperarSenha.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRelatorios.cs">
+    <Compile Include="adminForms\FormRelatorios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRelatorios.Designer.cs">
+    <Compile Include="adminForms\FormRelatorios.Designer.cs">
       <DependentUpon>FormRelatorios.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -190,7 +190,7 @@
     <EmbeddedResource Include="FormRecuperarSenha.resx">
       <DependentUpon>FormRecuperarSenha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRelatorios.resx">
+    <EmbeddedResource Include="adminForms\FormRelatorios.resx">
       <DependentUpon>FormRelatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

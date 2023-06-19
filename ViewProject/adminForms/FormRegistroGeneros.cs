@@ -21,7 +21,6 @@ namespace ViewProject.adminForms
         DataTable tbGeneros;
         public FormRegistroGeneros()
         {
-            tbGeneros = generoController.getChangeableGenerosFromDB();
             InitializeComponent();
             fillDgv();
             if (dgvGeneros.CurrentRow != null)
@@ -55,6 +54,7 @@ namespace ViewProject.adminForms
 
         private void fillDgv()
         {
+            tbGeneros = generoController.getChangeableGenerosFromDB();
             dgvGeneros.DataSource = tbGeneros;   
 
         }
@@ -91,13 +91,17 @@ namespace ViewProject.adminForms
             }
             else if (generoController.generoIsReferenced(genero))
             {
-                MessageBox.Show("Genero cadastrado em livros, deseja substituí-lo e deletar mesmo assim?");
-                //TODO: perguntar se o usuário quer mesmo deletar
-                if (true)
+                DialogResult dialogResult = MessageBox.Show(
+                    "Genero cadastrado em livros, deseja substituí-lo e deletar mesmo assim?",
+                    "",
+                    MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
                 {
                     livroController.substituirPorGeneroIndefinido(genero);
                     generoController.deleteGeneroFromDB(genero);
                 }
+
             }
             else
             {

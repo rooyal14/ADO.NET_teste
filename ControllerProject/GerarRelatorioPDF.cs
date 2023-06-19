@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using ModelProject;
 
 namespace ControllerProject
 {
@@ -203,12 +204,53 @@ namespace ControllerProject
             }
         }
         */
-        public void geralRelatorioClientesCadastrados()
+        public DataTable gerarDataTableClientesCadastrados()
+        {
+            var command = DBCon.Conn().CreateCommand();
+            command.CommandText = "EXEC RelatorioClientesCadastrados";
+            DataTable dt = DBCon.queryDataTable(command);
+            return dt;
+        }
+
+        public DataTable gerarDataTableEstoqueLivros()
+        {
+            var command = DBCon.Conn().CreateCommand();
+            command.CommandText = "EXEC RelatorioEstoqueLivros";
+            DataTable dt = DBCon.queryDataTable(command);
+            return dt;
+        }
+
+        public DataTable gerarDataTableFechamentoDeCaixa()
+        {
+            var command = DBCon.Conn().CreateCommand();
+            command.CommandText = "EXEC RelatorioFechamentoDeCaixa";
+            DataTable dt = DBCon.queryDataTable(command);
+            return dt;
+        }
+
+        public DataTable gerarDataTableLivrosMaisVendidos()
+        {
+            var command = DBCon.Conn().CreateCommand();
+            command.CommandText = "EXEC RelatorioLivrosMaisVendidos";
+            DataTable dt = DBCon.queryDataTable(command);
+            return dt;
+        }
+
+        public DataTable gerarDataTablePedidosRealizados()
+        {
+            var command = DBCon.Conn().CreateCommand();
+            command.CommandText = "EXEC RelatorioPedidosRealizados";
+            DataTable dt = DBCon.queryDataTable(command);
+            return dt;
+        }
+
+
+        public void geralRelatorioClientesCadastrados(DataTable dt, string path)
         {
             var pxPorMm = 72 / 25.2F;
             var pdf = new Document(PageSize.A4, 15 * pxPorMm, 15 * pxPorMm,
                 15 * pxPorMm, 20 * pxPorMm);
-            var nomeArquivo = "meuPdfTesteClientes.pdf";
+            var nomeArquivo = "C:\\Users\\zwiro\\OneDrive\\Documentos\\SQL Server Management Studio\\meuPdfTesteClientes.pdf";
             var arquivo = new FileStream(nomeArquivo, FileMode.Create);
             var writer = PdfWriter.GetInstance(pdf, arquivo);
             writer.PageEvent = new RodapeRelatorioPDF(1);
@@ -221,28 +263,22 @@ namespace ControllerProject
             pdf.Add(titulo);
 
             //adiciona a tabela
-            DataTable tbUsuarios = userController.getChangeableUsersFromDB();
-            PdfPTable pdfTable = new PdfPTable(tbUsuarios.Columns.Count);
-            foreach (DataColumn c in tbUsuarios.Columns)
+            PdfPTable pdfTable = new PdfPTable(dt.Columns.Count);
+            foreach (DataColumn c in dt.Columns)
             {
 
                 pdfTable.AddCell(new Phrase(c.ColumnName));
             }
 
-            foreach (DataRow r in tbUsuarios.Rows)
+            foreach (DataRow r in dt.Rows)
             {
-                if (tbUsuarios.Rows.Count > 0)
+                if (dt.Rows.Count > 0)
                 {
                     foreach(var content in r.ItemArray)
                     {
                         pdfTable.AddCell(new Phrase(content.ToString()));
                     }
-                    /*
-                    pdfTable.AddCell(new Phrase(r[0].ToString()));
-                    pdfTable.AddCell(new Phrase(r[1].ToString()));
-                    pdfTable.AddCell(new Phrase(r[2].ToString()));
-                    pdfTable.AddCell(new Phrase(r[3].ToString()));
-                    */
+
                 }
             }
             pdf.Add(pdfTable);

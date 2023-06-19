@@ -56,8 +56,8 @@ namespace ControllerProject
         {
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
-            command.CommandText = "SELECT COUNT(ID_Autor) FROM Tb_Autor WHERE ID_Autor = @ID_Autor";
-            command.Parameters.AddWithValue("@ID_Autor", autor.ID_Autor);
+            command.CommandText = "SELECT COUNT(Nome) FROM Tb_Autor WHERE Nome = @Nome";
+            command.Parameters.AddWithValue("@Nome", autor.nome);
             DataTable query = DBCon.queryDataTable(command);
             conn.Close();
 
