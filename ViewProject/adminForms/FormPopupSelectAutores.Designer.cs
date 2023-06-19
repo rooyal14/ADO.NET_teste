@@ -36,10 +36,10 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnVoltar = new System.Windows.Forms.Button();
-            this.btnConfirmar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -84,6 +84,20 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel4.Controls.Add(this.btnVoltar, 0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             // 
+            // btnConfirmar
+            // 
+            resources.ApplyResources(this.btnConfirmar, "btnConfirmar");
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = true;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            // 
+            // btnVoltar
+            // 
+            resources.ApplyResources(this.btnVoltar, "btnVoltar");
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // tableLayoutPanel5
             // 
             resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
@@ -94,19 +108,6 @@ namespace ViewProject.adminForms
             resources.ApplyResources(this.tableLayoutPanel2, "tableLayoutPanel2");
             this.tableLayoutPanel2.Controls.Add(this.lbxAutores, 0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            // 
-            // btnVoltar
-            // 
-            resources.ApplyResources(this.btnVoltar, "btnVoltar");
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // btnConfirmar
-            // 
-            resources.ApplyResources(this.btnConfirmar, "btnConfirmar");
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = true;
             // 
             // FormPopupSelectAutores
             // 

@@ -20,7 +20,7 @@ namespace ViewProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormRegistroGeneros());
+            Application.Run(new FormRegistroLivros());
         }
     }
 }
