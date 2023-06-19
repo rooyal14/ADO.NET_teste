@@ -110,7 +110,7 @@ namespace ViewProject
             0});
             this.numQtd.Name = "numQtd";
             this.numQtd.Size = new System.Drawing.Size(111, 64);
-            this.numQtd.TabIndex = 29;
+            this.numQtd.TabIndex = 2;
             this.numQtd.Value = new decimal(new int[] {
             1,
             0,
@@ -123,7 +123,7 @@ namespace ViewProject
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.10865F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.89135F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 297F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 298F));
             this.tableLayoutPanel4.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label10, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.lblNome, 1, 0);
@@ -190,7 +190,7 @@ namespace ViewProject
             this.lblTotal.AutoSize = true;
             this.lblTotal.Enabled = false;
             this.lblTotal.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(1062, 0);
+            this.lblTotal.Location = new System.Drawing.Point(1061, 0);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(101, 45);
@@ -201,7 +201,7 @@ namespace ViewProject
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(892, 0);
+            this.label12.Location = new System.Drawing.Point(891, 0);
             this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(114, 45);
@@ -435,7 +435,7 @@ namespace ViewProject
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 134F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 117F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(472, 117);
             this.tableLayoutPanel3.TabIndex = 51;
             // 
@@ -446,7 +446,7 @@ namespace ViewProject
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(6);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(460, 105);
-            this.btnVoltar.TabIndex = 32;
+            this.btnVoltar.TabIndex = 6;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -469,7 +469,7 @@ namespace ViewProject
             this.btnAddToCarrinho.Margin = new System.Windows.Forms.Padding(6);
             this.btnAddToCarrinho.Name = "btnAddToCarrinho";
             this.btnAddToCarrinho.Size = new System.Drawing.Size(472, 115);
-            this.btnAddToCarrinho.TabIndex = 32;
+            this.btnAddToCarrinho.TabIndex = 3;
             this.btnAddToCarrinho.Text = "Adicionar";
             this.btnAddToCarrinho.UseVisualStyleBackColor = true;
             this.btnAddToCarrinho.Click += new System.EventHandler(this.btnAddToCarrinho_Click);
@@ -481,7 +481,7 @@ namespace ViewProject
             this.btnRemoveFromCart.Margin = new System.Windows.Forms.Padding(6);
             this.btnRemoveFromCart.Name = "btnRemoveFromCart";
             this.btnRemoveFromCart.Size = new System.Drawing.Size(472, 104);
-            this.btnRemoveFromCart.TabIndex = 55;
+            this.btnRemoveFromCart.TabIndex = 4;
             this.btnRemoveFromCart.Text = "Remover";
             this.btnRemoveFromCart.UseVisualStyleBackColor = true;
             this.btnRemoveFromCart.Click += new System.EventHandler(this.btnRemoveFromCart_Click);
@@ -507,7 +507,7 @@ namespace ViewProject
             this.btnConfirmarCompra.Margin = new System.Windows.Forms.Padding(6);
             this.btnConfirmarCompra.Name = "btnConfirmarCompra";
             this.btnConfirmarCompra.Size = new System.Drawing.Size(460, 126);
-            this.btnConfirmarCompra.TabIndex = 32;
+            this.btnConfirmarCompra.TabIndex = 5;
             this.btnConfirmarCompra.Text = "Comprar";
             this.btnConfirmarCompra.UseVisualStyleBackColor = true;
             this.btnConfirmarCompra.Click += new System.EventHandler(this.btnConfirmarCompra_Click);
