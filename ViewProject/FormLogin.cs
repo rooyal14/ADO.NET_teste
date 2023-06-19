@@ -68,10 +68,10 @@ namespace ViewProject
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Seja bem-vindo ao Sistema Livraria " +
-                "ADO.NET. \n\nProjeto desenvolvido por: \nAlice Bentes, " +
+            MessageBox.Show("Seja bem-vindo(a) ao Sistema Livraria " +
+                "Visual. \n\nProjeto desenvolvido por: \nAlice Bentes, " +
                 "Rodrigo Zwirtes, Victor Hugo e Wellington Amaral.",
-                "Sobre os Autores", MessageBoxButtons.OK);
+                "Sobre os Desenvolvedores", MessageBoxButtons.OK);
         }
 
         private void btnRecuperarSenha_Click(object sender, EventArgs e)
@@ -80,6 +80,11 @@ namespace ViewProject
                 new FormRecuperarSenha().ShowDialog();
                 this.Show();
           
+        }
+
+        private void iniciarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
