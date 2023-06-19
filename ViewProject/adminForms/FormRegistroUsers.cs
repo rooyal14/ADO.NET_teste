@@ -295,5 +295,9 @@ namespace ViewProject
 
         }
 
+        private void FormRegistroClientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
