@@ -21,7 +21,6 @@ namespace ViewProject
         DataTable tbUsers;
         public FormRegistroClientes()
         {
-            tbUsers = userController.getChangeableUsersFromDB();
             InitializeComponent();
             fillDgv();
             cbxPesquisa.SelectedIndex = 0;
@@ -97,13 +96,18 @@ namespace ViewProject
             }
             else if (userController.userIsReferenced(usuario))
             {
-                MessageBox.Show("Usuário cadastrado em vendas, deseja substituí-lo deletar mesmo assim?");
-                //TODO: perguntar se o usuário quer mesmo deletar
-                if (true)
+                DialogResult dialogResult = MessageBox.Show(
+                   "Usuário cadastrado em vendas, deseja substituí-lo deletar mesmo assim?",
+                   "",
+                   MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.Yes)
                 {
                     vendaController.substituirPorClienteDeletado(usuario);
                     userController.deleteUserFromDB(usuario);
+                    MessageBox.Show("Usuário excluído com sucesso");
                 }
+
             } 
             else
             {
@@ -124,8 +128,6 @@ namespace ViewProject
                 fmCPF.Text = "";
                 
             }
-            
-            
             else
             {
                 string senhaHash = Criptografia.GerarHash(fmSenha.Text);
@@ -139,12 +141,16 @@ namespace ViewProject
 
                 if (stateAdicionando)
                 {
-                    //TODO: Alerta caso haja repetição de nomes
-                    userController.addUserToDB(usuario);
+                    if (userController.addUserToDB(usuario))
+                        MessageBox.Show("Usuário cadastrado com sucesso");
+                    else
+                        MessageBox.Show("Usuário já cadastrado");
                 }
                 else
                 {
                     userController.updateUserFromDB(usuario);
+                    MessageBox.Show("Dados atualizados");
+                    
                 }
             }
             fillDgv();
@@ -174,6 +180,7 @@ namespace ViewProject
 
         private void fillDgv()
         {
+            tbUsers = userController.getChangeableUsersFromDB();
             dgvClientes.DataSource = tbUsers;
 
         }
@@ -200,6 +207,8 @@ namespace ViewProject
                 fmConfirmaSenha.Text = "";
                 ActiveControl = fmSenha;
             }
+
+            
         }
 
         private void fmConfirmaSenha_Leave(object sender, EventArgs e)
@@ -295,9 +304,5 @@ namespace ViewProject
 
         }
 
-        private void FormRegistroClientes_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

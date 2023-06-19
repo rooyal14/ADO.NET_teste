@@ -35,19 +35,19 @@ namespace ViewProject
                 switch (currentRelatorio)
                 {
                     case "Clientes cadastrados":
-                        geradorDeRelatorios.geralRelatorios(dgvTable, sfd.FileName, "Lista de Clientes Cadastrados");
+                        geradorDeRelatorios.geralRelatorios(dgvTable, sfd.FileName, "Valor De Compras De Cada Cliente");
                         break;
                     case "Estoque":
-                        geradorDeRelatorios.geralRelatorios(dgvTable, sfd.FileName, "Lista de Estoque");
+                        geradorDeRelatorios.geralRelatorios(dgvTable, sfd.FileName, "Lista De Estoque");
                         break;
                     case "Fechamento de caixa":
-                        geradorDeRelatorios.geralRelatorios(dgvTable, sfd.FileName, "Fechamento de Caixa do dia "+ DateTime.Today.ToString("dd/MM/yyyy"));
+                        geradorDeRelatorios.geralRelatorios(dgvTable, sfd.FileName, "Fechamento De Caixa Do dia "+ DateTime.Today.ToString("dd/MM/yyyy"));
                         break;
                     case "Livros mais vendidos":
-                        geradorDeRelatorios.geralRelatorios(dgvTable, sfd.FileName, "Lista dos 5 Livros mais vendidos");
+                        geradorDeRelatorios.geralRelatorios(dgvTable, sfd.FileName, "Lista Dos 5 Livros Mais Vendidos");
                         break;
                     case "Pedidos realizados":
-                        geradorDeRelatorios.geralRelatorios(dgvTable, sfd.FileName, "Lista de Itens Pedidos");
+                        geradorDeRelatorios.geralRelatorios(dgvTable, sfd.FileName, "Lista De Itens Pedidos");
                         break;
 
                 }
@@ -58,7 +58,7 @@ namespace ViewProject
         private void btnClientesCadastrados_Click(object sender, EventArgs e)
         {
             currentRelatorio = "Clientes cadastrados";
-            sfd.FileName = "relatorioClientesCadastrados.pdf";
+            sfd.FileName = "relatorioTotalPorCliente.pdf";
             dgvTable = geradorDeRelatorios.gerarDataTableClientesCadastrados();
             dgv.DataSource = dgvTable;
         }

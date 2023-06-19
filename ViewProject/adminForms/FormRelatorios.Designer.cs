@@ -57,10 +57,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold);
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(15, 9);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Location = new System.Drawing.Point(8, 5);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(913, 80);
+            this.label7.Size = new System.Drawing.Size(522, 46);
             this.label7.TabIndex = 44;
             this.label7.Text = "Livraria Visual - Relatórios";
             // 
@@ -69,10 +68,9 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 24F);
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(24, 112);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Location = new System.Drawing.Point(13, 61);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(809, 68);
+            this.label8.Size = new System.Drawing.Size(464, 39);
             this.label8.TabIndex = 51;
             this.label8.Text = "Selecione o Relatório Desejado:";
             // 
@@ -81,12 +79,11 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.dgv, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(651, 204);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(355, 111);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.51546F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1257, 591);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(686, 320);
             this.tableLayoutPanel1.TabIndex = 52;
             // 
             // dgv
@@ -128,8 +125,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgv.Location = new System.Drawing.Point(6, 6);
-            this.dgv.Margin = new System.Windows.Forms.Padding(6);
+            this.dgv.Location = new System.Drawing.Point(3, 3);
             this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -143,7 +139,7 @@
             this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv.RowHeadersWidth = 62;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(1245, 579);
+            this.dgv.Size = new System.Drawing.Size(680, 314);
             this.dgv.TabIndex = 30;
             this.dgv.Text = global::ViewProject.Properties.Settings.Default.teste;
             // 
@@ -155,21 +151,20 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.Controls.Add(this.btnVoltar, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnSalvar, 2, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(651, 818);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(355, 443);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1251, 119);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(682, 64);
             this.tableLayoutPanel3.TabIndex = 53;
             // 
             // btnVoltar
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
-            this.btnVoltar.Location = new System.Drawing.Point(6, 6);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnVoltar.Location = new System.Drawing.Point(3, 3);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(405, 107);
+            this.btnVoltar.Size = new System.Drawing.Size(221, 58);
             this.btnVoltar.TabIndex = 6;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -178,10 +173,9 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
-            this.btnSalvar.Location = new System.Drawing.Point(840, 6);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnSalvar.Location = new System.Drawing.Point(457, 3);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(405, 107);
+            this.btnSalvar.Size = new System.Drawing.Size(221, 58);
             this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Gerar PDF";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -190,12 +184,11 @@
             // btnClientesCadastrados
             // 
             this.btnClientesCadastrados.Font = new System.Drawing.Font("Tahoma", 22F);
-            this.btnClientesCadastrados.Location = new System.Drawing.Point(6, 6);
-            this.btnClientesCadastrados.Margin = new System.Windows.Forms.Padding(6);
+            this.btnClientesCadastrados.Location = new System.Drawing.Point(3, 3);
             this.btnClientesCadastrados.Name = "btnClientesCadastrados";
-            this.btnClientesCadastrados.Size = new System.Drawing.Size(556, 106);
+            this.btnClientesCadastrados.Size = new System.Drawing.Size(303, 57);
             this.btnClientesCadastrados.TabIndex = 1;
-            this.btnClientesCadastrados.Text = "Clientes Cadastrados";
+            this.btnClientesCadastrados.Text = "Total Por Cliente";
             this.btnClientesCadastrados.UseVisualStyleBackColor = true;
             this.btnClientesCadastrados.Click += new System.EventHandler(this.btnClientesCadastrados_Click);
             // 
@@ -208,8 +201,8 @@
             this.tableLayoutPanel4.Controls.Add(this.btnFechamentoDeCaixa, 0, 2);
             this.tableLayoutPanel4.Controls.Add(this.btnClientesCadastrados, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnEstoque, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(36, 204);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(20, 111);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 5;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -217,16 +210,15 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(568, 591);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(310, 320);
             this.tableLayoutPanel4.TabIndex = 55;
             // 
             // btnPedidosRealizados
             // 
             this.btnPedidosRealizados.Font = new System.Drawing.Font("Tahoma", 22F);
-            this.btnPedidosRealizados.Location = new System.Drawing.Point(6, 478);
-            this.btnPedidosRealizados.Margin = new System.Windows.Forms.Padding(6);
+            this.btnPedidosRealizados.Location = new System.Drawing.Point(3, 259);
             this.btnPedidosRealizados.Name = "btnPedidosRealizados";
-            this.btnPedidosRealizados.Size = new System.Drawing.Size(556, 107);
+            this.btnPedidosRealizados.Size = new System.Drawing.Size(303, 58);
             this.btnPedidosRealizados.TabIndex = 5;
             this.btnPedidosRealizados.Text = "Pedidos Realizados";
             this.btnPedidosRealizados.UseVisualStyleBackColor = true;
@@ -235,10 +227,9 @@
             // btnMaisVendidos
             // 
             this.btnMaisVendidos.Font = new System.Drawing.Font("Tahoma", 22F);
-            this.btnMaisVendidos.Location = new System.Drawing.Point(6, 360);
-            this.btnMaisVendidos.Margin = new System.Windows.Forms.Padding(6);
+            this.btnMaisVendidos.Location = new System.Drawing.Point(3, 195);
             this.btnMaisVendidos.Name = "btnMaisVendidos";
-            this.btnMaisVendidos.Size = new System.Drawing.Size(556, 106);
+            this.btnMaisVendidos.Size = new System.Drawing.Size(303, 57);
             this.btnMaisVendidos.TabIndex = 4;
             this.btnMaisVendidos.Text = "Mais Vendidos";
             this.btnMaisVendidos.UseVisualStyleBackColor = true;
@@ -247,10 +238,9 @@
             // btnFechamentoDeCaixa
             // 
             this.btnFechamentoDeCaixa.Font = new System.Drawing.Font("Tahoma", 22F);
-            this.btnFechamentoDeCaixa.Location = new System.Drawing.Point(6, 242);
-            this.btnFechamentoDeCaixa.Margin = new System.Windows.Forms.Padding(6);
+            this.btnFechamentoDeCaixa.Location = new System.Drawing.Point(3, 131);
             this.btnFechamentoDeCaixa.Name = "btnFechamentoDeCaixa";
-            this.btnFechamentoDeCaixa.Size = new System.Drawing.Size(556, 106);
+            this.btnFechamentoDeCaixa.Size = new System.Drawing.Size(303, 57);
             this.btnFechamentoDeCaixa.TabIndex = 3;
             this.btnFechamentoDeCaixa.Text = "Fechamento de Caixa";
             this.btnFechamentoDeCaixa.UseVisualStyleBackColor = true;
@@ -259,10 +249,9 @@
             // btnEstoque
             // 
             this.btnEstoque.Font = new System.Drawing.Font("Tahoma", 22F);
-            this.btnEstoque.Location = new System.Drawing.Point(6, 124);
-            this.btnEstoque.Margin = new System.Windows.Forms.Padding(6);
+            this.btnEstoque.Location = new System.Drawing.Point(3, 67);
             this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(556, 106);
+            this.btnEstoque.Size = new System.Drawing.Size(303, 57);
             this.btnEstoque.TabIndex = 2;
             this.btnEstoque.Text = "Estoque";
             this.btnEstoque.UseVisualStyleBackColor = true;
@@ -276,16 +265,16 @@
             // 
             // FormRelatorios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1956, 1003);
+            this.ClientSize = new System.Drawing.Size(745, 404);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRelatorios";

@@ -75,14 +75,5 @@ namespace ViewProject.adminForms
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FormRelatorioVenda_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -35,6 +35,7 @@ namespace ViewProject
             this.user = user;
             fillDgvLivros();
             fillDgvCarrinho();
+            lblTotal.Text = "0";
             if (user != null)
             {
                 fillUserInfo();
@@ -182,6 +183,7 @@ namespace ViewProject
             {
                 MessageBox.Show("Compra efetuada com sucesso");
                 repositorioCarrinho.limparCarrinho();
+                lblTotal.Text = "0";
             }
             else
             {
@@ -209,11 +211,6 @@ namespace ViewProject
             }
             
             
-
-        }
-
-        private void FormLojaCliente_Load(object sender, EventArgs e)
-        {
 
         }
     }

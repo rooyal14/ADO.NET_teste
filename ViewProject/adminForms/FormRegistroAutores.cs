@@ -150,10 +150,5 @@ namespace ViewProject.adminForms
         {
 
         }
-
-        private void FormRegistroAutores_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -30,6 +30,9 @@ namespace ViewProject
             this.CompraRealizada = false;
             this.lblNome.Text = nome;
             this.lblCPF.Text = cpf;
+            this.fmTotalFaltaPagar.Text = lblTotal.Text;
+            this.fmDinheiro.Text = "0";
+            this.fmTroco.Text = "0";
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -65,9 +68,28 @@ namespace ViewProject
             lblTotal.Text = repositorioCarrinho.getTotal().ToString();
         }
 
-        private void btnAplicarDesconto_Click(object sender, EventArgs e)
+        private void fmDinheiro_TextChanged(object sender, EventArgs e)
         {
+            try
+            {
+                double total = Convert.ToDouble(lblTotal.Text);
+                double troco = Convert.ToDouble(fmTroco.Text);
+                double faltaPagar = Convert.ToDouble(fmTotalFaltaPagar.Text);
+                double dinheiro = Convert.ToDouble(fmDinheiro.Text);
+                if (dinheiro < total)
+                {
+                    fmTroco.Text = "0";
+                    fmTotalFaltaPagar.Text = (total - dinheiro).ToString();
+                } else if (dinheiro >= total)
+                {
+                    fmTotalFaltaPagar.Text = "0";
+                    fmTroco.Text = (dinheiro - total).ToString();
+                }
+            }
+            catch
+            {
 
+            }
         }
     }
 }

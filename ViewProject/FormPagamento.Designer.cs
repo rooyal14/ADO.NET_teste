@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvCarrinho = new System.Windows.Forms.DataGridView();
@@ -46,12 +46,12 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.fmTroco = new System.Windows.Forms.RichTextBox();
             this.fmTotalFaltaPagar = new System.Windows.Forms.RichTextBox();
             this.fmDinheiro = new System.Windows.Forms.RichTextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.fmTroco = new System.Windows.Forms.RichTextBox();
             this.btnConfirmarCompra = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
@@ -64,10 +64,9 @@
             // btnVoltar
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(6, 6);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnVoltar.Location = new System.Drawing.Point(3, 3);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(614, 119);
+            this.btnVoltar.Size = new System.Drawing.Size(335, 64);
             this.btnVoltar.TabIndex = 32;
             this.btnVoltar.Text = "Voltar ao Pedido";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -78,12 +77,11 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.dgvCarrinho, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(47, 388);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(26, 210);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.51546F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1846, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1007, 244);
             this.tableLayoutPanel1.TabIndex = 59;
             // 
             // dgvCarrinho
@@ -93,11 +91,11 @@
             this.dgvCarrinho.AllowUserToOrderColumns = true;
             this.dgvCarrinho.AllowUserToResizeColumns = false;
             this.dgvCarrinho.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvCarrinho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCarrinho.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCarrinho.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -106,41 +104,40 @@
             this.dgvCarrinho.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvCarrinho.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvCarrinho.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCarrinho.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCarrinho.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCarrinho.ColumnHeadersHeight = 34;
             this.dgvCarrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCarrinho.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCarrinho.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCarrinho.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvCarrinho.Location = new System.Drawing.Point(6, 6);
-            this.dgvCarrinho.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvCarrinho.Location = new System.Drawing.Point(3, 3);
             this.dgvCarrinho.MultiSelect = false;
             this.dgvCarrinho.Name = "dgvCarrinho";
             this.dgvCarrinho.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCarrinho.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCarrinho.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCarrinho.RowHeadersWidth = 62;
             this.dgvCarrinho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCarrinho.Size = new System.Drawing.Size(1834, 438);
+            this.dgvCarrinho.Size = new System.Drawing.Size(1001, 238);
             this.dgvCarrinho.TabIndex = 31;
             this.dgvCarrinho.Text = global::ViewProject.Properties.Settings.Default.teste;
             // 
@@ -149,31 +146,29 @@
             this.tableLayoutPanel4.ColumnCount = 4;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.94043F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.05957F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 293F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
             this.tableLayoutPanel4.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label10, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.lblNome, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.lblCPF, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.lblTotal, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.label12, 2, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(635, 177);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(346, 96);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1253, 185);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(683, 100);
             this.tableLayoutPanel4.TabIndex = 65;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 0);
-            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(142, 45);
+            this.label9.Size = new System.Drawing.Size(83, 25);
             this.label9.TabIndex = 42;
             this.label9.Text = "Cliente:";
             // 
@@ -181,10 +176,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 92);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Location = new System.Drawing.Point(3, 50);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 45);
+            this.label10.Size = new System.Drawing.Size(55, 25);
             this.label10.TabIndex = 43;
             this.label10.Text = "CPF:";
             // 
@@ -193,10 +187,9 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Enabled = false;
             this.lblNome.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(187, 0);
-            this.lblNome.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblNome.Location = new System.Drawing.Point(101, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(115, 45);
+            this.lblNome.Size = new System.Drawing.Size(66, 25);
             this.lblNome.TabIndex = 40;
             this.lblNome.Text = "Nome";
             // 
@@ -205,10 +198,9 @@
             this.lblCPF.AutoSize = true;
             this.lblCPF.Enabled = false;
             this.lblCPF.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPF.Location = new System.Drawing.Point(187, 92);
-            this.lblCPF.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblCPF.Location = new System.Drawing.Point(101, 50);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(286, 45);
+            this.lblCPF.Size = new System.Drawing.Size(164, 25);
             this.lblCPF.TabIndex = 41;
             this.lblCPF.Text = "XXX.XXX.XXX-XX";
             // 
@@ -217,10 +209,9 @@
             this.lblTotal.AutoSize = true;
             this.lblTotal.Enabled = false;
             this.lblTotal.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(965, 0);
-            this.lblTotal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.lblTotal.Location = new System.Drawing.Point(525, 0);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(101, 45);
+            this.lblTotal.Size = new System.Drawing.Size(58, 25);
             this.lblTotal.TabIndex = 45;
             this.lblTotal.Text = "Total";
             // 
@@ -228,10 +219,9 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(795, 0);
-            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Location = new System.Drawing.Point(432, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(114, 45);
+            this.label12.Size = new System.Drawing.Size(65, 25);
             this.label12.TabIndex = 44;
             this.label12.Text = "Total:";
             // 
@@ -239,10 +229,9 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(38, 270);
-            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label13.Location = new System.Drawing.Point(21, 146);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(334, 45);
+            this.label13.Size = new System.Drawing.Size(194, 25);
             this.label13.TabIndex = 64;
             this.label13.Text = "Confira seu pedido.";
             // 
@@ -250,10 +239,9 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(33, 177);
-            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label14.Location = new System.Drawing.Point(18, 96);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(522, 80);
+            this.label14.Size = new System.Drawing.Size(299, 46);
             this.label14.TabIndex = 63;
             this.label14.Text = "Bem-Vindo(a)!";
             // 
@@ -261,10 +249,9 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(38, 46);
-            this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label15.Location = new System.Drawing.Point(21, 25);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(913, 80);
+            this.label15.Size = new System.Drawing.Size(523, 46);
             this.label15.TabIndex = 62;
             this.label15.Text = "Livraria Visual - Check Out";
             // 
@@ -279,54 +266,52 @@
             this.tableLayoutPanel2.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.fmTroco, 1, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(46, 872);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(25, 472);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1078, 254);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(588, 138);
             this.tableLayoutPanel2.TabIndex = 66;
-            // 
-            // fmTroco
-            // 
-            this.fmTroco.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.fmTroco.Location = new System.Drawing.Point(484, 174);
-            this.fmTroco.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.fmTroco.Name = "fmTroco";
-            this.fmTroco.Size = new System.Drawing.Size(588, 72);
-            this.fmTroco.TabIndex = 76;
-            this.fmTroco.Text = "";
             // 
             // fmTotalFaltaPagar
             // 
+            this.fmTotalFaltaPagar.Enabled = false;
             this.fmTotalFaltaPagar.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.fmTotalFaltaPagar.Location = new System.Drawing.Point(484, 6);
-            this.fmTotalFaltaPagar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fmTotalFaltaPagar.Location = new System.Drawing.Point(264, 3);
             this.fmTotalFaltaPagar.Name = "fmTotalFaltaPagar";
-            this.fmTotalFaltaPagar.Size = new System.Drawing.Size(588, 72);
+            this.fmTotalFaltaPagar.Size = new System.Drawing.Size(321, 39);
             this.fmTotalFaltaPagar.TabIndex = 75;
             this.fmTotalFaltaPagar.Text = "";
             // 
             // fmDinheiro
             // 
             this.fmDinheiro.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.fmDinheiro.Location = new System.Drawing.Point(484, 90);
-            this.fmDinheiro.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fmDinheiro.Location = new System.Drawing.Point(264, 48);
             this.fmDinheiro.Name = "fmDinheiro";
-            this.fmDinheiro.Size = new System.Drawing.Size(588, 72);
+            this.fmDinheiro.Size = new System.Drawing.Size(321, 39);
             this.fmDinheiro.TabIndex = 68;
             this.fmDinheiro.Text = "";
+            this.fmDinheiro.TextChanged += new System.EventHandler(this.fmDinheiro_TextChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(3, 90);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(102, 33);
+            this.label8.TabIndex = 72;
+            this.label8.Text = "Troco:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(6, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(355, 57);
+            this.label7.Size = new System.Drawing.Size(205, 33);
             this.label7.TabIndex = 71;
             this.label7.Text = "Total a Pagar:";
             // 
@@ -334,31 +319,28 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(6, 84);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Location = new System.Drawing.Point(3, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(397, 57);
+            this.label2.Size = new System.Drawing.Size(229, 33);
             this.label2.TabIndex = 68;
             this.label2.Text = "Valor Recebido:";
             // 
-            // label8
+            // fmTroco
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 20F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(6, 168);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(174, 57);
-            this.label8.TabIndex = 72;
-            this.label8.Text = "Troco:";
+            this.fmTroco.Enabled = false;
+            this.fmTroco.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.fmTroco.Location = new System.Drawing.Point(264, 93);
+            this.fmTroco.Name = "fmTroco";
+            this.fmTroco.Size = new System.Drawing.Size(321, 41);
+            this.fmTroco.TabIndex = 76;
+            this.fmTroco.Text = "";
             // 
             // btnConfirmarCompra
             // 
             this.btnConfirmarCompra.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirmarCompra.Location = new System.Drawing.Point(6, 137);
-            this.btnConfirmarCompra.Margin = new System.Windows.Forms.Padding(6);
+            this.btnConfirmarCompra.Location = new System.Drawing.Point(3, 74);
             this.btnConfirmarCompra.Name = "btnConfirmarCompra";
-            this.btnConfirmarCompra.Size = new System.Drawing.Size(614, 120);
+            this.btnConfirmarCompra.Size = new System.Drawing.Size(335, 65);
             this.btnConfirmarCompra.TabIndex = 32;
             this.btnConfirmarCompra.Text = "Finalizar";
             this.btnConfirmarCompra.UseVisualStyleBackColor = true;
@@ -370,19 +352,20 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.btnVoltar, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnConfirmarCompra, 0, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1273, 863);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(694, 467);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(626, 263);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(341, 142);
             this.tableLayoutPanel3.TabIndex = 67;
             // 
             // FormPagamento
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(4127, 2081);
+            this.ClientSize = new System.Drawing.Size(745, 404);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel4);
@@ -391,7 +374,6 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormPagamento";

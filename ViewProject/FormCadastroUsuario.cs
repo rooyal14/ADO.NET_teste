@@ -34,8 +34,7 @@ namespace ViewProject
                                     false);
             if (userController.addUserToDB(usuario))
             {
-                MessageBox.Show("Usuário cadastrado com sucesso."
-                    + "\nSenha Criptografada: ",(senhaHash));
+                MessageBox.Show("Usuário cadastrado com sucesso.");
                 this.Close();
             } else
             {

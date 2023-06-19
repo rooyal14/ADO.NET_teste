@@ -46,7 +46,7 @@ namespace ControllerProject
         {
             var conn = DBCon.Conn();
             var command = conn.CreateCommand();
-            command.CommandText = "SELECT * FROM Tb_Autor WHERE ID_Autor > 1";
+            command.CommandText = "SELECT * FROM Tb_Autor WHERE ID_Autor > 0";
             var table = DBCon.queryDataTable(command);
             conn.Close();
             return table;

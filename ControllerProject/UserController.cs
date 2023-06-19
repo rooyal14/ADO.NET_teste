@@ -50,7 +50,9 @@ namespace ControllerProject
 
         public void updateUserFromDB(User user)
         {
+            
             string senhaHash = Criptografia.GerarHash(user.senha);
+
             SqlConnection conn = DBCon.Conn();
             SqlCommand command = conn.CreateCommand();
             command.CommandText = "UPDATE Tb_Usuarios SET nome=@nome, senha=@senha, " +
@@ -62,6 +64,8 @@ namespace ControllerProject
             command.Parameters.AddWithValue("@telefone", user.telefone);
             command.ExecuteNonQuery();
             conn.Close();
+
+
         }
 
         public void updatePasswordFromDB(User user)
