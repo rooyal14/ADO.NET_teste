@@ -271,7 +271,7 @@
     <value>Tahoma, 20pt</value>
   </data>
   <data name="cbxIsAdmin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>603, 6</value>
+    <value>602, 6</value>
   </data>
   <data name="cbxIsAdmin.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 6, 6, 6</value>
@@ -424,7 +424,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel7.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="cbxIsAdmin" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="fmCPF" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,85,18519,Percent,14,81481,Absolute,213" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="cbxIsAdmin" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="fmCPF" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,85,18519,Percent,14,81481,Absolute,214" /&gt;&lt;Rows Styles="Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

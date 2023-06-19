@@ -64,5 +64,10 @@ namespace ViewProject
 
             lblTotal.Text = repositorioCarrinho.getTotal().ToString();
         }
+
+        private void btnAplicarDesconto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -82,7 +82,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.dgv, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(651, 204);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.51546F));
@@ -96,7 +96,7 @@
             this.dgv.AllowUserToOrderColumns = true;
             this.dgv.AllowUserToResizeColumns = false;
             this.dgv.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 20.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 15.75F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -111,7 +111,7 @@
             this.dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 20.14286F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 15.75F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -129,13 +129,13 @@
             this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgv.Location = new System.Drawing.Point(6, 6);
-            this.dgv.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgv.Margin = new System.Windows.Forms.Padding(6);
             this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 20.14286F);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 15.75F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -156,7 +156,7 @@
             this.tableLayoutPanel3.Controls.Add(this.btnVoltar, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnSalvar, 2, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(651, 818);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -167,7 +167,7 @@
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnVoltar.Location = new System.Drawing.Point(6, 6);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(6);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(405, 107);
             this.btnVoltar.TabIndex = 6;
@@ -179,7 +179,7 @@
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnSalvar.Location = new System.Drawing.Point(840, 6);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(6);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(405, 107);
             this.btnSalvar.TabIndex = 7;
@@ -191,7 +191,7 @@
             // 
             this.btnClientesCadastrados.Font = new System.Drawing.Font("Tahoma", 22F);
             this.btnClientesCadastrados.Location = new System.Drawing.Point(6, 6);
-            this.btnClientesCadastrados.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnClientesCadastrados.Margin = new System.Windows.Forms.Padding(6);
             this.btnClientesCadastrados.Name = "btnClientesCadastrados";
             this.btnClientesCadastrados.Size = new System.Drawing.Size(556, 106);
             this.btnClientesCadastrados.TabIndex = 1;
@@ -209,7 +209,7 @@
             this.tableLayoutPanel4.Controls.Add(this.btnClientesCadastrados, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.btnEstoque, 0, 1);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(36, 204);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 5;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -224,7 +224,7 @@
             // 
             this.btnPedidosRealizados.Font = new System.Drawing.Font("Tahoma", 22F);
             this.btnPedidosRealizados.Location = new System.Drawing.Point(6, 478);
-            this.btnPedidosRealizados.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnPedidosRealizados.Margin = new System.Windows.Forms.Padding(6);
             this.btnPedidosRealizados.Name = "btnPedidosRealizados";
             this.btnPedidosRealizados.Size = new System.Drawing.Size(556, 107);
             this.btnPedidosRealizados.TabIndex = 5;
@@ -236,7 +236,7 @@
             // 
             this.btnMaisVendidos.Font = new System.Drawing.Font("Tahoma", 22F);
             this.btnMaisVendidos.Location = new System.Drawing.Point(6, 360);
-            this.btnMaisVendidos.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnMaisVendidos.Margin = new System.Windows.Forms.Padding(6);
             this.btnMaisVendidos.Name = "btnMaisVendidos";
             this.btnMaisVendidos.Size = new System.Drawing.Size(556, 106);
             this.btnMaisVendidos.TabIndex = 4;
@@ -248,7 +248,7 @@
             // 
             this.btnFechamentoDeCaixa.Font = new System.Drawing.Font("Tahoma", 22F);
             this.btnFechamentoDeCaixa.Location = new System.Drawing.Point(6, 242);
-            this.btnFechamentoDeCaixa.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnFechamentoDeCaixa.Margin = new System.Windows.Forms.Padding(6);
             this.btnFechamentoDeCaixa.Name = "btnFechamentoDeCaixa";
             this.btnFechamentoDeCaixa.Size = new System.Drawing.Size(556, 106);
             this.btnFechamentoDeCaixa.TabIndex = 3;
@@ -260,7 +260,7 @@
             // 
             this.btnEstoque.Font = new System.Drawing.Font("Tahoma", 22F);
             this.btnEstoque.Location = new System.Drawing.Point(6, 124);
-            this.btnEstoque.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnEstoque.Margin = new System.Windows.Forms.Padding(6);
             this.btnEstoque.Name = "btnEstoque";
             this.btnEstoque.Size = new System.Drawing.Size(556, 106);
             this.btnEstoque.TabIndex = 2;
@@ -285,7 +285,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRelatorios";
