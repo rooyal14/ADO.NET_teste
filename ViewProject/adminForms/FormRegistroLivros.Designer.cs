@@ -74,19 +74,19 @@ namespace ViewProject
             this.fmNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.fmNome.Enabled = false;
             this.fmNome.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmNome.Location = new System.Drawing.Point(248, 55);
+            this.fmNome.Location = new System.Drawing.Point(316, 55);
             this.fmNome.MaxLength = 100;
             this.fmNome.Name = "fmNome";
-            this.fmNome.Size = new System.Drawing.Size(420, 46);
+            this.fmNome.Size = new System.Drawing.Size(646, 46);
             this.fmNome.TabIndex = 2;
             // 
             // fmEstoque
             // 
             this.fmEstoque.Enabled = false;
             this.fmEstoque.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmEstoque.Location = new System.Drawing.Point(248, 263);
+            this.fmEstoque.Location = new System.Drawing.Point(316, 263);
             this.fmEstoque.Name = "fmEstoque";
-            this.fmEstoque.Size = new System.Drawing.Size(194, 46);
+            this.fmEstoque.Size = new System.Drawing.Size(352, 75);
             this.fmEstoque.TabIndex = 3;
             // 
             // fmAutor
@@ -94,35 +94,36 @@ namespace ViewProject
             this.fmAutor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.fmAutor.Enabled = false;
             this.fmAutor.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmAutor.Location = new System.Drawing.Point(3, 3);
+            this.fmAutor.Location = new System.Drawing.Point(6, 6);
+            this.fmAutor.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.fmAutor.MaxLength = 100;
             this.fmAutor.Name = "fmAutor";
-            this.fmAutor.Size = new System.Drawing.Size(356, 46);
+            this.fmAutor.Size = new System.Drawing.Size(583, 46);
             this.fmAutor.TabIndex = 4;
             // 
             // fmNr
             // 
             this.fmNr.Enabled = false;
             this.fmNr.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmNr.Location = new System.Drawing.Point(248, 3);
+            this.fmNr.Location = new System.Drawing.Point(316, 3);
             this.fmNr.Name = "fmNr";
-            this.fmNr.Size = new System.Drawing.Size(194, 46);
+            this.fmNr.Size = new System.Drawing.Size(352, 75);
             this.fmNr.TabIndex = 1;
             // 
             // cbxGenero
             // 
             this.cbxGenero.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxGenero.FormattingEnabled = true;
-            this.cbxGenero.Location = new System.Drawing.Point(248, 107);
+            this.cbxGenero.Location = new System.Drawing.Point(316, 107);
             this.cbxGenero.Name = "cbxGenero";
-            this.cbxGenero.Size = new System.Drawing.Size(420, 47);
+            this.cbxGenero.Size = new System.Drawing.Size(646, 47);
             this.cbxGenero.TabIndex = 40;
             // 
             // btnAutorPopup
             // 
-            this.btnAutorPopup.Location = new System.Drawing.Point(365, 3);
+            this.btnAutorPopup.Location = new System.Drawing.Point(592, 3);
             this.btnAutorPopup.Name = "btnAutorPopup";
-            this.btnAutorPopup.Size = new System.Drawing.Size(50, 38);
+            this.btnAutorPopup.Size = new System.Drawing.Size(51, 39);
             this.btnAutorPopup.TabIndex = 41;
             this.btnAutorPopup.Text = "...";
             this.btnAutorPopup.UseVisualStyleBackColor = true;
@@ -133,11 +134,11 @@ namespace ViewProject
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.dgv, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(33, 538);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(43, 526);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(874, 219);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1230, 301);
             this.tableLayoutPanel4.TabIndex = 48;
             // 
             // dgv
@@ -179,7 +180,8 @@ namespace ViewProject
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgv.Location = new System.Drawing.Point(3, 3);
+            this.dgv.Location = new System.Drawing.Point(6, 6);
+            this.dgv.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dgv.MultiSelect = false;
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -193,7 +195,7 @@ namespace ViewProject
             this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv.RowHeadersWidth = 62;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(868, 213);
+            this.dgv.Size = new System.Drawing.Size(1224, 295);
             this.dgv.TabIndex = 20;
             this.dgv.Text = global::ViewProject.Properties.Settings.Default.teste;
             this.dgv.SelectionChanged += new System.EventHandler(this.dgv_SelectionChanged);
@@ -203,9 +205,10 @@ namespace ViewProject
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 24F);
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(36, 467);
+            this.label6.Location = new System.Drawing.Point(66, 862);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(425, 39);
+            this.label6.Size = new System.Drawing.Size(743, 68);
             this.label6.TabIndex = 47;
             this.label6.Text = "Lista de Títulos Cadastrados:";
             // 
@@ -218,8 +221,8 @@ namespace ViewProject
             this.tableLayoutPanel2.Controls.Add(this.btnChange, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnDelete, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnInsert, 0, 4);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(725, 115);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(1025, 115);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -227,16 +230,16 @@ namespace ViewProject
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(182, 421);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(248, 313);
             this.tableLayoutPanel2.TabIndex = 45;
             // 
             // btnVoltar
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnVoltar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnVoltar.Location = new System.Drawing.Point(3, 255);
+            this.btnVoltar.Location = new System.Drawing.Point(3, 189);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(175, 77);
+            this.btnVoltar.Size = new System.Drawing.Size(242, 56);
             this.btnVoltar.TabIndex = 27;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -246,9 +249,10 @@ namespace ViewProject
             // 
             this.btnNew.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnNew.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnNew.Location = new System.Drawing.Point(3, 3);
+            this.btnNew.Location = new System.Drawing.Point(6, 6);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(175, 77);
+            this.btnNew.Size = new System.Drawing.Size(242, 56);
             this.btnNew.TabIndex = 16;
             this.btnNew.Text = "Novo";
             this.btnNew.UseVisualStyleBackColor = true;
@@ -259,9 +263,9 @@ namespace ViewProject
             this.btnChange.Enabled = false;
             this.btnChange.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnChange.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnChange.Location = new System.Drawing.Point(3, 87);
+            this.btnChange.Location = new System.Drawing.Point(3, 65);
             this.btnChange.Name = "btnChange";
-            this.btnChange.Size = new System.Drawing.Size(175, 77);
+            this.btnChange.Size = new System.Drawing.Size(242, 56);
             this.btnChange.TabIndex = 17;
             this.btnChange.Text = "Alterar";
             this.btnChange.UseVisualStyleBackColor = true;
@@ -272,9 +276,9 @@ namespace ViewProject
             this.btnDelete.Enabled = false;
             this.btnDelete.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnDelete.Location = new System.Drawing.Point(3, 171);
+            this.btnDelete.Location = new System.Drawing.Point(3, 127);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(175, 77);
+            this.btnDelete.Size = new System.Drawing.Size(242, 56);
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "Apagar";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -285,9 +289,9 @@ namespace ViewProject
             this.btnInsert.Enabled = false;
             this.btnInsert.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnInsert.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnInsert.Location = new System.Drawing.Point(3, 339);
+            this.btnInsert.Location = new System.Drawing.Point(3, 251);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(175, 79);
+            this.btnInsert.Size = new System.Drawing.Size(242, 57);
             this.btnInsert.TabIndex = 19;
             this.btnInsert.Text = "Confirmar";
             this.btnInsert.UseVisualStyleBackColor = true;
@@ -298,9 +302,10 @@ namespace ViewProject
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 28F, System.Drawing.FontStyle.Bold);
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(25, 40);
+            this.label7.Location = new System.Drawing.Point(46, 74);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(658, 46);
+            this.label7.Size = new System.Drawing.Size(1147, 80);
             this.label7.TabIndex = 43;
             this.label7.Text = "Livraria Visual - Gestão de Títulos";
             // 
@@ -322,7 +327,7 @@ namespace ViewProject
             this.tableLayoutPanel1.Controls.Add(this.fmNome, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.fmEstoque, 1, 5);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(33, 115);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -331,30 +336,30 @@ namespace ViewProject
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(671, 313);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(965, 313);
             this.tableLayoutPanel1.TabIndex = 42;
             // 
             // fmPrecoUnitario
             // 
             this.fmPrecoUnitario.Enabled = false;
             this.fmPrecoUnitario.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmPrecoUnitario.Location = new System.Drawing.Point(248, 211);
+            this.fmPrecoUnitario.Location = new System.Drawing.Point(316, 211);
             this.fmPrecoUnitario.Name = "fmPrecoUnitario";
-            this.fmPrecoUnitario.Size = new System.Drawing.Size(194, 46);
+            this.fmPrecoUnitario.Size = new System.Drawing.Size(352, 75);
             this.fmPrecoUnitario.TabIndex = 49;
             // 
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
             this.tableLayoutPanel5.Controls.Add(this.btnAutorPopup, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.fmAutor, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(248, 159);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(316, 159);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(419, 45);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(646, 45);
             this.tableLayoutPanel5.TabIndex = 50;
             // 
             // label10
@@ -362,9 +367,10 @@ namespace ViewProject
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 24F);
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(3, 260);
+            this.label10.Location = new System.Drawing.Point(6, 480);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(141, 39);
+            this.label10.Size = new System.Drawing.Size(245, 68);
             this.label10.TabIndex = 11;
             this.label10.Text = "Estoque:";
             // 
@@ -373,9 +379,10 @@ namespace ViewProject
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Tahoma", 24F);
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(3, 0);
+            this.label11.Location = new System.Drawing.Point(6, 0);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(151, 39);
+            this.label11.Size = new System.Drawing.Size(265, 68);
             this.label11.TabIndex = 0;
             this.label11.Text = "ID Título:";
             // 
@@ -384,9 +391,10 @@ namespace ViewProject
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Tahoma", 24F);
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label12.Location = new System.Drawing.Point(3, 52);
+            this.label12.Location = new System.Drawing.Point(6, 96);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(199, 39);
+            this.label12.Size = new System.Drawing.Size(349, 68);
             this.label12.TabIndex = 2;
             this.label12.Text = "Nome Título:";
             // 
@@ -395,9 +403,10 @@ namespace ViewProject
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Tahoma", 24F);
             this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label13.Location = new System.Drawing.Point(3, 104);
+            this.label13.Location = new System.Drawing.Point(6, 192);
+            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(219, 39);
+            this.label13.Size = new System.Drawing.Size(382, 68);
             this.label13.TabIndex = 4;
             this.label13.Text = "Gênero Título:";
             // 
@@ -406,9 +415,10 @@ namespace ViewProject
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 24F);
             this.label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label14.Location = new System.Drawing.Point(3, 156);
+            this.label14.Location = new System.Drawing.Point(6, 288);
+            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(239, 39);
+            this.label14.Size = new System.Drawing.Size(419, 68);
             this.label14.TabIndex = 6;
             this.label14.Text = "Autor do Título:";
             // 
@@ -417,9 +427,10 @@ namespace ViewProject
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Tahoma", 24F);
             this.label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label15.Location = new System.Drawing.Point(3, 208);
+            this.label15.Location = new System.Drawing.Point(6, 384);
+            this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(220, 39);
+            this.label15.Size = new System.Drawing.Size(384, 68);
             this.label15.TabIndex = 9;
             this.label15.Text = "Valor Unitário:";
             // 
@@ -429,22 +440,20 @@ namespace ViewProject
             this.gridPesquisa.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.gridPesquisa.Controls.Add(this.fmPesquisa, 0, 0);
             this.gridPesquisa.Controls.Add(this.cbxPesquisa, 0, 1);
-            this.gridPesquisa.Location = new System.Drawing.Point(432, 433);
+            this.gridPesquisa.Location = new System.Drawing.Point(601, 433);
             this.gridPesquisa.Name = "gridPesquisa";
             this.gridPesquisa.RowCount = 2;
-            this.gridPesquisa.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.17127F));
-            this.gridPesquisa.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.82873F));
-            this.gridPesquisa.Size = new System.Drawing.Size(272, 98);
+            this.gridPesquisa.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.gridPesquisa.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.gridPesquisa.Size = new System.Drawing.Size(397, 55);
             this.gridPesquisa.TabIndex = 60;
             // 
             // fmPesquisa
             // 
             this.fmPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.fmPesquisa.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.fmPesquisa.Font = new System.Drawing.Font("Tahoma", 24F);
-            this.fmPesquisa.Location = new System.Drawing.Point(3, 3);
+            this.fmPesquisa.Location = new System.Drawing.Point(55, 3);
             this.fmPesquisa.Name = "fmPesquisa";
-            this.fmPesquisa.Size = new System.Drawing.Size(266, 46);
+            this.fmPesquisa.Size = new System.Drawing.Size(287, 20);
             this.fmPesquisa.TabIndex = 0;
             this.fmPesquisa.TextChanged += new System.EventHandler(this.fmPesquisa_TextChanged);
             // 
@@ -460,24 +469,23 @@ namespace ViewProject
             "Quantidade em Estoque",
             "Gênero",
             "Autor"});
-            this.cbxPesquisa.Location = new System.Drawing.Point(3, 51);
+            this.cbxPesquisa.Location = new System.Drawing.Point(56, 30);
             this.cbxPesquisa.Name = "cbxPesquisa";
-            this.cbxPesquisa.Size = new System.Drawing.Size(266, 47);
+            this.cbxPesquisa.Size = new System.Drawing.Size(284, 21);
             this.cbxPesquisa.TabIndex = 1;
             this.cbxPesquisa.Text = "Escolher pesquisa";
             // 
             // FormRegistroLivros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 404);
+            this.ClientSize = new System.Drawing.Size(1212, 689);
             this.Controls.Add(this.gridPesquisa);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FormRegistroLivros";
             this.Text = "Livraria Visual - Gestão de Títulos";
             this.tableLayoutPanel4.ResumeLayout(false);
