@@ -245,19 +245,19 @@ namespace ControllerProject
         }
 
 
-        public void geralRelatorioClientesCadastrados(DataTable dt, string path)
+        public void geralRelatorios(DataTable dt, string path, string tituloRelatorio)
         {
             var pxPorMm = 72 / 25.2F;
             var pdf = new Document(PageSize.A4, 15 * pxPorMm, 15 * pxPorMm,
                 15 * pxPorMm, 20 * pxPorMm);
-            var nomeArquivo = "C:\\Users\\zwiro\\OneDrive\\Documentos\\SQL Server Management Studio\\meuPdfTesteClientes.pdf";
+            var nomeArquivo = path;
             var arquivo = new FileStream(nomeArquivo, FileMode.Create);
             var writer = PdfWriter.GetInstance(pdf, arquivo);
             writer.PageEvent = new RodapeRelatorioPDF(1);
             pdf.Open();
 
             //adiciona um título
-            var titulo = new Paragraph("Relatório de Pessoas\n\n");
+            var titulo = new Paragraph(tituloRelatorio+"\n\n");
             titulo.Alignment = Element.ALIGN_CENTER;
             titulo.SpacingAfter = 4;
             pdf.Add(titulo);
