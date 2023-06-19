@@ -78,7 +78,7 @@ namespace ViewProject
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 24F);
-            this.label1.Location = new System.Drawing.Point(6, 86);
+            this.label1.Location = new System.Drawing.Point(6, 95);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(200, 68);
@@ -88,7 +88,7 @@ namespace ViewProject
             // fmSenha
             // 
             this.fmSenha.Font = new System.Drawing.Font("Tahoma", 24F);
-            this.fmSenha.Location = new System.Drawing.Point(237, 92);
+            this.fmSenha.Location = new System.Drawing.Point(237, 101);
             this.fmSenha.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.fmSenha.Name = "fmSenha";
             this.fmSenha.Size = new System.Drawing.Size(1072, 75);
@@ -188,7 +188,7 @@ namespace ViewProject
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1315, 172);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1315, 191);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
             // tableLayoutPanel2

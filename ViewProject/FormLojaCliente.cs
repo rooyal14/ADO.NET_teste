@@ -211,5 +211,10 @@ namespace ViewProject
             
 
         }
+
+        private void FormLojaCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -138,13 +138,13 @@ namespace ViewProject
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1314, 181);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1314, 196);
             this.tableLayoutPanel1.TabIndex = 22;
             // 
             // fmSenha
             // 
             this.fmSenha.Font = new System.Drawing.Font("Tahoma", 24F);
-            this.fmSenha.Location = new System.Drawing.Point(432, 96);
+            this.fmSenha.Location = new System.Drawing.Point(432, 104);
             this.fmSenha.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.fmSenha.Name = "fmSenha";
             this.fmSenha.PasswordChar = '*';
@@ -156,7 +156,7 @@ namespace ViewProject
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 24F);
-            this.label2.Location = new System.Drawing.Point(6, 90);
+            this.label2.Location = new System.Drawing.Point(6, 98);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 68);
