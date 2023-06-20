@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -46,10 +47,12 @@
             this.btnEstoque = new System.Windows.Forms.Button();
             this.sfd = new System.Windows.Forms.SaveFileDialog();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.carrinhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carrinhoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -97,12 +100,12 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.Controls.Add(this.btnVoltar, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnSalvar, 2, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(752, 818);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(758, 818);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1109, 118);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1103, 118);
             this.tableLayoutPanel3.TabIndex = 53;
             // 
             // btnVoltar
@@ -111,7 +114,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(6, 6);
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(357, 106);
+            this.btnVoltar.Size = new System.Drawing.Size(355, 106);
             this.btnVoltar.TabIndex = 6;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -120,10 +123,10 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
-            this.btnSalvar.Location = new System.Drawing.Point(744, 6);
+            this.btnSalvar.Location = new System.Drawing.Point(740, 6);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(359, 106);
+            this.btnSalvar.Size = new System.Drawing.Size(357, 106);
             this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Gerar PDF";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -275,6 +278,10 @@
             this.dgv.TabIndex = 56;
             this.dgv.Text = global::ViewProject.Properties.Settings.Default.teste;
             // 
+            // carrinhoBindingSource
+            // 
+            this.carrinhoBindingSource.DataSource = typeof(ModelProject.Carrinho);
+            // 
             // FormRelatorios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -297,6 +304,7 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carrinhoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,5 +326,6 @@
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.SaveFileDialog sfd;
         private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.BindingSource carrinhoBindingSource;
     }
 }
