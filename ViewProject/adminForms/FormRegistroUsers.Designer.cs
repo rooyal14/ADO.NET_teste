@@ -59,16 +59,16 @@ namespace ViewProject
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.gridPesquisa = new System.Windows.Forms.TableLayoutPanel();
             this.fmPesquisa = new System.Windows.Forms.TextBox();
             this.cbxPesquisa = new System.Windows.Forms.ComboBox();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
-            this.gridPesquisa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            this.gridPesquisa.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNew
@@ -236,31 +236,6 @@ namespace ViewProject
             this.tableLayoutPanel4.Controls.Add(this.dgvClientes, 0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             // 
-            // gridPesquisa
-            // 
-            resources.ApplyResources(this.gridPesquisa, "gridPesquisa");
-            this.gridPesquisa.Controls.Add(this.fmPesquisa, 0, 0);
-            this.gridPesquisa.Controls.Add(this.cbxPesquisa, 0, 1);
-            this.gridPesquisa.Name = "gridPesquisa";
-            // 
-            // fmPesquisa
-            // 
-            resources.ApplyResources(this.fmPesquisa, "fmPesquisa");
-            this.fmPesquisa.Name = "fmPesquisa";
-            this.fmPesquisa.TextChanged += new System.EventHandler(this.fmPesquisa_TextChanged);
-            // 
-            // cbxPesquisa
-            // 
-            resources.ApplyResources(this.cbxPesquisa, "cbxPesquisa");
-            this.cbxPesquisa.FormattingEnabled = true;
-            this.cbxPesquisa.Items.AddRange(new object[] {
-            resources.GetString("cbxPesquisa.Items"),
-            resources.GetString("cbxPesquisa.Items1"),
-            resources.GetString("cbxPesquisa.Items2"),
-            resources.GetString("cbxPesquisa.Items3"),
-            resources.GetString("cbxPesquisa.Items4")});
-            this.cbxPesquisa.Name = "cbxPesquisa";
-            // 
             // dgvClientes
             // 
             this.dgvClientes.AllowUserToAddRows = false;
@@ -312,6 +287,31 @@ namespace ViewProject
             this.dgvClientes.Text = global::ViewProject.Properties.Settings.Default.teste;
             this.dgvClientes.SelectionChanged += new System.EventHandler(this.dgvClientes_SelectionChanged);
             // 
+            // gridPesquisa
+            // 
+            resources.ApplyResources(this.gridPesquisa, "gridPesquisa");
+            this.gridPesquisa.Controls.Add(this.fmPesquisa, 0, 0);
+            this.gridPesquisa.Controls.Add(this.cbxPesquisa, 0, 1);
+            this.gridPesquisa.Name = "gridPesquisa";
+            // 
+            // fmPesquisa
+            // 
+            resources.ApplyResources(this.fmPesquisa, "fmPesquisa");
+            this.fmPesquisa.Name = "fmPesquisa";
+            this.fmPesquisa.TextChanged += new System.EventHandler(this.fmPesquisa_TextChanged);
+            // 
+            // cbxPesquisa
+            // 
+            resources.ApplyResources(this.cbxPesquisa, "cbxPesquisa");
+            this.cbxPesquisa.FormattingEnabled = true;
+            this.cbxPesquisa.Items.AddRange(new object[] {
+            resources.GetString("cbxPesquisa.Items"),
+            resources.GetString("cbxPesquisa.Items1"),
+            resources.GetString("cbxPesquisa.Items2"),
+            resources.GetString("cbxPesquisa.Items3"),
+            resources.GetString("cbxPesquisa.Items4")});
+            this.cbxPesquisa.Name = "cbxPesquisa";
+            // 
             // FormRegistroClientes
             // 
             resources.ApplyResources(this, "$this");
@@ -325,6 +325,8 @@ namespace ViewProject
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormRegistroClientes";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.TopMost = true;
@@ -335,9 +337,9 @@ namespace ViewProject
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.gridPesquisa.ResumeLayout(false);
             this.gridPesquisa.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -86,7 +86,7 @@ namespace ViewProject
             fmEstoque.Text = "";
             fmAutor.Text = "";
             cbxGenero.SelectedIndex = -1;
-            fmPrecoUnitario.Text = "";
+            fmPrecoUnitario.Text = 0.ToString("C2");
             changeFormularioEnabled(true);
 
         }
@@ -185,6 +185,11 @@ namespace ViewProject
         }
 
         private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void fmPrecoUnitario_TextChanged(object sender, EventArgs e)
         {
 
         }

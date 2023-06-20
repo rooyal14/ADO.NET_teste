@@ -43,7 +43,7 @@ namespace ViewProject
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(fmDinheiro.Text) && Convert.ToDouble(fmDinheiro.Text) >= repositorioCarrinho.getTotal())
+            if (!String.IsNullOrEmpty(fmDinheiro.Text.Substring(2)) && Convert.ToDouble(fmDinheiro.Text.Substring(2)) >= repositorioCarrinho.getTotal())
             {
                 vendaController.confirmarCompra(repositorioCarrinho, currentUserEmail);
                 repositorioCarrinho.limparCarrinho();

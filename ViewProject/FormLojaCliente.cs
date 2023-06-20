@@ -193,7 +193,7 @@ namespace ViewProject
             {
                 MessageBox.Show("Compra efetuada com sucesso");
                 repositorioCarrinho.limparCarrinho();
-                lblTotal.Text = "0";
+                lblTotal.Text = 0.ToString("C2");
             }
             else
             {
