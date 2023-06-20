@@ -33,7 +33,7 @@ namespace ViewProject
 
             if ((fmCPF.Text != "") && (!validaCPF))
             {
-                fmCPF.BackColor = System.Drawing.Color.Red;
+               // fmCPF.BackColor = System.Drawing.Color.Red;
                 MessageBox.Show("O CPF digitado está incorreto.\nPor favor, " +
                "verifique os dados inseridos.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //fmCPF.Text = "";
@@ -42,7 +42,7 @@ namespace ViewProject
 
             else if (!cpfCadastrado)
             {
-                fmCPF.BackColor = System.Drawing.Color.Red;
+              //  fmCPF.BackColor = System.Drawing.Color.Red;
                 MessageBox.Show("Usuário Não Cadastrado.\n\nVerifique os Dados Cadastrados" +
                     " ou Clique em 'VOLTAR' e Cadastre-se.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 // ActiveControl = fmCPF;
@@ -50,18 +50,18 @@ namespace ViewProject
 
             else if (userController.checkIfProtectedUser(usuario))
             {
-                fmCPF.BackColor = System.Drawing.Color.Red;
+             //   fmCPF.BackColor = System.Drawing.Color.Red;
                 MessageBox.Show("Não é possível mudar o valor do administrador padrão", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 //   ActiveControl = fmCPF;
             }
             else if (cpfCadastrado)
             {   
-                fmCPF.BackColor = System.Drawing.Color.Green;
+            //    fmCPF.BackColor = System.Drawing.Color.Green;
                 fmConfirmaSenha.Enabled = true;
                 fmSenha.Enabled = true;
                 ActiveControl = fmSenha;
-                fmSenha.BackColor = System.Drawing.Color.White;
-                fmConfirmaSenha.BackColor = System.Drawing.Color.White;
+             //   fmSenha.BackColor = System.Drawing.Color.White;
+             //   fmConfirmaSenha.BackColor = System.Drawing.Color.White;
             }
         }
 
@@ -79,16 +79,16 @@ namespace ViewProject
                         "e máximo de 10 caracteres.", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     fmSenha.Text = "";
                     fmConfirmaSenha.Text = "";*/
-                    fmSenha.BackColor = System.Drawing.Color.Red;
+                    //fmSenha.BackColor = System.Drawing.Color.Red;
                     // ActiveControl = fmSenha;
                 }
                 else
                 {
-                    fmSenha.BackColor = System.Drawing.Color.Green;
+                   // fmSenha.BackColor = System.Drawing.Color.Green;
                     ActiveControl = fmConfirmaSenha;
                 }
             }
-            else fmSenha.BackColor = System.Drawing.Color.White;
+           // else fmSenha.BackColor = System.Drawing.Color.White;
 
         }
         private void fmConfirmaSenha_Leave(object sender, EventArgs e)
@@ -104,23 +104,23 @@ namespace ViewProject
                         MessageBoxButtons.OK, MessageBoxIcon.Error);*/
                     fmSenha.Text = "";
                     fmConfirmaSenha.Text = "";
-                    fmSenha.BackColor = System.Drawing.Color.Red;
-                    fmConfirmaSenha.BackColor = System.Drawing.Color.Red;
+                   // fmSenha.BackColor = System.Drawing.Color.Red;
+                   // fmConfirmaSenha.BackColor = System.Drawing.Color.Red;
 
                     //ActiveControl = fmSenha;
                 }
             }
             else if (((fmCPF.Text != "") && (fmSenha.Text != "")) && (fmSenha.Text == fmConfirmaSenha.Text))
             {
-                fmSenha.BackColor = System.Drawing.Color.Green;
-                fmConfirmaSenha.BackColor = System.Drawing.Color.Green;
+             //   fmSenha.BackColor = System.Drawing.Color.Green;
+             //   fmConfirmaSenha.BackColor = System.Drawing.Color.Green;
                 ActiveControl = btnConfirmar;
 
             }
             else if ((fmCPF.Text == "") && (fmSenha.Text == ""))
             {
-                fmSenha.BackColor = System.Drawing.Color.White;
-                fmConfirmaSenha.BackColor = System.Drawing.Color.White;
+             //   fmSenha.BackColor = System.Drawing.Color.White;
+             //   fmConfirmaSenha.BackColor = System.Drawing.Color.White;
             }
         }
 
@@ -179,8 +179,8 @@ namespace ViewProject
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                     fmConfirmaSenha.Enabled = false;
                 fmSenha.Enabled = false;
-                fmSenha.BackColor = System.Drawing.Color.White;
-                fmConfirmaSenha.BackColor = System.Drawing.Color.White;
+             //   fmSenha.BackColor = System.Drawing.Color.White;
+             //   fmConfirmaSenha.BackColor = System.Drawing.Color.White;
             }
         }
 
@@ -189,5 +189,9 @@ namespace ViewProject
             this.Close();
         }
 
+        private void fmCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

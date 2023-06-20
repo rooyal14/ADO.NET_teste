@@ -82,7 +82,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.fmConfirmaSenha, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(28, 164);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -95,12 +95,13 @@
             // 
             this.fmCPF.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fmCPF.Location = new System.Drawing.Point(594, 4);
-            this.fmCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fmCPF.Margin = new System.Windows.Forms.Padding(4);
             this.fmCPF.Mask = "000,000,000-00";
             this.fmCPF.Name = "fmCPF";
             this.fmCPF.Size = new System.Drawing.Size(450, 75);
             this.fmCPF.TabIndex = 1;
             this.fmCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.fmCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.fmCPF_MaskInputRejected);
             this.fmCPF.Leave += new System.EventHandler(this.fmCPF_Leave);
             // 
             // label7
@@ -172,7 +173,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btnConfirmar, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnLimpar, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(28, 606);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -244,7 +245,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRecuperarSenha";
