@@ -206,6 +206,10 @@ namespace ViewProject
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Close();
+            this.Hide();
+            var FormLogin = new FormLogin();
+            FormLogin.Closed += (s, args) => this.Close();
+            FormLogin.Show();
         }
 
         private void fmPesquisa_TextChanged(object sender, EventArgs e)
