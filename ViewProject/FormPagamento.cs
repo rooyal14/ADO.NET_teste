@@ -48,7 +48,6 @@ namespace ViewProject
                 vendaController.confirmarCompra(repositorioCarrinho, currentUserEmail);
                 repositorioCarrinho.limparCarrinho();
                 CompraRealizada = true;
-                this.Close();
                 this.Hide();
                 var FormLogin = new FormLogin();
                 FormLogin.Closed += (s, args) => this.Close();
