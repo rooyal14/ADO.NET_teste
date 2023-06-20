@@ -1,6 +1,7 @@
 ﻿using ControllerProject;
 using ModelProject;
 using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,8 +32,8 @@ namespace ViewProject
             this.lblNome.Text = nome;
             this.lblCPF.Text = cpf;
             this.fmTotalFaltaPagar.Text = lblTotal.Text;
-            this.fmDinheiro.Text = "0";
-            this.fmTroco.Text = "0";
+            this.fmDinheiro.Text = 0.ToString("C2");
+            this.fmTroco.Text = 0.ToString("C2");
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -42,12 +43,16 @@ namespace ViewProject
 
         private void btnConfirmarCompra_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(fmDinheiro.Text) && Convert.ToInt32(fmDinheiro.Text) >= repositorioCarrinho.getTotal())
+            if (!String.IsNullOrEmpty(fmDinheiro.Text) && Convert.ToDouble(fmDinheiro.Text) >= repositorioCarrinho.getTotal())
             {
                 vendaController.confirmarCompra(repositorioCarrinho, currentUserEmail);
                 repositorioCarrinho.limparCarrinho();
                 CompraRealizada = true;
                 this.Close();
+                this.Hide();
+                var FormLogin = new FormLogin();
+                FormLogin.Closed += (s, args) => this.Close();
+                FormLogin.Show();
             } else
             {
                 MessageBox.Show("Dinheiro insuficiente para compra");
@@ -63,27 +68,29 @@ namespace ViewProject
             dgvCarrinho.Columns[1].HeaderText = "Nome do Livro";
             dgvCarrinho.Columns[2].HeaderText = "Quantidade";
             dgvCarrinho.Columns[3].HeaderText = "Preço Unitário";
+            dgvCarrinho.Columns[3].DefaultCellStyle.Format = "C2";
             dgvCarrinho.Columns[4].HeaderText = "Subtotal";
+            dgvCarrinho.Columns[4].DefaultCellStyle.Format = "C2";
 
-            lblTotal.Text = repositorioCarrinho.getTotal().ToString();
+            lblTotal.Text = repositorioCarrinho.getTotal().ToString("C2");
         }
 
         private void fmDinheiro_TextChanged(object sender, EventArgs e)
         {
             try
-            {
-                double total = Convert.ToDouble(lblTotal.Text);
-                double troco = Convert.ToDouble(fmTroco.Text);
-                double faltaPagar = Convert.ToDouble(fmTotalFaltaPagar.Text);
+                {
+                double total = Convert.ToDouble(lblTotal.Text.Substring(2));
+                double troco = Convert.ToDouble(fmTroco.Text.Substring(2));
+                double faltaPagar = Convert.ToDouble(fmTotalFaltaPagar.Text.Substring(2));
                 double dinheiro = Convert.ToDouble(fmDinheiro.Text);
                 if (dinheiro < total)
                 {
-                    fmTroco.Text = "0";
-                    fmTotalFaltaPagar.Text = (total - dinheiro).ToString();
+                    fmTroco.Text = 0.ToString("C2");
+                    fmTotalFaltaPagar.Text = (total - dinheiro).ToString("C2");
                 } else if (dinheiro >= total)
                 {
-                    fmTotalFaltaPagar.Text = "0";
-                    fmTroco.Text = (dinheiro - total).ToString();
+                    fmTotalFaltaPagar.Text = 0.ToString("C2");
+                    fmTroco.Text = (dinheiro - total).ToString("C2");
                 }
             }
             catch

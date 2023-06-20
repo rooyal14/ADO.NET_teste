@@ -6,10 +6,13 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ViewProject
 {
@@ -35,7 +38,7 @@ namespace ViewProject
             this.user = user;
             fillDgvLivros();
             fillDgvCarrinho();
-            lblTotal.Text = "0";
+            lblTotal.Text = "";
             if (user != null)
             {
                 fillUserInfo();
@@ -58,6 +61,7 @@ namespace ViewProject
             dgv.Columns[0].HeaderText = "Código";
             dgv.Columns[1].HeaderText = "Nome";
             dgv.Columns[2].HeaderText = "Valor Unitário";
+            dgv.Columns[2].DefaultCellStyle.Format = "C2";
             dgv.Columns[3].HeaderText = "Quantidade em Estoque";
             dgv.Columns[4].HeaderText = "Gênero";
             dgv.Columns[5].HeaderText = "Autores";
@@ -74,7 +78,9 @@ namespace ViewProject
             dgvCarrinho.Columns[1].HeaderText = "Nome do Livro";
             dgvCarrinho.Columns[2].HeaderText = "Quantidade";
             dgvCarrinho.Columns[3].HeaderText = "Preço Unitário";
+            dgvCarrinho.Columns[3].DefaultCellStyle.Format = "C2";
             dgvCarrinho.Columns[4].HeaderText = "Subtotal";
+            dgvCarrinho.Columns[4].DefaultCellStyle.Format = "C2";
 
         }
 
@@ -121,12 +127,15 @@ namespace ViewProject
 
         private void btnAddToCarrinho_Click(object sender, EventArgs e)
         {
+            
             Livro livro = new Livro(fmNr.Text,
                     fmGenero.Text,
                     fmNome.Text,
                     Convert.ToInt32(fmEstoque.Text),
                     Convert.ToDouble(fmPrecoUnitario.Text));
             ItemCarrinho item = new ItemCarrinho(livro, Convert.ToInt32(numQtd.Value));
+           
+
             if (item.Qtd > livro.estoque)
             {
                 MessageBox.Show("Estoque indisponível");
@@ -135,7 +144,8 @@ namespace ViewProject
             else
             {
                 repositorioCarrinho.adicionarItemAoCarrinho(item);
-                lblTotal.Text = repositorioCarrinho.getTotal().ToString();
+                lblTotal.Text = repositorioCarrinho.getTotal().ToString("C2");
+              
             }
 
         }
@@ -211,6 +221,21 @@ namespace ViewProject
             }
             
             
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
+        {
 
         }
     }

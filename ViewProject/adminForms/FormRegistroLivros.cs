@@ -44,7 +44,6 @@ namespace ViewProject
         {
             livrosTable = livroController.getDisplayLivros();
             dgv.DataSource = livrosTable;
-
         }
 
         private void dgv_SelectionChanged(object sender, EventArgs e)
@@ -185,5 +184,9 @@ namespace ViewProject
 
         }
 
+        private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

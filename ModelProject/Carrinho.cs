@@ -39,8 +39,11 @@ namespace ModelProject
             foreach (ItemCarrinho item in carrinhoDeLivros)
             {
                 total += item.Subtotal;
+
+
+
             }
-            
+
         }
 
         public IList<ItemCarrinho> obterCarrinho()
