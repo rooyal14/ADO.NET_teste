@@ -39,7 +39,6 @@ namespace ViewProject
             this.btnInsert = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.cbxIsAdmin = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.fmConfirmaSenha = new System.Windows.Forms.TextBox();
@@ -56,19 +55,17 @@ namespace ViewProject
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.gridPesquisa = new System.Windows.Forms.TableLayoutPanel();
             this.fmPesquisa = new System.Windows.Forms.TextBox();
             this.cbxPesquisa = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
-            this.gridPesquisa.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnNew
@@ -104,11 +101,6 @@ namespace ViewProject
             resources.ApplyResources(this.cbxIsAdmin, "cbxIsAdmin");
             this.cbxIsAdmin.Name = "cbxIsAdmin";
             this.cbxIsAdmin.UseVisualStyleBackColor = true;
-            // 
-            // label9
-            // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.Name = "label9";
             // 
             // label6
             // 
@@ -219,12 +211,6 @@ namespace ViewProject
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // tableLayoutPanel3
-            // 
-            resources.ApplyResources(this.tableLayoutPanel3, "tableLayoutPanel3");
-            this.tableLayoutPanel3.Controls.Add(this.cbxIsAdmin, 0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            // 
             // label8
             // 
             resources.ApplyResources(this.label8, "label8");
@@ -287,13 +273,6 @@ namespace ViewProject
             this.dgvClientes.Text = global::ViewProject.Properties.Settings.Default.teste;
             this.dgvClientes.SelectionChanged += new System.EventHandler(this.dgvClientes_SelectionChanged);
             // 
-            // gridPesquisa
-            // 
-            resources.ApplyResources(this.gridPesquisa, "gridPesquisa");
-            this.gridPesquisa.Controls.Add(this.fmPesquisa, 0, 0);
-            this.gridPesquisa.Controls.Add(this.cbxPesquisa, 0, 1);
-            this.gridPesquisa.Name = "gridPesquisa";
-            // 
             // fmPesquisa
             // 
             resources.ApplyResources(this.fmPesquisa, "fmPesquisa");
@@ -312,16 +291,22 @@ namespace ViewProject
             resources.GetString("cbxPesquisa.Items4")});
             this.cbxPesquisa.Name = "cbxPesquisa";
             // 
+            // tableLayoutPanel5
+            // 
+            resources.ApplyResources(this.tableLayoutPanel5, "tableLayoutPanel5");
+            this.tableLayoutPanel5.Controls.Add(this.cbxPesquisa, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.fmPesquisa, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.cbxIsAdmin, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label8, 0, 1);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            // 
             // FormRegistroClientes
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gridPesquisa);
+            this.Controls.Add(this.tableLayoutPanel5);
             this.Controls.Add(this.tableLayoutPanel4);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -331,15 +316,14 @@ namespace ViewProject
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FormRegistroClientes_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
-            this.gridPesquisa.ResumeLayout(false);
-            this.gridPesquisa.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,7 +337,6 @@ namespace ViewProject
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.CheckBox cbxIsAdmin;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TextBox fmConfirmaSenha;
@@ -369,12 +352,11 @@ namespace ViewProject
         private System.Windows.Forms.MaskedTextBox fmTelefone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.TableLayoutPanel gridPesquisa;
         private System.Windows.Forms.TextBox fmPesquisa;
         private System.Windows.Forms.ComboBox cbxPesquisa;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
     }
 }
