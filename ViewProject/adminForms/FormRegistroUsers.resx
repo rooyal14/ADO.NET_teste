@@ -346,7 +346,7 @@
     <value>Tahoma, 24pt</value>
   </data>
   <data name="fmConfirmaSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 421</value>
+    <value>540, 421</value>
   </data>
   <data name="fmConfirmaSenha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 6, 6, 6</value>
@@ -415,7 +415,7 @@
     <value>Tahoma, 24pt</value>
   </data>
   <data name="fmSenha.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 338</value>
+    <value>540, 338</value>
   </data>
   <data name="fmSenha.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 6, 6, 6</value>
@@ -448,7 +448,7 @@
     <value>Tahoma, 24pt</value>
   </data>
   <data name="fmCPF.Location" type="System.Drawing.Point, System.Drawing">
-    <value>503, 4</value>
+    <value>538, 4</value>
   </data>
   <data name="fmCPF.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -550,7 +550,7 @@
     <value>Tahoma, 24pt</value>
   </data>
   <data name="fmNome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 89</value>
+    <value>540, 89</value>
   </data>
   <data name="fmNome.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 6, 6, 6</value>
@@ -559,7 +559,7 @@
     <value>100</value>
   </data>
   <data name="fmNome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1028, 75</value>
+    <value>993, 75</value>
   </data>
   <data name="fmNome.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -616,7 +616,7 @@
     <value>Tahoma, 24pt</value>
   </data>
   <data name="fmEmail.Location" type="System.Drawing.Point, System.Drawing">
-    <value>505, 172</value>
+    <value>540, 172</value>
   </data>
   <data name="fmEmail.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 6, 6, 6</value>
@@ -625,7 +625,7 @@
     <value>100</value>
   </data>
   <data name="fmEmail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1028, 75</value>
+    <value>993, 75</value>
   </data>
   <data name="fmEmail.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -682,7 +682,7 @@
     <value>Tahoma, 24pt</value>
   </data>
   <data name="fmTelefone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>503, 253</value>
+    <value>538, 253</value>
   </data>
   <data name="fmTelefone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
@@ -772,7 +772,7 @@
     <value>4</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="fmConfirmaSenha" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label7" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="fmSenha" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="fmCPF" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="fmNome" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label3" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="fmEmail" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label4" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="fmTelefone" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label5" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,32,481,Percent,67,519" /&gt;&lt;Rows Styles="Percent,16,66667,Percent,16,66667,Percent,16,66667,Percent,16,66667,Percent,16,66667,Percent,16,66667" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="fmConfirmaSenha" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label7" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="fmSenha" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="fmCPF" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="fmNome" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label3" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="fmEmail" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label4" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="fmTelefone" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label5" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,34,69786,Percent,65,30215" /&gt;&lt;Rows Styles="Percent,16,66667,Percent,16,66667,Percent,16,66667,Percent,16,66667,Percent,16,66667,Percent,16,66667" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel2.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
