@@ -29,9 +29,9 @@ namespace ViewProject.adminForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.fmNome = new System.Windows.Forms.TextBox();
             this.fmIdAutor = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -62,8 +62,8 @@ namespace ViewProject.adminForms
             this.fmNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.fmNome.Enabled = false;
             this.fmNome.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmNome.Location = new System.Drawing.Point(525, 99);
-            this.fmNome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fmNome.Location = new System.Drawing.Point(524, 99);
+            this.fmNome.Margin = new System.Windows.Forms.Padding(6);
             this.fmNome.MaxLength = 100;
             this.fmNome.Name = "fmNome";
             this.fmNome.Size = new System.Drawing.Size(873, 75);
@@ -73,8 +73,8 @@ namespace ViewProject.adminForms
             // 
             this.fmIdAutor.Enabled = false;
             this.fmIdAutor.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fmIdAutor.Location = new System.Drawing.Point(525, 6);
-            this.fmIdAutor.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fmIdAutor.Location = new System.Drawing.Point(524, 6);
+            this.fmIdAutor.Margin = new System.Windows.Forms.Padding(6);
             this.fmIdAutor.Name = "fmIdAutor";
             this.fmIdAutor.Size = new System.Drawing.Size(873, 75);
             this.fmIdAutor.TabIndex = 26;
@@ -85,7 +85,7 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.dgvAutores, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(13, 554);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -99,11 +99,11 @@ namespace ViewProject.adminForms
             this.dgvAutores.AllowUserToOrderColumns = true;
             this.dgvAutores.AllowUserToResizeColumns = false;
             this.dgvAutores.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvAutores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvAutores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAutores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -112,27 +112,27 @@ namespace ViewProject.adminForms
             this.dgvAutores.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvAutores.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvAutores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAutores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAutores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAutores.ColumnHeadersHeight = 34;
             this.dgvAutores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 15.75F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAutores.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 15.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAutores.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAutores.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvAutores.Location = new System.Drawing.Point(6, 6);
-            this.dgvAutores.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.dgvAutores.Margin = new System.Windows.Forms.Padding(6);
             this.dgvAutores.MultiSelect = false;
             this.dgvAutores.Name = "dgvAutores";
             this.dgvAutores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -153,7 +153,7 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel2.Controls.Add(this.btnDelete, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.btnInsert, 0, 4);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(1448, 131);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -170,7 +170,7 @@ namespace ViewProject.adminForms
             this.btnVoltar.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnVoltar.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnVoltar.Location = new System.Drawing.Point(6, 501);
-            this.btnVoltar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(6);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(327, 153);
             this.btnVoltar.TabIndex = 27;
@@ -184,7 +184,7 @@ namespace ViewProject.adminForms
             this.btnNew.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnNew.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnNew.Location = new System.Drawing.Point(6, 6);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnNew.Margin = new System.Windows.Forms.Padding(6);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(327, 153);
             this.btnNew.TabIndex = 16;
@@ -199,7 +199,7 @@ namespace ViewProject.adminForms
             this.btnChange.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnChange.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnChange.Location = new System.Drawing.Point(6, 171);
-            this.btnChange.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(6);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(327, 153);
             this.btnChange.TabIndex = 17;
@@ -214,7 +214,7 @@ namespace ViewProject.adminForms
             this.btnDelete.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnDelete.Location = new System.Drawing.Point(6, 336);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(6);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(327, 153);
             this.btnDelete.TabIndex = 18;
@@ -229,7 +229,7 @@ namespace ViewProject.adminForms
             this.btnInsert.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold);
             this.btnInsert.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.btnInsert.Location = new System.Drawing.Point(6, 666);
-            this.btnInsert.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(6);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(327, 154);
             this.btnInsert.TabIndex = 19;
@@ -271,7 +271,7 @@ namespace ViewProject.adminForms
             this.tableLayoutPanel1.Controls.Add(this.fmIdAutor, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.fmNome, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(13, 131);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -309,7 +309,7 @@ namespace ViewProject.adminForms
             this.fmPesquisa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.fmPesquisa.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.fmPesquisa.Location = new System.Drawing.Point(523, 6);
-            this.fmPesquisa.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.fmPesquisa.Margin = new System.Windows.Forms.Padding(6);
             this.fmPesquisa.Name = "fmPesquisa";
             this.fmPesquisa.Size = new System.Drawing.Size(875, 71);
             this.fmPesquisa.TabIndex = 0;
@@ -324,7 +324,7 @@ namespace ViewProject.adminForms
             "Código",
             "Nome"});
             this.cbxPesquisa.Location = new System.Drawing.Point(523, 95);
-            this.cbxPesquisa.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cbxPesquisa.Margin = new System.Windows.Forms.Padding(6);
             this.cbxPesquisa.Name = "cbxPesquisa";
             this.cbxPesquisa.Size = new System.Drawing.Size(875, 76);
             this.cbxPesquisa.TabIndex = 1;
@@ -351,14 +351,14 @@ namespace ViewProject.adminForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1996, 1085);
+            this.ClientSize = new System.Drawing.Size(1920, 1085);
             this.Controls.Add(this.tableLayoutPanel4);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRegistroAutores";
