@@ -44,6 +44,14 @@ namespace ViewProject
         {
             livrosTable = livroController.getDisplayLivros();
             dgv.DataSource = livrosTable;
+            dgv.Columns[0].HeaderText = "ID Livro";
+            dgv.Columns[1].HeaderText = "Nome do Livro";
+            dgv.Columns[2].HeaderText = "Preço Unitário";
+            dgv.Columns[3].HeaderText = "Estoque";
+            dgv.Columns[2].DefaultCellStyle.Format = "C2";
+            dgv.Columns[4].HeaderText = "Gênero";
+            dgv.Columns[4].HeaderText = "Autores";
+            
         }
 
         private void dgv_SelectionChanged(object sender, EventArgs e)

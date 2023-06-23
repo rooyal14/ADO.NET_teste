@@ -28,7 +28,12 @@ namespace ViewProject.adminForms
         private void fillDgvVendas()
         {
             dgvVendas.DataSource = tbVendas;
-            
+            dgvVendas.Columns[0].HeaderText = "ID Venda";
+            dgvVendas.Columns[1].HeaderText = "Total R$";
+            dgvVendas.Columns[1].DefaultCellStyle.Format = "C2";
+            dgvVendas.Columns[2].HeaderText = "Nome";
+            dgvVendas.Columns[3].HeaderText = "Data";
+               
         }
 
         private void dgvVendas_SelectionChanged(object sender, EventArgs e)
@@ -41,8 +46,15 @@ namespace ViewProject.adminForms
                     "AS tbiv LEFT JOIN Tb_Venda AS tbv ON tbiv.ID_Venda = tbv.ID_Venda LEFT JOIN Tb_Livro AS tbl ON " +
                     "tbiv.ID_Livro = tbl.ID_Livro WHERE tbiv.ID_Venda = @ID_Venda";
                 command.Parameters.AddWithValue("@ID_Venda", dgvVendas.CurrentRow.Cells[0].Value.ToString());
+                
                 var table = DBCon.queryDataTable(command);
                 dgvItensVendidos.DataSource = table;
+                dgvItensVendidos.Columns[0].HeaderText = "ID Item";
+                dgvItensVendidos.Columns[1].HeaderText = "Livro";
+                dgvItensVendidos.Columns[2].HeaderText = "Qtd";
+                dgvItensVendidos.Columns[3].HeaderText = "Subtotal R$";
+                dgvItensVendidos.Columns[3].DefaultCellStyle.Format = "C2";
+
                 command.CommandText = "SELECT CPF FROM Tb_Usuarios WHERE ID_Cliente = (SELECT ID_Cliente FROM Tb_Venda WHERE ID_Venda = @ID_Venda)";
                 var cpf = DBCon.queryDataTable(command).Rows[0][0].ToString();
                 conn.Close();
@@ -76,6 +88,11 @@ namespace ViewProject.adminForms
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
         {
 
         }
