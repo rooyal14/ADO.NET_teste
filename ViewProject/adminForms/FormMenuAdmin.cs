@@ -58,5 +58,20 @@ namespace ViewProject.adminForms
             new FormRelatorios().ShowDialog();
             this.Show();
         }
+
+        private void FormMenuAdmin_Load(object sender, EventArgs e)
+        {
+      
+        }
+
+        private void FormMenuAdmin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+        private void FormMenuAdmin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

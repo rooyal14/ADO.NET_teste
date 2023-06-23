@@ -103,6 +103,9 @@ namespace ViewProject.adminForms
             this.MinimizeBox = false;
             this.Name = "FormMenuAdmin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMenuAdmin_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormMenuAdmin_FormClosed);
+            this.Load += new System.EventHandler(this.FormMenuAdmin_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
